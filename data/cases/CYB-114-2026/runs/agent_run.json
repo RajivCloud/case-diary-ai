@@ -1,0 +1,4640 @@
+[
+  {
+    "type": "start",
+    "task": "Investigate FIR 114/2026. Who should be charge-sheeted and in what role? Is anyone wrongly suspected? Which statements are contradicted by the records? Trace the money. Is the case ready for chargesheet, and what gaps must the IO fix first?",
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+  },
+  {
+    "type": "thinking",
+    "text": "I should first go through the FIR and complaint to understand the details.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "I'll start with the FIR and complaint."
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "FIR digital arrest complaint",
+      "k": 4
+    },
+    "n": 1
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-01 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "NCRP complaint acknowledgement (1930 helpline)",
+          "doc_type": "complaint",
+          "date": "2026-10-06",
+          "text": "The person in police uniform on the video call, using number 8969204117, said I was under \"digital arrest\" and must not tell anyone, including my family. The 'digital arrest' continued through Sunday 04-Oct. He said my bank funds must be verified by the RBI and would be returned within 48 hours after verification.",
+          "score": 0.0328,
+          "dense_rank": 1,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-02 ¶7",
+          "case_id": "CYB-114-2026",
+          "title": "First Information Report No. 114/2026, Cyber Police Station, Pune City",
+          "doc_type": "fir",
+          "date": "2026-10-07",
+          "text": "Brief facts: The complainant was induced by persons impersonating a courier company, Mumbai Police and the Central Bureau of Investigation to believe he was under \"digital arrest\" and to transfer his savings for \"RBI verification\". NCRP acknowledgement No. 31510260004417 dated 06-Oct-2026 is annexed.",
+          "score": 0.032,
+          "dense_rank": 2,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-01 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "NCRP complaint acknowledgement (1930 helpline)",
+          "doc_type": "complaint",
+          "date": "2026-10-06",
+          "text": "National Cyber Crime Reporting Portal - Acknowledgement No. 31510260004417, registered on 06-Oct-2026 at 09:42 hrs through the 1930 helpline. Category: Online Financial Fraud - Impersonation of Government Officials (\"digital arrest\").",
+          "score": 0.0315,
+          "dense_rank": 5,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-03 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Prof. Suresh Kulkarni under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-07",
+          "text": "Vikram Rathore told me I was under digital arrest, that I must keep the camera on at all times and must not tell anyone, including my wife, or I would be arrested immediately. He spoke Hindi with a slight Marathi accent. He called me many times from 8969204117 on ConnectX calls.",
+          "score": 0.0308,
+          "dense_rank": 3,
+          "bm25_rank": 7
+        }
+      ]
+    },
+    "n": 1
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-02"
+    },
+    "n": 2
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-02",
+      "title": "First Information Report No. 114/2026, Cyber Police Station, Pune City",
+      "doc_type": "fir",
+      "date": "2026-10-07",
+      "paragraphs": [
+        {
+          "cite": "DOC-02 ¶1",
+          "text": "FIRST INFORMATION REPORT (under Section 173 BNSS). District: Pune City. Police Station: Cyber Police Station, Shivajinagar. FIR No. 114/2026. Date and time of FIR: 07-Oct-2026, 13:20 hrs."
+        },
+        {
+          "cite": "DOC-02 ¶2",
+          "text": "Acts and sections: Bharatiya Nyaya Sanhita, 2023 - Sections 318(4), 319(2), 204, 61(2); Information Technology Act, 2000 - Sections 66C, 66D."
+        },
+        {
+          "cite": "DOC-02 ¶3",
+          "text": "Occurrence of offence: 03-Oct-2026 10:12 hrs to 05-Oct-2026 11:25 hrs. Place of occurrence: complainant's residence, Kothrud, Pune (offence committed through telephone and video calls)."
+        },
+        {
+          "cite": "DOC-02 ¶4",
+          "text": "Complainant / informant: Prof. Suresh Kulkarni, age 67, Kothrud, Pune. Mobile 9822041763."
+        },
+        {
+          "cite": "DOC-02 ¶5",
+          "text": "Details of known / suspected / unknown accused: Unknown persons using mobile numbers 7303518246 and 8969204117, a ConnectX video-call account in the name \"cbi.vikram.rathore\", and the beneficiary bank account No. 50210043318876 at Konkan Small Finance Bank, Hadapsar branch, held in the name of Rohit Pawar."
+        },
+        {
+          "cite": "DOC-02 ¶6",
+          "text": "Particulars of property involved: Rs 38,50,000 transferred by RTGS from Sahyadri National Bank account No. 10020034571 (Kothrud branch)."
+        },
+        {
+          "cite": "DOC-02 ¶7",
+          "text": "Brief facts: The complainant was induced by persons impersonating a courier company, Mumbai Police and the Central Bureau of Investigation to believe he was under \"digital arrest\" and to transfer his savings for \"RBI verification\". NCRP acknowledgement No. 31510260004417 dated 06-Oct-2026 is annexed."
+        },
+        {
+          "cite": "DOC-02 ¶8",
+          "text": "Action taken: The case is registered and investigation is entrusted to Police Inspector Meera Deshpande, Cyber Police Station, Pune City."
+        }
+      ]
+    },
+    "n": 2
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-03"
+    },
+    "n": 3
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-03",
+      "title": "Statement of Prof. Suresh Kulkarni under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-07",
+      "paragraphs": [
+        {
+          "cite": "DOC-03 ¶1",
+          "text": "Statement recorded by PI Meera Deshpande at Cyber Police Station on 07-Oct-2026. I, Suresh Kulkarni, age 67, retired professor of physics, residing at Kothrud, Pune, state as follows."
+        },
+        {
+          "cite": "DOC-03 ¶2",
+          "text": "I live with my wife Vandana. Our son lives in Canada. My nephew Anil Kulkarni, who works in Bengaluru, stayed with us from 20-Sep to 28-Sep-2026 and helped me set up net banking on my phone. He knows I keep my savings in Sahyadri National Bank."
+        },
+        {
+          "cite": "DOC-03 ¶3",
+          "text": "On 03-Oct at about 10:12 hrs I got a call from 7303518246. The caller said he was from SwiftAir Courier and that a parcel in my name with drugs had been stopped at Mumbai customs. He gave me a \"complaint number\" and transferred the call."
+        },
+        {
+          "cite": "DOC-03 ¶4",
+          "text": "The next person, who said he was Inspector Patil of Mumbai Police Cyber Cell, said my Aadhaar was linked to a money-laundering case. He asked me to install the ConnectX app and join a video call. On the video call a man in a police uniform with a CBI logo behind him introduced himself as Vikram Rathore, CBI. He showed me an \"arrest warrant\" with a Supreme Court seal."
+        },
+        {
+          "cite": "DOC-03 ¶5",
+          "text": "Vikram Rathore told me I was under digital arrest, that I must keep the camera on at all times and must not tell anyone, including my wife, or I would be arrested immediately. He spoke Hindi with a slight Marathi accent. He called me many times from 8969204117 on ConnectX calls."
+        },
+        {
+          "cite": "DOC-03 ¶6",
+          "text": "He said all my funds must be sent to an \"RBI-supervised safe account\" for verification. As instructed, I went to my bank and sent RTGS of Rs 9,50,000 at about 15:40 and Rs 12,00,000 at about 17:05 on 03-Oct, and Rs 17,00,000 at about 11:20 on Monday 05-Oct, after being kept on video watch through Sunday 04-Oct. The beneficiary name was Rohit Pawar, Konkan Small Finance Bank. I was told this was an RBI nodal officer's account."
+        },
+        {
+          "cite": "DOC-03 ¶7",
+          "text": "I did not share my net-banking password with anyone. I made all transfers myself at the branch under instructions on the video call. Nobody else had my phone between 03 and 05 Oct."
+        },
+        {
+          "cite": "DOC-03 ¶8",
+          "text": "On 06-Oct the numbers stopped answering. I realised I had been cheated and informed my wife, who called 1930. I can identify the voice of Vikram Rathore if heard again."
+        }
+      ]
+    },
+    "n": 3
+  },
+  {
+    "type": "thinking",
+    "text": "I should check the other documents too, looking specifically for statements from Rohit, Imran, Anil, Sameer, and the wife.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Now the other statements and key replies."
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "statement Rohit Pawar account given commission",
+      "k": 8
+    },
+    "n": 4
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-22 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-14",
+          "text": "I, Rohit Pawar, now state that what I said on 11-Oct was not fully true. In September a friend from my college introduced me to a man called Imran bhai from Malegaon. He said he needed accounts for his mobile business and would pay Rs 15,000 per month for using my account.",
+          "score": 0.0323,
+          "dense_rank": 1,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-22 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-14",
+          "text": "Supplementary statement recorded by PI Meera Deshpande on 14-Oct-2026 at Cyber Police Station, after the call records and the bank's statement were shown to Rohit Pawar.",
+          "score": 0.0318,
+          "dense_rank": 5,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-06 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Konkan Small Finance Bank reply - beneficiary account of Rohit Pawar",
+          "doc_type": "bank_reply",
+          "date": "2026-10-08",
+          "text": "KYC details: account holder Rohit Sunil Pawar, age 21, student, address Room 14, Shinde Chawl, Hadapsar, Pune 411028. Aadhaar and PAN verified. Registered mobile number 9371662405. The registered mobile number has not been changed since account opening.",
+          "score": 0.0315,
+          "dense_rank": 2,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "DOC-12 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Rohit Pawar under Section 180 BNSS (first statement)",
+          "doc_type": "statement_180",
+          "date": "2026-10-11",
+          "text": "Statement recorded by PI Meera Deshpande on 11-Oct-2026. I, Rohit Sunil Pawar, age 21, student of B.Com second year, residing at Shinde Chawl, Hadapsar, Pune, state as follows.",
+          "score": 0.0308,
+          "dense_rank": 8,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-22 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-14",
+          "text": "I am ready to give this statement before a Magistrate.",
+          "score": 0.0306,
+          "dense_rank": 7,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-13 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Konkan SFB branch manager under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-12",
+          "text": "On Friday 25-Sep-2026 at about 12:30 hrs the account holder Rohit Pawar came to the branch to activate net banking and IMPS. He was not alone. A man aged about 27 to 30, with a short beard, wearing a grey kurta, came with him and did most of the talking.",
+          "score": 0.0298,
+          "dense_rank": 3,
+          "bm25_rank": 12
+        },
+        {
+          "cite": "DOC-14 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Imran Shaikh under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-12",
+          "text": "I do not know any Rohit Pawar. I have never been to Pune. The Rs 15,000 sent on 27-Sep may have been a mistake by my staff.",
+          "score": 0.0297,
+          "dense_rank": 4,
+          "bm25_rank": 11
+        },
+        {
+          "cite": "DOC-22 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-14",
+          "text": "I agreed because I needed money for fees. On 25-Sep Imran bhai came with me to the bank to start net banking and increase the limit. On 27-Sep he sent me Rs 15,000 on UPI.",
+          "score": 0.0289,
+          "dense_rank": 6,
+          "bm25_rank": 13
+        }
+      ]
+    },
+    "n": 4
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "wife suspects nephew Anil",
+      "k": 6
+    },
+    "n": 5
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-23 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+          "doc_type": "case_diary",
+          "date": "2026-10-10",
+          "text": "07-Oct-2026: FIR 114/2026 registered. Statements of the complainant and his wife recorded. The wife suspects the nephew Anil Kulkarni, who stayed with them in September. Notices under Section 94 BNSS issued to Sahyadri National Bank, Konkan SFB, Trinet Mobile, Airwave Telecom and the ConnectX platform.",
+          "score": 0.0325,
+          "dense_rank": 2,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-05 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Mrs. Vandana Kulkarni under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-07",
+          "text": "I suspect our nephew Anil Kulkarni may be involved. Anil stayed with us in September and was always on my husband's phone, setting up banking apps. He knows exactly how much money we have. He has had money troubles in the past and borrowed Rs 2 lakh from us last year, which he has not returned.",
+          "score": 0.032,
+          "dense_rank": 1,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-15 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Anil Kulkarni (victim's nephew) under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-13",
+          "text": "Statement recorded over video call and later signed copy received, 13-Oct-2026. I, Anil Prakash Kulkarni, age 29, software engineer with Lumen Arc Technologies, Whitefield, Bengaluru, state as follows.",
+          "score": 0.0313,
+          "dense_rank": 5,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-15 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Anil Kulkarni (victim's nephew) under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-13",
+          "text": "It is true I borrowed Rs 2 lakh from my uncle in 2025 for a medical emergency of my mother; I have repaid Rs 1.2 lakh. I have nothing to do with this fraud. My mobile number is 9845012377 and police may check my call records.",
+          "score": 0.031,
+          "dense_rank": 3,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-15 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Anil Kulkarni (victim's nephew) under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-13",
+          "text": "I stayed with my uncle and aunt in Kothrud from 20-Sep to 28-Sep-2026 during my leave. I helped my uncle install his bank's mobile app because he found it difficult. I did not note down or keep any password.",
+          "score": 0.0305,
+          "dense_rank": 6,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "DOC-03 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Prof. Suresh Kulkarni under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-07",
+          "text": "I live with my wife Vandana. Our son lives in Canada. My nephew Anil Kulkarni, who works in Bengaluru, stayed with us from 20-Sep to 28-Sep-2026 and helped me set up net banking on my phone. He knows I keep my savings in Sahyadri National Bank.",
+          "score": 0.0302,
+          "dense_rank": 11,
+          "bm25_rank": 2
+        }
+      ]
+    },
+    "n": 5
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-14"
+    },
+    "n": 6
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-14",
+      "title": "Statement of Imran Shaikh under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-12",
+      "paragraphs": [
+        {
+          "cite": "DOC-14 ¶1",
+          "text": "Statement recorded at Malegaon on 12-Oct-2026. I, Imran Rafiq Shaikh, age 27, proprietor of Shaikh Mobile Point, Kidwai Road, Malegaon, state as follows."
+        },
+        {
+          "cite": "DOC-14 ¶2",
+          "text": "I run a mobile phone sales and repair shop. The money received in my current account from the Konkan bank account was payment for a bulk sale of mobile phones to a customer whose name I do not remember. I did not keep a bill."
+        },
+        {
+          "cite": "DOC-14 ¶3",
+          "text": "I do not know any Rohit Pawar. I have never been to Pune. The Rs 15,000 sent on 27-Sep may have been a mistake by my staff."
+        },
+        {
+          "cite": "DOC-14 ¶4",
+          "text": "On 05-Oct-2026 I was at my shop in Malegaon the whole day, from 10 in the morning till 9 at night. I did not go to Nashik that day. My debit card is always with me and nobody else uses it."
+        },
+        {
+          "cite": "DOC-14 ¶5",
+          "text": "I know Sameer Ansari of Nashik only as a customer who buys used phones from me. I have not spoken to him for many weeks. My mobile number is 9890447120."
+        }
+      ]
+    },
+    "n": 6
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-12"
+    },
+    "n": 7
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-12",
+      "title": "Statement of Rohit Pawar under Section 180 BNSS (first statement)",
+      "doc_type": "statement_180",
+      "date": "2026-10-11",
+      "paragraphs": [
+        {
+          "cite": "DOC-12 ¶1",
+          "text": "Statement recorded by PI Meera Deshpande on 11-Oct-2026. I, Rohit Sunil Pawar, age 21, student of B.Com second year, residing at Shinde Chawl, Hadapsar, Pune, state as follows."
+        },
+        {
+          "cite": "DOC-12 ¶2",
+          "text": "I opened my account in Konkan Small Finance Bank in August 2026 for receiving scholarship money. I went to the bank alone on 25-Sep to start net banking because I wanted to pay my college fees online."
+        },
+        {
+          "cite": "DOC-12 ¶3",
+          "text": "I do not know anything about the Rs 38 lakh. I never gave my account details or my net-banking password to anyone. My account must have been hacked. I did not receive any OTP on my phone on 03-Oct or 05-Oct."
+        },
+        {
+          "cite": "DOC-12 ¶4",
+          "text": "I do not know any person named Imran Shaikh and I have never been to Malegaon or Nashik. I do not know anyone called Sameer. I have not received any money from anyone for my account."
+        },
+        {
+          "cite": "DOC-12 ¶5",
+          "text": "My mobile number is 9371662405 and it is always with me. I have not lost my phone or SIM."
+        }
+      ]
+    },
+    "n": 7
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-22"
+    },
+    "n": 8
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-22",
+      "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-14",
+      "paragraphs": [
+        {
+          "cite": "DOC-22 ¶1",
+          "text": "Supplementary statement recorded by PI Meera Deshpande on 14-Oct-2026 at Cyber Police Station, after the call records and the bank's statement were shown to Rohit Pawar."
+        },
+        {
+          "cite": "DOC-22 ¶2",
+          "text": "I, Rohit Pawar, now state that what I said on 11-Oct was not fully true. In September a friend from my college introduced me to a man called Imran bhai from Malegaon. He said he needed accounts for his mobile business and would pay Rs 15,000 per month for using my account."
+        },
+        {
+          "cite": "DOC-22 ¶3",
+          "text": "I agreed because I needed money for fees. On 25-Sep Imran bhai came with me to the bank to start net banking and increase the limit. On 27-Sep he sent me Rs 15,000 on UPI."
+        },
+        {
+          "cite": "DOC-22 ¶4",
+          "text": "On 03-Oct and 05-Oct I got OTP messages from my bank. Imran bhai had told me to forward every OTP immediately to a number he gave me, which was 8969204117. I forwarded the OTPs as SMS. I did not know the money was from a fraud on an old man. I never met or spoke to anyone named Sameer."
+        },
+        {
+          "cite": "DOC-22 ¶5",
+          "text": "I am ready to give this statement before a Magistrate."
+        }
+      ]
+    },
+    "n": 8
+  },
+  {
+    "type": "thinking",
+    "text": "The OTPs being forwarded to that \"Vikram Rathore\" number at 8969204117 catches my attention — that number could actually belong to Imran or Sameer. I should trace where the money trail leads from there.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Following the money now."
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "10020034571",
+      "start": "2026-10-03",
+      "end": "2026-10-06",
+      "min_amount": 100000
+    },
+    "n": 9
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 3,
+      "sum_amount": 3850000,
+      "rows": [
+        {
+          "txn_id": "T00001",
+          "account_no": "10020034571",
+          "account_holder": "Suresh Kulkarni",
+          "bank": "Sahyadri National Bank",
+          "txn_time": "2026-10-03 15:40:00",
+          "direction": "DR",
+          "amount": "950000",
+          "mode": "RTGS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "SNBR526100338841",
+          "remarks": "RTGS at branch",
+          "location": ""
+        },
+        {
+          "txn_id": "T00003",
+          "account_no": "10020034571",
+          "account_holder": "Suresh Kulkarni",
+          "bank": "Sahyadri National Bank",
+          "txn_time": "2026-10-03 17:05:00",
+          "direction": "DR",
+          "amount": "1200000",
+          "mode": "RTGS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "SNBR526100341192",
+          "remarks": "RTGS at branch",
+          "location": ""
+        },
+        {
+          "txn_id": "T00005",
+          "account_no": "10020034571",
+          "account_holder": "Suresh Kulkarni",
+          "bank": "Sahyadri National Bank",
+          "txn_time": "2026-10-05 11:20:00",
+          "direction": "DR",
+          "amount": "1700000",
+          "mode": "RTGS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "SNBR528100015530",
+          "remarks": "RTGS at branch",
+          "location": ""
+        }
+      ],
+      "truncated": false,
+      "accounts_held": [
+        "10020034571 (Suresh Kulkarni, SNB)",
+        "50210043318876 (Rohit Pawar, KSFB)",
+        "31082290447 (Imran Shaikh, Narmada Bank)"
+      ]
+    },
+    "n": 9
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "50210043318876",
+      "start": "2026-09-20",
+      "end": "2026-10-10",
+      "min_amount": 10000
+    },
+    "n": 10
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 12,
+      "sum_amount": 7705000,
+      "rows": [
+        {
+          "txn_id": "T00021",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-27 18:41:09",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "UPI",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "UPI626918330421",
+          "remarks": "acct rent",
+          "location": ""
+        },
+        {
+          "txn_id": "T00002",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 15:40:00",
+          "direction": "CR",
+          "amount": "950000",
+          "mode": "RTGS",
+          "counterparty_account": "10020034571",
+          "counterparty_name": "Suresh Kulkarni",
+          "utr": "SNBR526100338841",
+          "remarks": "RTGS at branch",
+          "location": ""
+        },
+        {
+          "txn_id": "T00007",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 15:52:01",
+          "direction": "DR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "IMPS627516707",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00009",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 15:58:12",
+          "direction": "DR",
+          "amount": "460000",
+          "mode": "IMPS",
+          "counterparty_account": "7700118245",
+          "counterparty_name": "Bapi Mondal (Bengal Rural Bank)",
+          "utr": "IMPS628304181",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00004",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 17:05:00",
+          "direction": "CR",
+          "amount": "1200000",
+          "mode": "RTGS",
+          "counterparty_account": "10020034571",
+          "counterparty_name": "Suresh Kulkarni",
+          "utr": "SNBR526100341192",
+          "remarks": "RTGS at branch",
+          "location": ""
+        },
+        {
+          "txn_id": "T00010",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 17:14:00",
+          "direction": "DR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "IMPS629935826",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00012",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 17:20:31",
+          "direction": "DR",
+          "amount": "400000",
+          "mode": "IMPS",
+          "counterparty_account": "7700118245",
+          "counterparty_name": "Bapi Mondal (Bengal Rural Bank)",
+          "utr": "IMPS630230407",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00013",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-03 17:26:05",
+          "direction": "DR",
+          "amount": "310000",
+          "mode": "IMPS",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "IMPS631124666",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00006",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-05 11:20:00",
+          "direction": "CR",
+          "amount": "1700000",
+          "mode": "RTGS",
+          "counterparty_account": "10020034571",
+          "counterparty_name": "Suresh Kulkarni",
+          "utr": "SNBR528100015530",
+          "remarks": "RTGS at branch",
+          "location": ""
+        },
+        {
+          "txn_id": "T00015",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-05 11:30:02",
+          "direction": "DR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "IMPS632216605",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00017",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-05 11:34:10",
+          "direction": "DR",
+          "amount": "360000",
+          "mode": "IMPS",
+          "counterparty_account": "31082290447",
+          "counterparty_name": "Shaikh Mobile Point (Imran Shaikh)",
+          "utr": "IMPS633668444",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00019",
+          "account_no": "50210043318876",
+          "account_holder": "Rohit Pawar",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-10-05 11:40:00",
+          "direction": "DR",
+          "amount": "840000",
+          "mode": "IMPS",
+          "counterparty_account": "0451200381",
+          "counterparty_name": "Hemant Saini (Marudhar Co-op Bank)",
+          "utr": "IMPS634574096",
+          "remarks": "NB transfer",
+          "location": ""
+        }
+      ],
+      "truncated": false,
+      "accounts_held": [
+        "10020034571 (Suresh Kulkarni, SNB)",
+        "50210043318876 (Rohit Pawar, KSFB)",
+        "31082290447 (Imran Shaikh, Narmada Bank)"
+      ]
+    },
+    "n": 10
+  },
+  {
+    "type": "thinking",
+    "text": "Adding up the totals: Imran comes to 21,40,000, Bapi Mondal to 8,60,000, and Hemant Saini to 8,40,000, giving a combined total of 38,40,000, leaving 10,000 remaining from 38,50,000. Now I'm moving on to check Imran's account.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "31082290447",
+      "start": "2026-09-25",
+      "end": "2026-10-10",
+      "min_amount": 10000
+    },
+    "n": 11
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 44,
+      "sum_amount": 4796992,
+      "rows": [
+        {
+          "txn_id": "T00217",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-25 11:24:00",
+          "direction": "DR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Walk-in customer",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00215",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-25 18:17:00",
+          "direction": "DR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00216",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-25 19:49:00",
+          "direction": "CR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Phone repair",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00229",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-27 12:16:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00228",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-27 17:30:00",
+          "direction": "CR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Spare parts Nashik",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00232",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-27 18:02:00",
+          "direction": "DR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00020",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-27 18:41:09",
+          "direction": "DR",
+          "amount": "15000",
+          "mode": "UPI",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "UPI626918330421",
+          "remarks": "acct rent",
+          "location": ""
+        },
+        {
+          "txn_id": "T00239",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-28 14:09:00",
+          "direction": "DR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Accessories",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00244",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-29 15:22:00",
+          "direction": "CR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00243",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-29 16:02:00",
+          "direction": "DR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00242",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-29 16:29:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Accessories",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00248",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-29 16:35:00",
+          "direction": "CR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Phone repair",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00246",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-29 17:33:00",
+          "direction": "CR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00252",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-30 17:10:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00253",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-09-30 18:20:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Spare parts Nashik",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00265",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-01 12:31:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Spare parts Nashik",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00268",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-01 20:06:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Walk-in customer",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00270",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-02 11:05:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Walk-in customer",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00271",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-02 20:56:00",
+          "direction": "CR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Walk-in customer",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00281",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 11:30:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Accessories",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00276",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 12:04:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Accessories",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00008",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 15:52:01",
+          "direction": "CR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "IMPS627516707",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00278",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 16:18:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Phone repair",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00011",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 17:14:00",
+          "direction": "CR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "IMPS629935826",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00014",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-03 17:26:05",
+          "direction": "CR",
+          "amount": "310000",
+          "mode": "IMPS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "IMPS631124666",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00287",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-04 17:09:00",
+          "direction": "CR",
+          "amount": "21000",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Accessories",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00285",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-04 20:09:00",
+          "direction": "DR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Phone repair",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00016",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 11:30:02",
+          "direction": "CR",
+          "amount": "490000",
+          "mode": "IMPS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "IMPS632216605",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00018",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 11:34:10",
+          "direction": "CR",
+          "amount": "360000",
+          "mode": "IMPS",
+          "counterparty_account": "50210043318876",
+          "counterparty_name": "Rohit Pawar",
+          "utr": "IMPS633668444",
+          "remarks": "NB transfer",
+          "location": ""
+        },
+        {
+          "txn_id": "T00022",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:31:30",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00023",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:33:41",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00024",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:35:52",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00025",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:38:05",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00026",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:40:20",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00027",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 14:43:58",
+          "direction": "DR",
+          "amount": "47000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "ATM WDL NB-NSK-0417",
+          "location": "ATM NB-NSK-0417 Dwarka Circle, Nashik"
+        },
+        {
+          "txn_id": "T00028",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 15:20:44",
+          "direction": "DR",
+          "amount": "940000",
+          "mode": "IMPS",
+          "counterparty_account": "6620045519",
+          "counterparty_name": "Gulshan Traders",
+          "utr": "IMPS6281045520",
+          "remarks": "supplier payment",
+          "location": ""
+        },
+        {
+          "txn_id": "T00300",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 17:31:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Walk-in customer",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00296",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 19:19:00",
+          "direction": "DR",
+          "amount": "12500",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Spare parts Nashik",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00302",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-05 20:06:00",
+          "direction": "CR",
+          "amount": "15999",
+          "mode": "UPI",
+          "counterparty_account": "",
+          "counterparty_name": "Distributor Malegaon",
+          "utr": "",
+          "remarks": "UPI",
+          "location": ""
+        },
+        {
+          "txn_id": "T00029",
+          "account_no": "31082290447",
+          "account_holder": "Shaikh Mobile Point (Imran Shaikh)",
+          "bank": "Narmada Bank",
+          "txn_time": "2026-10-06 12:15:00",
+          "direction": "DR",
+          "amount": "900000",
+          "mode": "CASH",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "",
+          "remarks": "SELF CHQ 000117",
+          "location": "Nashik Road branch"
+        }
+      ],
+      "truncated": true,
+      "accounts_held": [
+        "10020034571 (Suresh Kulkarni, SNB)",
+        "50210043318876 (Rohit Pawar, KSFB)",
+        "31082290447 (Imran Shaikh, Narmada Bank)"
+      ]
+    },
+    "n": 11
+  },
+  {
+    "type": "tool_call",
+    "name": "update_case_diary",
+    "input": {
+      "entries": [
+        {
+          "type": "FACT",
+          "text": "Victim sent 3 RTGS totalling Rs 38,50,000 to Rohit Pawar's KSFB a/c 50210043318876 (9.5L 03-Oct 15:40; 12L 03-Oct 17:05; 17L 05-Oct 11:20).",
+          "sources": [
+            "TXN T00001",
+            "TXN T00003",
+            "TXN T00005",
+            "DOC-03 ¶6"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Within 6-20 min of each credit, Rohit's a/c was emptied by net-banking IMPS: Rs 21,40,000 to Imran Shaikh/Shaikh Mobile Point a/c 31082290447 (5 txns), Rs 8,60,000 to Bapi Mondal (Bengal Rural Bank 7700118245), Rs 8,40,000 to Hemant Saini (Marudhar Co-op 0451200381).",
+          "sources": [
+            "TXN T00007",
+            "TXN T00010",
+            "TXN T00013",
+            "TXN T00015",
+            "TXN T00017",
+            "TXN T00009",
+            "TXN T00012",
+            "TXN T00019"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Imran's a/c paid Rs 15,000 UPI to Rohit on 27-Sep with remark 'acct rent'.",
+          "sources": [
+            "TXN T00021"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Rohit Pawar",
+          "text": "Account holder of mule a/c; first statement denies, supplementary admits renting account and forwarding OTPs to 8969204117.",
+          "sources": [
+            "DOC-12 ¶3",
+            "DOC-22 ¶2-4"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Imran Shaikh",
+          "text": "Received Rs 21.4L from mule a/c; paid 'acct rent' to Rohit.",
+          "sources": [
+            "TXN T00021",
+            "TXN T00007"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Anil Kulkarni",
+          "text": "Suspected by victim's wife (stayed Sept, set up banking app, past loan).",
+          "sources": [
+            "DOC-05 ¶3",
+            "DOC-23 ¶1"
+          ]
+        }
+      ]
+    },
+    "n": 12
+  },
+  {
+    "type": "diary",
+    "entries": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Victim sent 3 RTGS totalling Rs 38,50,000 to Rohit Pawar's KSFB a/c 50210043318876 (9.5L 03-Oct 15:40; 12L 03-Oct 17:05; 17L 05-Oct 11:20).",
+        "sources": [
+          "TXN T00001",
+          "TXN T00003",
+          "TXN T00005",
+          "DOC-03 ¶6"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "Within 6-20 min of each credit, Rohit's a/c was emptied by net-banking IMPS: Rs 21,40,000 to Imran Shaikh/Shaikh Mobile Point a/c 31082290447 (5 txns), Rs 8,60,000 to Bapi Mondal (Bengal Rural Bank 7700118245), Rs 8,40,000 to Hemant Saini (Marudhar Co-op 0451200381).",
+        "sources": [
+          "TXN T00007",
+          "TXN T00010",
+          "TXN T00013",
+          "TXN T00015",
+          "TXN T00017",
+          "TXN T00009",
+          "TXN T00012",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "Imran's a/c paid Rs 15,000 UPI to Rohit on 27-Sep with remark 'acct rent'.",
+        "sources": [
+          "TXN T00021"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Account holder of mule a/c; first statement denies, supplementary admits renting account and forwarding OTPs to 8969204117.",
+        "sources": [
+          "DOC-12 ¶3",
+          "DOC-22 ¶2-4"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Received Rs 21.4L from mule a/c; paid 'acct rent' to Rohit.",
+        "sources": [
+          "TXN T00021",
+          "TXN T00007"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Suspected by victim's wife (stayed Sept, set up banking app, past loan).",
+        "sources": [
+          "DOC-05 ¶3",
+          "DOC-23 ¶1"
+        ],
+        "person": "Anil Kulkarni"
+      }
+    ]
+  },
+  {
+    "type": "tool_result",
+    "name": "update_case_diary",
+    "output": {
+      "added": 6,
+      "rejected": [],
+      "diary_size": 6
+    },
+    "n": 12
+  },
+  {
+    "type": "thinking",
+    "text": "The Nashik ATM withdrawals of 2.97 lakh between 14:31-14:44 on 5-Oct conflict with Imran's claim of being in Malegaon all day, so I need to verify both his and Sameer's locations and pull CCTV footage. There's also the Gulshan Traders transaction of 9.4L and a self-cheque cash withdrawal of 9L at Nashik Road on 6-Oct to trace, plus Rohit's call records for OTP forwarding and the IMEI/location data tied to the scam numbers.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Imran's account shows ATM withdrawals in Nashik on 05-Oct—contrary to his alibi. Checking phones now."
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "number": "8969204117"
+    },
+    "n": 13
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "number": "8969204117",
+      "handset_sequence": [
+        {
+          "imei": "356938112847152",
+          "from": "2026-09-30 08:05:00",
+          "to": "2026-10-06 21:14:00",
+          "events": 76
+        }
+      ]
+    },
+    "n": 13
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "number": "7303518246"
+    },
+    "n": 14
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "number": "7303518246",
+      "handset_sequence": [
+        {
+          "imei": "861234055591027",
+          "from": "2026-08-21 11:04:30",
+          "to": "2026-10-03 18:20:52",
+          "events": 60
+        }
+      ]
+    },
+    "n": 14
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9890447120",
+      "start": "2026-10-05 10:00",
+      "end": "2026-10-05 21:00"
+    },
+    "n": 15
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9890447120",
+      "window": [
+        "2026-10-05 10:00",
+        "2026-10-05 21:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Kidwai Road, Malegaon",
+          "from": "2026-10-05 10:32:06",
+          "to": "2026-10-05 12:35:50",
+          "events": 3,
+          "cell_id": "MLG-KDW-01"
+        },
+        {
+          "cell_location": "Chandwad, Nashik district",
+          "from": "2026-10-05 13:22:05",
+          "to": "2026-10-05 13:22:05",
+          "events": 1,
+          "cell_id": "NSK-HWY-05"
+        },
+        {
+          "cell_location": "Dwarka Circle, Nashik",
+          "from": "2026-10-05 14:21:33",
+          "to": "2026-10-05 15:08:44",
+          "events": 5,
+          "cell_id": "NSK-DWK-02"
+        },
+        {
+          "cell_location": "Chandwad, Nashik district",
+          "from": "2026-10-05 16:10:20",
+          "to": "2026-10-05 16:10:20",
+          "events": 1,
+          "cell_id": "NSK-HWY-05"
+        },
+        {
+          "cell_location": "Kidwai Road, Malegaon",
+          "from": "2026-10-05 17:32:02",
+          "to": "2026-10-05 20:52:37",
+          "events": 4,
+          "cell_id": "MLG-KDW-01"
+        }
+      ]
+    },
+    "n": 15
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9765330812",
+      "start": "2026-10-05 10:00",
+      "end": "2026-10-05 21:00"
+    },
+    "n": 16
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9765330812",
+      "window": [
+        "2026-10-05 10:00",
+        "2026-10-05 21:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Bhadrakali, Nashik",
+          "from": "2026-10-05 10:48:16",
+          "to": "2026-10-05 19:53:34",
+          "events": 7,
+          "cell_id": "NSK-BHD-03"
+        }
+      ]
+    },
+    "n": 16
+  },
+  {
+    "type": "thinking",
+    "text": "Imran was placed at Dwarka Circle Nashik from 14:21-15:08 during the ATM withdrawals, while Sameer stayed at Bhadrakali the whole day. Now I need to check the IMEI records to figure out who was using the handsets with numbers 356938112847152 and 861234055591027.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "imei": "356938112847152"
+    },
+    "n": 17
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "imei": "356938112847152",
+      "sim_sequence": [
+        {
+          "target_number": "9765330812",
+          "from": "2026-09-01 14:48:07",
+          "to": "2026-09-29 22:19:38",
+          "events": 162
+        },
+        {
+          "target_number": "8969204117",
+          "from": "2026-09-30 08:05:00",
+          "to": "2026-10-06 21:14:00",
+          "events": 76
+        },
+        {
+          "target_number": "9765330812",
+          "from": "2026-10-07 10:47:23",
+          "to": "2026-10-08 21:10:16",
+          "events": 15
+        }
+      ]
+    },
+    "n": 17
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "imei": "861234055591027"
+    },
+    "n": 18
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "imei": "861234055591027",
+      "sim_sequence": [
+        {
+          "target_number": "7303518246",
+          "from": "2026-08-21 11:04:30",
+          "to": "2026-10-03 18:20:52",
+          "events": 60
+        }
+      ]
+    },
+    "n": 18
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9371662405",
+      "other_number": "8969204117"
+    },
+    "n": 19
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 8,
+      "rows": [
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-03 15:51:44",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-03 15:57:59",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-03 17:13:34",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-03 17:20:23",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-03 17:25:45",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-05 11:29:33",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-05 11:33:31",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        },
+        {
+          "target_number": "9371662405",
+          "other_number": "8969204117",
+          "call_type": "SMS_OUT",
+          "start_time": "2026-10-05 11:39:20",
+          "duration_sec": "0",
+          "imei": "353918107744120",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 19
+  },
+  {
+    "type": "thinking",
+    "text": "I'm tracing the SIM usage on Sameer's handset, which points to \"Vikram Rathore\" likely being Sameer himself, and noting that Rohit's claim of receiving no OTP contradicts his having forwarded eight OTPs right before each IMPS debit. I still need to identify who used the other SIM, check tower data and contacts, and verify Imran's claim about not speaking with Sameer.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "update_case_diary",
+    "input": {
+      "entries": [
+        {
+          "type": "FACT",
+          "text": "Rohit's phone 9371662405 sent 8 SMS to 8969204117 from Hadapsar, each 20-40 sec before each IMPS debit from his a/c (OTP forwarding).",
+          "sources": [
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "CDR 9371662405 2026-10-03 17:25:45",
+            "CDR 9371662405 2026-10-05 11:39:20",
+            "TXN T00007",
+            "TXN T00019"
+          ]
+        },
+        {
+          "type": "CONTRADICTION",
+          "person": "Rohit Pawar",
+          "text": "First statement: no OTP received, account hacked, went to bank alone, received no money. Records: 8 SMS to 8969204117 right before debits; Rs 15,000 'acct rent' from Imran; bank manager saw companion.",
+          "sources": [
+            "DOC-12 ¶2-4",
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "TXN T00021",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Scam SIM 8969204117 ('Vikram Rathore') ran in IMEI 356938112847152 from 30-Sep to 06-Oct; same handset carried Sameer Ansari's 9765330812 before (01-29 Sep) and after (07-08 Oct).",
+          "sources": [
+            "IMEI 356938112847152"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Sameer Ansari",
+          "text": "Handset of his own SIM ran scam number 8969204117 used as 'CBI Vikram Rathore' and OTP recipient.",
+          "sources": [
+            "IMEI 356938112847152",
+            "DOC-03 ¶5",
+            "DOC-22 ¶4"
+          ]
+        },
+        {
+          "type": "CONTRADICTION",
+          "person": "Imran Shaikh",
+          "text": "Claims at Malegaon shop whole day 05-Oct and card never used by others. His phone was at Dwarka Circle, Nashik 14:21-15:08, exactly when 6 ATM withdrawals (Rs 2,97,000) were made at ATM NB-NSK-0417 Dwarka Circle 14:31-14:43.",
+          "sources": [
+            "DOC-14 ¶4",
+            "CDR 9890447120 2026-10-05 14:21:33",
+            "TXN T00022",
+            "TXN T00027"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Onward from Imran a/c: ATM Nashik Rs 2,97,000 (05-Oct), IMPS Rs 9,40,000 to Gulshan Traders a/c 6620045519 (05-Oct 15:20), self-cheque cash Rs 9,00,000 Nashik Road branch (06-Oct).",
+          "sources": [
+            "TXN T00022",
+            "TXN T00023",
+            "TXN T00024",
+            "TXN T00025",
+            "TXN T00026",
+            "TXN T00027",
+            "TXN T00028",
+            "TXN T00029"
+          ]
+        }
+      ]
+    },
+    "n": 20
+  },
+  {
+    "type": "diary",
+    "entries": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Victim sent 3 RTGS totalling Rs 38,50,000 to Rohit Pawar's KSFB a/c 50210043318876 (9.5L 03-Oct 15:40; 12L 03-Oct 17:05; 17L 05-Oct 11:20).",
+        "sources": [
+          "TXN T00001",
+          "TXN T00003",
+          "TXN T00005",
+          "DOC-03 ¶6"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "Within 6-20 min of each credit, Rohit's a/c was emptied by net-banking IMPS: Rs 21,40,000 to Imran Shaikh/Shaikh Mobile Point a/c 31082290447 (5 txns), Rs 8,60,000 to Bapi Mondal (Bengal Rural Bank 7700118245), Rs 8,40,000 to Hemant Saini (Marudhar Co-op 0451200381).",
+        "sources": [
+          "TXN T00007",
+          "TXN T00010",
+          "TXN T00013",
+          "TXN T00015",
+          "TXN T00017",
+          "TXN T00009",
+          "TXN T00012",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "Imran's a/c paid Rs 15,000 UPI to Rohit on 27-Sep with remark 'acct rent'.",
+        "sources": [
+          "TXN T00021"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Account holder of mule a/c; first statement denies, supplementary admits renting account and forwarding OTPs to 8969204117.",
+        "sources": [
+          "DOC-12 ¶3",
+          "DOC-22 ¶2-4"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Received Rs 21.4L from mule a/c; paid 'acct rent' to Rohit.",
+        "sources": [
+          "TXN T00021",
+          "TXN T00007"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Suspected by victim's wife (stayed Sept, set up banking app, past loan).",
+        "sources": [
+          "DOC-05 ¶3",
+          "DOC-23 ¶1"
+        ],
+        "person": "Anil Kulkarni"
+      },
+      {
+        "n": 7,
+        "type": "FACT",
+        "text": "Rohit's phone 9371662405 sent 8 SMS to 8969204117 from Hadapsar, each 20-40 sec before each IMPS debit from his a/c (OTP forwarding).",
+        "sources": [
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "CDR 9371662405 2026-10-03 17:25:45",
+          "CDR 9371662405 2026-10-05 11:39:20",
+          "TXN T00007",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 8,
+        "type": "CONTRADICTION",
+        "text": "First statement: no OTP received, account hacked, went to bank alone, received no money. Records: 8 SMS to 8969204117 right before debits; Rs 15,000 'acct rent' from Imran; bank manager saw companion.",
+        "sources": [
+          "DOC-12 ¶2-4",
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "TXN T00021",
+          "DOC-13 ¶2"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 9,
+        "type": "FACT",
+        "text": "Scam SIM 8969204117 ('Vikram Rathore') ran in IMEI 356938112847152 from 30-Sep to 06-Oct; same handset carried Sameer Ansari's 9765330812 before (01-29 Sep) and after (07-08 Oct).",
+        "sources": [
+          "IMEI 356938112847152"
+        ],
+        "person": ""
+      },
+      {
+        "n": 10,
+        "type": "SUSPECT",
+        "text": "Handset of his own SIM ran scam number 8969204117 used as 'CBI Vikram Rathore' and OTP recipient.",
+        "sources": [
+          "IMEI 356938112847152",
+          "DOC-03 ¶5",
+          "DOC-22 ¶4"
+        ],
+        "person": "Sameer Ansari"
+      },
+      {
+        "n": 11,
+        "type": "CONTRADICTION",
+        "text": "Claims at Malegaon shop whole day 05-Oct and card never used by others. His phone was at Dwarka Circle, Nashik 14:21-15:08, exactly when 6 ATM withdrawals (Rs 2,97,000) were made at ATM NB-NSK-0417 Dwarka Circle 14:31-14:43.",
+        "sources": [
+          "DOC-14 ¶4",
+          "CDR 9890447120 2026-10-05 14:21:33",
+          "TXN T00022",
+          "TXN T00027"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 12,
+        "type": "FACT",
+        "text": "Onward from Imran a/c: ATM Nashik Rs 2,97,000 (05-Oct), IMPS Rs 9,40,000 to Gulshan Traders a/c 6620045519 (05-Oct 15:20), self-cheque cash Rs 9,00,000 Nashik Road branch (06-Oct).",
+        "sources": [
+          "TXN T00022",
+          "TXN T00023",
+          "TXN T00024",
+          "TXN T00025",
+          "TXN T00026",
+          "TXN T00027",
+          "TXN T00028",
+          "TXN T00029"
+        ],
+        "person": ""
+      }
+    ]
+  },
+  {
+    "type": "tool_result",
+    "name": "update_case_diary",
+    "output": {
+      "added": 6,
+      "rejected": [],
+      "diary_size": 12
+    },
+    "n": 20
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9890447120",
+      "other_number": "9765330812"
+    },
+    "n": 21
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 7,
+      "rows": [
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-08 19:22:10",
+          "duration_sec": "118",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-14 13:05:44",
+          "duration_sec": "299",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-21 21:40:03",
+          "duration_sec": "179",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-25 09:12:30",
+          "duration_sec": "245",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-27 18:30:00",
+          "duration_sec": "99",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-05 14:52:18",
+          "duration_sec": "63",
+          "imei": "352114096628301",
+          "cell_id": "NSK-DWK-02",
+          "cell_location": "Dwarka Circle, Nashik"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "9765330812",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-06 12:40:15",
+          "duration_sec": "88",
+          "imei": "352114096628301",
+          "cell_id": "NSK-NRD-04",
+          "cell_location": "Nashik Road, Nashik"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 21
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9890447120",
+      "other_number": "8969204117"
+    },
+    "n": 22
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 2,
+      "rows": [
+        {
+          "target_number": "9890447120",
+          "other_number": "8969204117",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-03 15:35:10",
+          "duration_sec": "94",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        },
+        {
+          "target_number": "9890447120",
+          "other_number": "8969204117",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-05 11:15:42",
+          "duration_sec": "51",
+          "imei": "352114096628301",
+          "cell_id": "MLG-KDW-01",
+          "cell_location": "Kidwai Road, Malegaon"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 22
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "7303518246",
+      "start": "2026-10-03 09:00",
+      "end": "2026-10-03 19:00"
+    },
+    "n": 23
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 3,
+      "rows": [
+        {
+          "target_number": "7303518246",
+          "other_number": "9822041763",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-03 10:12:04",
+          "duration_sec": "1460",
+          "imei": "861234055591027",
+          "cell_id": "NSK-BHD-03",
+          "cell_location": "Bhadrakali, Nashik"
+        },
+        {
+          "target_number": "7303518246",
+          "other_number": "",
+          "call_type": "DATA",
+          "start_time": "2026-10-03 16:35:43",
+          "duration_sec": "897",
+          "imei": "861234055591027",
+          "cell_id": "NSK-BHD-03",
+          "cell_location": "Bhadrakali, Nashik"
+        },
+        {
+          "target_number": "7303518246",
+          "other_number": "",
+          "call_type": "DATA",
+          "start_time": "2026-10-03 18:20:52",
+          "duration_sec": "869",
+          "imei": "861234055591027",
+          "cell_id": "NSK-BHD-03",
+          "cell_location": "Bhadrakali, Nashik"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 23
+  },
+  {
+    "type": "thinking",
+    "text": "Imran's calls to 8969204117 happen right before each victim's RTGS transaction, and he's clearly in repeated contact with Sameer around the ATM and cash withdrawal dates on 05-06 October, directly contradicting the claim they hadn't spoken in weeks. The number 7303518246 traces back to Bhadrakali, Nashik, which is Sameer's area, so I want to check if 8969204117 shares that tower too, then move on to pulling Anil's CDR, location data, and archive records.\n\nI also need to look for seizure memos, FSL reports, and Section 65B certificates, plus check whether Rohit's CDR shows any contact with Imran.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9845012377",
+      "start": "2026-10-03 00:00",
+      "end": "2026-10-06 23:59"
+    },
+    "n": 24
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9845012377",
+      "window": [
+        "2026-10-03 00:00",
+        "2026-10-06 23:59"
+      ],
+      "movements": [
+        {
+          "cell_location": "Brookefield, Bengaluru",
+          "from": "2026-10-03 08:29:21",
+          "to": "2026-10-04 22:06:03",
+          "events": 17,
+          "cell_id": "BLR-BRK-12"
+        },
+        {
+          "cell_location": "Whitefield, Bengaluru",
+          "from": "2026-10-05 09:16:45",
+          "to": "2026-10-06 18:30:25",
+          "events": 13,
+          "cell_id": "BLR-WTF-03"
+        },
+        {
+          "cell_location": "Brookefield, Bengaluru",
+          "from": "2026-10-06 19:16:03",
+          "to": "2026-10-06 20:49:25",
+          "events": 4,
+          "cell_id": "BLR-BRK-12"
+        }
+      ]
+    },
+    "n": 24
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9845012377",
+      "start": "2026-09-20",
+      "end": "2026-10-08",
+      "other_number": "8969204117"
+    },
+    "n": 25
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 0,
+      "rows": [],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 25
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "8969204117",
+      "start": "2026-10-03 00:00",
+      "end": "2026-10-06 23:59"
+    },
+    "n": 26
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "8969204117",
+      "window": [
+        "2026-10-03 00:00",
+        "2026-10-06 23:59"
+      ],
+      "movements": [
+        {
+          "cell_location": "Bhadrakali, Nashik",
+          "from": "2026-10-03 00:16:00",
+          "to": "2026-10-06 21:14:00",
+          "events": 58,
+          "cell_id": "NSK-BHD-03"
+        }
+      ]
+    },
+    "n": 26
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "7303518246 8969204117 digital arrest",
+      "include_archive": true,
+      "k": 8
+    },
+    "n": 27
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-01 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "NCRP complaint acknowledgement (1930 helpline)",
+          "doc_type": "complaint",
+          "date": "2026-10-06",
+          "text": "The person in police uniform on the video call, using number 8969204117, said I was under \"digital arrest\" and must not tell anyone, including my family. The 'digital arrest' continued through Sunday 04-Oct. He said my bank funds must be verified by the RBI and would be returned within 48 hours after verification.",
+          "score": 0.0328,
+          "dense_rank": 1,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "CYB-098-2026-FIR ¶2",
+          "case_id": "CYB-098-2026",
+          "title": "Digital arrest fraud on Mrs. Leela Joshi, Aundh",
+          "doc_type": "fir",
+          "date": "2026-08-24",
+          "text": "On 21-Aug-2026 at about 11:04 hrs she received a call from 7303518246 from a person claiming to be from a courier company, saying a parcel in her name contained narcotics. The call was transferred to a 'Delhi Police officer' on a video call.",
+          "score": 0.0323,
+          "dense_rank": 2,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-03 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Prof. Suresh Kulkarni under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-07",
+          "text": "Vikram Rathore told me I was under digital arrest, that I must keep the camera on at all times and must not tell anyone, including my wife, or I would be arrested immediately. He spoke Hindi with a slight Marathi accent. He called me many times from 8969204117 on ConnectX calls.",
+          "score": 0.0313,
+          "dense_rank": 5,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-02 ¶7",
+          "case_id": "CYB-114-2026",
+          "title": "First Information Report No. 114/2026, Cyber Police Station, Pune City",
+          "doc_type": "fir",
+          "date": "2026-10-07",
+          "text": "Brief facts: The complainant was induced by persons impersonating a courier company, Mumbai Police and the Central Bureau of Investigation to believe he was under \"digital arrest\" and to transfer his savings for \"RBI verification\". NCRP acknowledgement No. 31510260004417 dated 06-Oct-2026 is annexed.",
+          "score": 0.0303,
+          "dense_rank": 4,
+          "bm25_rank": 8
+        },
+        {
+          "cite": "CYB-098-2026-FIR ¶1",
+          "case_id": "CYB-098-2026",
+          "title": "Digital arrest fraud on Mrs. Leela Joshi, Aundh",
+          "doc_type": "fir",
+          "date": "2026-08-24",
+          "text": "FIR 98/2026 under BNS 318(4), 319(2) and IT Act 66D. Complainant Mrs. Leela Joshi, age 71, Aundh, Pune, mobile 9881234560.",
+          "score": 0.0303,
+          "dense_rank": 8,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-02 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "First Information Report No. 114/2026, Cyber Police Station, Pune City",
+          "doc_type": "fir",
+          "date": "2026-10-07",
+          "text": "Details of known / suspected / unknown accused: Unknown persons using mobile numbers 7303518246 and 8969204117, a ConnectX video-call account in the name \"cbi.vikram.rathore\", and the beneficiary bank account No. 50210043318876 at Konkan Small Finance Bank, Hadapsar branch, held in the name of Rohit Pawar.",
+          "score": 0.0296,
+          "dense_rank": 6,
+          "bm25_rank": 9
+        },
+        {
+          "cite": "CYB-098-2026-FIR ¶3",
+          "case_id": "CYB-098-2026",
+          "title": "Digital arrest fraud on Mrs. Leela Joshi, Aundh",
+          "doc_type": "fir",
+          "date": "2026-08-24",
+          "text": "She was told to stay on camera and transferred Rs 6,20,000 by IMPS to an account at Marudhar Co-operative Bank, Jaipur. The account holder could not be traced. Investigation pending; the courier number was switched off when checked in August.",
+          "score": 0.029,
+          "dense_rank": 11,
+          "bm25_rank": 7
+        },
+        {
+          "cite": "DOC-19 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Arrest memos - Sameer Ansari and Imran Shaikh",
+          "doc_type": "arrest_memo",
+          "date": "2026-10-15",
+          "text": "Arrest memo 2: Imran Rafiq Shaikh, age 27, Malegaon, arrested on 15-Oct-2026 at 13:05 hrs at Malegaon by PSI Akash Shinde in FIR 114/2026. Grounds of arrest explained. Information of arrest given to his wife at 13:20 hrs. Medical examination done at General Hospital, Malegaon.",
+          "score": 0.0278,
+          "dense_rank": 13,
+          "bm25_rank": 11
+        }
+      ]
+    },
+    "n": 27
+  },
+  {
+    "type": "thinking",
+    "text": "With CYB-098-2026 linked and Anil cleared, I'm checking readiness of the remaining pieces—seizure memos, FSL report, s.63 certificates, the ConnectX reply, ATM CCTV footage, and Sameer's statement—before moving into the search.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Anil was in Bengaluru throughout. Linked case CYB-098-2026 found. Now checking seizures, forensics, certificates and Sameer's statement."
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "seizure memo panch witnesses phone seized Sameer",
+      "k": 8
+    },
+    "n": 28
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-18 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Search and seizure panchnama at the house of Sameer Ansari, Nashik",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-15",
+          "text": "The articles were sealed and labelled Article 1 to 6 with the seal \"CYBER PS PUNE\" and signed by both panch witnesses and the occupant. Hash values of the phones were not computed at the spot; the phones were sealed in Faraday bags and sent to the forensic laboratory.",
+          "score": 0.0325,
+          "dense_rank": 1,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-18 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Search and seizure panchnama at the house of Sameer Ansari, Nashik",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-15",
+          "text": "Articles seized: (1) black smartphone, IMEI 356938112847152, with SIM 9765330812 inserted; (2) a basic keypad phone, IMEI 861234055591027, without SIM; (3) three loose SIM cards including one Trinet SIM whose ICCID matches the SIM issued for 8969204117; (4) a printed fake identity card in the name \"Vikram Rathore, Deputy Superintendent, CBI\"; (5) a khaki uniform shirt with shoulder badges; (6) Rs 4,80,000 in cash in a cupboard.",
+          "score": 0.0318,
+          "dense_rank": 2,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-17 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Seizure panchnama at the house of Imran Shaikh, Malegaon",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-12",
+          "text": "Panch witness: Police Constable Dattatray More, Buckle No. 4471, Cyber Police Station, Pune City. Two local residents approached to act as panchas declined to join. No other panch witness is recorded.",
+          "score": 0.0315,
+          "dense_rank": 4,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-18 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Search and seizure panchnama at the house of Sameer Ansari, Nashik",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-15",
+          "text": "Independent panch witnesses: (1) Kailas Bhosale, age 52, shopkeeper, Bhadrakali, Nashik; (2) Salim Pathan, age 46, auto-rickshaw driver, Bhadrakali, Nashik. Both are residents of the locality and are not connected to police.",
+          "score": 0.0307,
+          "dense_rank": 10,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-20 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Article 2 (keypad phone, IMEI 861234055591027): call log shows outgoing calls to 9822041763 on 03-Oct-2026 from 10:12 hrs. The SIM slot was empty at the time of examination.",
+          "score": 0.0306,
+          "dense_rank": 3,
+          "bm25_rank": 8
+        },
+        {
+          "cite": "DOC-17 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Seizure panchnama at the house of Imran Shaikh, Malegaon",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-12",
+          "text": "Articles seized: (1) Narmada Bank debit card ending 4471 in the name of Imran Shaikh; (2) four debit cards of other banks in the names of other persons, not belonging to the occupants; (3) one diary with handwritten account numbers, including 50210043318876 written against the name \"Rohit P - 15k\"; (4) one Android phone, IMEI 352114096628301, with SIM 9890447120.",
+          "score": 0.0303,
+          "dense_rank": 6,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-18 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Search and seizure panchnama at the house of Sameer Ansari, Nashik",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-15",
+          "text": "Search and seizure panchnama drawn on 15-Oct-2026 between 07:40 and 09:55 hrs at Flat 302, Noor Residency, Bhadrakali, Nashik, the residence of Sameer Yusuf Ansari, by PI Meera Deshpande, with videography of the search.",
+          "score": 0.0296,
+          "dense_rank": 8,
+          "bm25_rank": 7
+        },
+        {
+          "cite": "DOC-19 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Arrest memos - Sameer Ansari and Imran Shaikh",
+          "doc_type": "arrest_memo",
+          "date": "2026-10-15",
+          "text": "Both accused were produced before the Judicial Magistrate First Class, Pune, on 16-Oct-2026 and remanded to police custody till 20-Oct-2026.",
+          "score": 0.0288,
+          "dense_rank": 7,
+          "bm25_rank": 12
+        }
+      ]
+    },
+    "n": 28
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "Section 63 certificate awaited electronic record",
+      "k": 10
+    },
+    "n": 29
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-09 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "IMEI linkage report - handsets used with scam numbers",
+          "doc_type": "telecom_reply",
+          "date": "2026-10-11",
+          "text": "The data is provided in electronic form with a certificate under Section 63 BSA signed by the Nodal Officer.",
+          "score": 0.0325,
+          "dense_rank": 2,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-21 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Observation note on ATM CCTV footage, Dwarka Circle, Nashik",
+          "doc_type": "io_note",
+          "date": "2026-10-16",
+          "text": "Note: the footage is relied upon for identification of the accused. The Section 63 BSA certificate for this footage has not yet been received from the bank.",
+          "score": 0.0304,
+          "dense_rank": 3,
+          "bm25_rank": 9
+        },
+        {
+          "cite": "DOC-23 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+          "doc_type": "case_diary",
+          "date": "2026-10-10",
+          "text": "10-Oct-2026: Narmada Bank reply received. Second-layer recipient is Imran Shaikh, Malegaon. ATM withdrawals at Dwarka Circle, Nashik, on 05-Oct. CCTV pen drive collected; Section 63 certificate awaited. Layer-account freeze report received; Rs 10.3 lakh frozen so far.",
+          "score": 0.03,
+          "dense_rank": 12,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-20 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "A final report with the full extraction will follow. A certificate under Section 63 BSA for the extracted data will be issued with the final report.",
+          "score": 0.0299,
+          "dense_rank": 6,
+          "bm25_rank": 8
+        },
+        {
+          "cite": "DOC-13 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Konkan SFB branch manager under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-12",
+          "text": "The branch CCTV recording for 25-Sep-2026 has been preserved and a copy can be provided with the required certificate. I can identify the man who came with Rohit if shown to me.",
+          "score": 0.0297,
+          "dense_rank": 1,
+          "bm25_rank": 15
+        },
+        {
+          "cite": "DOC-08 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Telecom nodal officer replies - subscriber details of scam numbers",
+          "doc_type": "telecom_reply",
+          "date": "2026-10-09",
+          "text": "Call detail records with cell-site (tower) locations and handset IMEI for both numbers, for 01-Sep-2026 to 08-Oct-2026, are provided in electronic form. A certificate under Section 63 BSA signed by each nodal officer is enclosed for the CDRs.",
+          "score": 0.0296,
+          "dense_rank": 9,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-16 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Employer letter - attendance of Anil Kulkarni",
+          "doc_type": "third_party_letter",
+          "date": "2026-10-14",
+          "text": "The swipe records are system-generated and are enclosed in electronic form.",
+          "score": 0.029,
+          "dense_rank": 7,
+          "bm25_rank": 11
+        },
+        {
+          "cite": "DOC-23 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+          "doc_type": "case_diary",
+          "date": "2026-10-10",
+          "text": "09-Oct-2026: Telecom replies received for 8969204117 and 7303518246. Both SIMs issued on false identities through point-of-sale agents in Malegaon and Nashik. CDRs with IMEI received with Section 63 certificates. CDR analysis of the scam numbers, the account holder's number and the nephew's number is pending.",
+          "score": 0.0279,
+          "dense_rank": 8,
+          "bm25_rank": 16
+        },
+        {
+          "cite": "DOC-07 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Narmada Bank reply - account of Imran Shaikh and ATM withdrawals",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "CCTV footage of ATM NB-NSK-0417 for 05-Oct-2026, 14:15 to 15:00 hrs, has been copied onto a pen drive and handed over to the police officer on 10-Oct-2026. The certificate under Section 63 of the Bharatiya Sakshya Adhiniyam for this footage is under preparation by the ATM vendor and will be forwarded separately.",
+          "score": 0.0276,
+          "dense_rank": 15,
+          "bm25_rank": 10
+        },
+        {
+          "cite": "DOC-22 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-14",
+          "text": "I am ready to give this statement before a Magistrate.",
+          "score": 0.0267,
+          "dense_rank": 13,
+          "bm25_rank": 17
+        }
+      ]
+    },
+    "n": 29
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "FSL forensic report hash value extraction pending",
+      "k": 8
+    },
+    "n": 30
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-20 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "A final report with the full extraction will follow. A certificate under Section 63 BSA for the extracted data will be issued with the final report.",
+          "score": 0.0328,
+          "dense_rank": 1,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-20 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Preliminary report of the Regional Forensic Science Laboratory (Cyber Division), Pune, on exhibits Article 1 and Article 2 received sealed from Cyber Police Station, Pune City, on 15-Oct-2026. Seals were found intact. Forensic images were created and hash values recorded in the laboratory.",
+          "score": 0.0323,
+          "dense_rank": 2,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-20 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Article 1 also contains SMS messages received from 9371662405 on 03-Oct and 05-Oct-2026, each containing a six-digit number. A chat in the messaging app with the contact \"Imran Mlg\" (9890447120) on 05-Oct-2026 at 14:49 hrs reads \"card se 2.97 nikala, baaki kal branch se\" (\"withdrew 2.97 by card, rest tomorrow from branch\").",
+          "score": 0.0315,
+          "dense_rank": 3,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-20 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Article 2 (keypad phone, IMEI 861234055591027): call log shows outgoing calls to 9822041763 on 03-Oct-2026 from 10:12 hrs. The SIM slot was empty at the time of examination.",
+          "score": 0.0315,
+          "dense_rank": 4,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-18 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Search and seizure panchnama at the house of Sameer Ansari, Nashik",
+          "doc_type": "seizure_memo",
+          "date": "2026-10-15",
+          "text": "The articles were sealed and labelled Article 1 to 6 with the seal \"CYBER PS PUNE\" and signed by both panch witnesses and the occupant. Hash values of the phones were not computed at the spot; the phones were sealed in Faraday bags and sent to the forensic laboratory.",
+          "score": 0.0305,
+          "dense_rank": 5,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-20 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Article 1 (smartphone, IMEI 356938112847152): the ConnectX app is installed and logged in to the account \"cbi.vikram.rathore\". Call history in the app shows video calls to the contact saved as \"Prof K Kothrud\" on 03, 04 and 05 Oct 2026. The gallery contains an image of a fake CBI identity card and an image of a fake arrest warrant bearing a Supreme Court emblem.",
+          "score": 0.0303,
+          "dense_rank": 7,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "DOC-23 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+          "doc_type": "case_diary",
+          "date": "2026-10-10",
+          "text": "Pending tasks: (1) analyse CDRs for location and contact links; (2) obtain IMEI linkage for the handsets used with the scam numbers; (3) examine Rohit Pawar, Imran Shaikh and Anil Kulkarni; (4) identify the person operating 8969204117.",
+          "score": 0.0299,
+          "dense_rank": 6,
+          "bm25_rank": 8
+        },
+        {
+          "cite": "DOC-09 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "IMEI linkage report - handsets used with scam numbers",
+          "doc_type": "telecom_reply",
+          "date": "2026-10-11",
+          "text": "The data is provided in electronic form with a certificate under Section 63 BSA signed by the Nodal Officer.",
+          "score": 0.0284,
+          "dense_rank": 9,
+          "bm25_rank": 12
+        }
+      ]
+    },
+    "n": 30
+  },
+  {
+    "type": "thinking",
+    "text": "I still need the CCTV observation document, the employer letter, bank certificates under s.63, and Sameer's statement. Let me pull up the CCTV record and then look for Sameer's statement along with the bank certificate.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-21"
+    },
+    "n": 31
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-21",
+      "title": "Observation note on ATM CCTV footage, Dwarka Circle, Nashik",
+      "doc_type": "io_note",
+      "date": "2026-10-16",
+      "paragraphs": [
+        {
+          "cite": "DOC-21 ¶1",
+          "text": "Observation note prepared by PI Meera Deshpande on 16-Oct-2026 after viewing the CCTV footage of Narmada Bank ATM NB-NSK-0417, Dwarka Circle, Nashik, for 05-Oct-2026, received on a pen drive from Narmada Bank on 10-Oct-2026."
+        },
+        {
+          "cite": "DOC-21 ¶2",
+          "text": "At 14:30:52 hrs (camera timestamp) a man aged about 27 to 30, with a short beard, wearing a white shirt and a black cap, enters the ATM cabin. Between 14:31 and 14:44 hrs he makes six withdrawals and counts the cash. He leaves at 14:45:10 hrs on a black two-wheeler."
+        },
+        {
+          "cite": "DOC-21 ¶3",
+          "text": "The face of the man is clearly visible at 14:38 hrs when he removes his cap. The face resembles the photograph of Imran Rafiq Shaikh on his Narmada Bank KYC record. The camera clock was checked against the bank's transaction log and found to be about 40 seconds ahead."
+        },
+        {
+          "cite": "DOC-21 ¶4",
+          "text": "Note: the footage is relied upon for identification of the accused. The Section 63 BSA certificate for this footage has not yet been received from the bank."
+        }
+      ]
+    },
+    "n": 31
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-16"
+    },
+    "n": 32
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-16",
+      "title": "Employer letter - attendance of Anil Kulkarni",
+      "doc_type": "third_party_letter",
+      "date": "2026-10-14",
+      "paragraphs": [
+        {
+          "cite": "DOC-16 ¶1",
+          "text": "Letter from the HR department of Lumen Arc Technologies Pvt. Ltd., Whitefield, Bengaluru, in response to a police request."
+        },
+        {
+          "cite": "DOC-16 ¶2",
+          "text": "Mr. Anil Prakash Kulkarni, Employee ID LA-20417, is employed as Senior Software Engineer at our Whitefield campus. He was on approved leave from 19-Sep-2026 to 28-Sep-2026."
+        },
+        {
+          "cite": "DOC-16 ¶3",
+          "text": "Access card swipe records show his entry and exit at the Whitefield campus as follows: 29-Sep 09:18 to 19:02; 30-Sep 09:25 to 18:47; 01-Oct 09:10 to 19:30; 05-Oct 09:12 to 19:40; 06-Oct 09:05 to 18:55. 02-Oct was a public holiday (Gandhi Jayanti) and 03-Oct and 04-Oct were weekly offs, so no swipe records exist for those days."
+        },
+        {
+          "cite": "DOC-16 ¶4",
+          "text": "The swipe records are system-generated and are enclosed in electronic form."
+        }
+      ]
+    },
+    "n": 32
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "bank statement certificate Section 63 enclosed account statement Konkan Narmada Sahyadri",
+      "doc_type": "bank_reply",
+      "k": 8
+    },
+    "n": 33
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-04 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Sahyadri National Bank reply - victim account debits",
+          "doc_type": "bank_reply",
+          "date": "2026-10-08",
+          "text": "The full account statement for 01-Sep-2026 to 07-Oct-2026 is enclosed in electronic form along with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023, signed by the Branch Manager.",
+          "score": 0.0328,
+          "dense_rank": 1,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-07 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Narmada Bank reply - account of Imran Shaikh and ATM withdrawals",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "The account statement is enclosed in electronic form with a Section 63 BSA certificate signed by the Branch Manager. The account was placed under debit freeze on 06-Oct-2026 at 16:30 hrs; balance at freeze Rs 3,120.",
+          "score": 0.032,
+          "dense_rank": 3,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-07 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Narmada Bank reply - account of Imran Shaikh and ATM withdrawals",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "Between 03-Oct and 05-Oct-2026 the account received five IMPS credits from Konkan SFB account 50210043318876 (Rohit Pawar) totalling Rs 21,40,000. The account also shows an outward UPI debit of Rs 15,000 on 27-Sep-2026 to the same Konkan SFB account with the remark \"acct rent\".",
+          "score": 0.0313,
+          "dense_rank": 2,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-07 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Narmada Bank reply - account of Imran Shaikh and ATM withdrawals",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "CCTV footage of ATM NB-NSK-0417 for 05-Oct-2026, 14:15 to 15:00 hrs, has been copied onto a pen drive and handed over to the police officer on 10-Oct-2026. The certificate under Section 63 of the Bharatiya Sakshya Adhiniyam for this footage is under preparation by the ATM vendor and will be forwarded separately.",
+          "score": 0.031,
+          "dense_rank": 5,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-04 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Sahyadri National Bank reply - victim account debits",
+          "doc_type": "bank_reply",
+          "date": "2026-10-08",
+          "text": "Sahyadri National Bank, Kothrud branch, Pune. Reply to notice under Section 94 BNSS dated 07-Oct-2026 from Cyber Police Station, Pune City. Account No. 10020034571, account holder Suresh Kulkarni.",
+          "score": 0.0301,
+          "dense_rank": 8,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "DOC-06 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Konkan Small Finance Bank reply - beneficiary account of Rohit Pawar",
+          "doc_type": "bank_reply",
+          "date": "2026-10-08",
+          "text": "Net-banking login IP addresses for the outward transfers resolve to a mobile data network in the Nashik region. The account was placed under debit freeze on 06-Oct-2026 at 10:07 hrs on the NCRP request; balance at freeze Rs 32,780. The detailed statement is provided in electronic form with a certificate under Section 63 BSA.",
+          "score": 0.0298,
+          "dense_rank": 12,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-04 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Sahyadri National Bank reply - victim account debits",
+          "doc_type": "bank_reply",
+          "date": "2026-10-08",
+          "text": "The following RTGS debits were made at the branch counter on customer request, with the customer physically present and signing the RTGS application form: (1) 03-Oct-2026 15:40, UTR SNBR526100338841, Rs 9,50,000; (2) 03-Oct-2026 17:05, UTR SNBR526100341192, Rs 12,00,000; (3) 05-Oct-2026 11:20, UTR SNBR528100015530, Rs 17,00,000. Beneficiary for all three: Rohit Pawar, Konkan Small Finance Bank, A/c 50210043318876, IFSC KSFB0000412.",
+          "score": 0.0296,
+          "dense_rank": 6,
+          "bm25_rank": 9
+        },
+        {
+          "cite": "DOC-11 ¶4",
+          "case_id": "CYB-114-2026",
+          "title": "Layer accounts - trail and freeze status report",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "Third-level account from Narmada Bank (Imran Shaikh): Gulshan Traders, Ulhasnagar, A/c 6620045519. Received Rs 9,40,000 on 05-Oct-2026. Amount of Rs 6,10,000 placed under lien on 07-Oct-2026.",
+          "score": 0.0295,
+          "dense_rank": 4,
+          "bm25_rank": 12
+        }
+      ]
+    },
+    "n": 33
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "Sameer Ansari statement interrogation disclosure",
+      "k": 6
+    },
+    "n": 34
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-19 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Arrest memos - Sameer Ansari and Imran Shaikh",
+          "doc_type": "arrest_memo",
+          "date": "2026-10-15",
+          "text": "Arrest memo 1: Sameer Yusuf Ansari, age 34, Bhadrakali, Nashik, arrested on 15-Oct-2026 at 10:20 hrs at his residence by PI Meera Deshpande in FIR 114/2026. Grounds of arrest were explained in Marathi and Hindi. Information of arrest given to his brother Arif Ansari at 10:35 hrs. Medical examination done at Civil Hospital, Nashik.",
+          "score": 0.032,
+          "dense_rank": 2,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-19 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Arrest memos - Sameer Ansari and Imran Shaikh",
+          "doc_type": "arrest_memo",
+          "date": "2026-10-15",
+          "text": "Both accused were produced before the Judicial Magistrate First Class, Pune, on 16-Oct-2026 and remanded to police custody till 20-Oct-2026.",
+          "score": 0.0312,
+          "dense_rank": 4,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-20 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "A final report with the full extraction will follow. A certificate under Section 63 BSA for the extracted data will be issued with the final report.",
+          "score": 0.031,
+          "dense_rank": 3,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-14 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Imran Shaikh under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-12",
+          "text": "I know Sameer Ansari of Nashik only as a customer who buys used phones from me. I have not spoken to him for many weeks. My mobile number is 9890447120.",
+          "score": 0.0303,
+          "dense_rank": 12,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-20 ¶2",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Article 1 (smartphone, IMEI 356938112847152): the ConnectX app is installed and logged in to the account \"cbi.vikram.rathore\". Call history in the app shows video calls to the contact saved as \"Prof K Kothrud\" on 03, 04 and 05 Oct 2026. The gallery contains an image of a fake CBI identity card and an image of a fake arrest warrant bearing a Supreme Court emblem.",
+          "score": 0.0297,
+          "dense_rank": 1,
+          "bm25_rank": 15
+        },
+        {
+          "cite": "DOC-20 ¶1",
+          "case_id": "CYB-114-2026",
+          "title": "Cyber forensic report - phones seized from Sameer Ansari",
+          "doc_type": "fsl_report",
+          "date": "2026-10-17",
+          "text": "Preliminary report of the Regional Forensic Science Laboratory (Cyber Division), Pune, on exhibits Article 1 and Article 2 received sealed from Cyber Police Station, Pune City, on 15-Oct-2026. Seals were found intact. Forensic images were created and hash values recorded in the laboratory.",
+          "score": 0.0292,
+          "dense_rank": 7,
+          "bm25_rank": 10
+        }
+      ]
+    },
+    "n": 34
+  },
+  {
+    "type": "thinking",
+    "text": "I need to check DOC-11 for the freeze totals showing 10.3 lakh frozen, along with DOC-10 and the full DOC-17. There's also Rohit's admission tied to the s.183 statement, plus the mysterious call to Imran's phone from \"Inspector Patil\" and the keypad phone found at Sameer's that needs tracing.\n\nThe courier call also came from that same keypad phone, placed from Bhadrakali, confirming Sameer was operating both lines.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-11"
+    },
+    "n": 35
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-11",
+      "title": "Layer accounts - trail and freeze status report",
+      "doc_type": "bank_reply",
+      "date": "2026-10-10",
+      "paragraphs": [
+        {
+          "cite": "DOC-11 ¶1",
+          "text": "Consolidated reply from banks on the second layer of the money trail from Konkan SFB account 50210043318876 (Rohit Pawar), compiled from replies to notices under Section 94 BNSS."
+        },
+        {
+          "cite": "DOC-11 ¶2",
+          "text": "Layer account 1: Bapi Mondal, Bengal Rural Bank, Baranagar, Kolkata, A/c 7700118245. Received Rs 8,60,000 by IMPS on 03-Oct-2026. Amount of Rs 4,20,000 placed under lien on 06-Oct-2026; the rest was withdrawn through ATMs in Kolkata on 04-Oct."
+        },
+        {
+          "cite": "DOC-11 ¶3",
+          "text": "Layer account 2: Hemant Saini, Marudhar Co-operative Bank, Jaipur, A/c 0451200381. Received Rs 8,40,000 on 05-Oct-2026. Balance nil at the time of freeze; funds moved onward to multiple wallets, enquiry pending."
+        },
+        {
+          "cite": "DOC-11 ¶4",
+          "text": "Third-level account from Narmada Bank (Imran Shaikh): Gulshan Traders, Ulhasnagar, A/c 6620045519. Received Rs 9,40,000 on 05-Oct-2026. Amount of Rs 6,10,000 placed under lien on 07-Oct-2026."
+        },
+        {
+          "cite": "DOC-11 ¶5",
+          "text": "Total amount frozen so far in the trail: Rs 10,30,000 (Rs 4,20,000 + Rs 6,10,000). The account holders Bapi Mondal and Hemant Saini have not yet been examined."
+        }
+      ]
+    },
+    "n": 35
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-17"
+    },
+    "n": 36
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-17",
+      "title": "Seizure panchnama at the house of Imran Shaikh, Malegaon",
+      "doc_type": "seizure_memo",
+      "date": "2026-10-12",
+      "paragraphs": [
+        {
+          "cite": "DOC-17 ¶1",
+          "text": "Seizure panchnama drawn on 12-Oct-2026 between 15:10 and 16:05 hrs at the house of Imran Rafiq Shaikh, Kidwai Road, Malegaon, by PSI Akash Shinde of Cyber Police Station, Pune City."
+        },
+        {
+          "cite": "DOC-17 ¶2",
+          "text": "Panch witness: Police Constable Dattatray More, Buckle No. 4471, Cyber Police Station, Pune City. Two local residents approached to act as panchas declined to join. No other panch witness is recorded."
+        },
+        {
+          "cite": "DOC-17 ¶3",
+          "text": "Articles seized: (1) Narmada Bank debit card ending 4471 in the name of Imran Shaikh; (2) four debit cards of other banks in the names of other persons, not belonging to the occupants; (3) one diary with handwritten account numbers, including 50210043318876 written against the name \"Rohit P - 15k\"; (4) one Android phone, IMEI 352114096628301, with SIM 9890447120."
+        },
+        {
+          "cite": "DOC-17 ¶4",
+          "text": "The articles were sealed with the seal \"CYBER PS PUNE\" in the presence of the panch and the occupant, and labelled Article A to D. A copy of the panchnama was given to the occupant."
+        }
+      ]
+    },
+    "n": 36
+  },
+  {
+    "type": "thinking",
+    "text": "I should also verify Imran's claimed Pune visit on 25-Sep — the bank manager mentioned a companion, but Imran denies ever going to Pune, so I need to check his location that day.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Checking Imran's \"never been to Pune\" claim against 25-Sep (branch visit)."
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9890447120",
+      "start": "2026-09-25 06:00",
+      "end": "2026-09-25 22:00"
+    },
+    "n": 37
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9890447120",
+      "window": [
+        "2026-09-25 06:00",
+        "2026-09-25 22:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Kidwai Road, Malegaon",
+          "from": "2026-09-25 09:12:30",
+          "to": "2026-09-25 09:12:30",
+          "events": 1,
+          "cell_id": "MLG-KDW-01"
+        },
+        {
+          "cell_location": "Hadapsar, Pune",
+          "from": "2026-09-25 11:48:40",
+          "to": "2026-09-25 15:09:11",
+          "events": 5,
+          "cell_id": "PUN-HDP-07"
+        },
+        {
+          "cell_location": "Kidwai Road, Malegaon",
+          "from": "2026-09-25 19:24:27",
+          "to": "2026-09-25 21:42:03",
+          "events": 4,
+          "cell_id": "MLG-KDW-01"
+        }
+      ]
+    },
+    "n": 37
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9890447120",
+      "other_number": "9371662405"
+    },
+    "n": 38
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 1,
+      "rows": [
+        {
+          "target_number": "9890447120",
+          "other_number": "9371662405",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-25 11:48:40",
+          "duration_sec": "33",
+          "imei": "352114096628301",
+          "cell_id": "PUN-HDP-07",
+          "cell_location": "Hadapsar, Pune"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 38
+  },
+  {
+    "type": "tool_call",
+    "name": "update_case_diary",
+    "input": {
+      "entries": [
+        {
+          "type": "CONTRADICTION",
+          "person": "Imran Shaikh",
+          "text": "Claims never been to Pune and does not know Rohit. His phone was at Hadapsar, Pune 11:48-15:09 on 25-Sep (branch visit ~12:30) and called Rohit at 11:48; diary seized lists Rohit's a/c as 'Rohit P - 15k'.",
+          "sources": [
+            "DOC-14 ¶3",
+            "CDR 9890447120 2026-09-25 11:48:40",
+            "DOC-13 ¶2",
+            "DOC-17 ¶3"
+          ]
+        },
+        {
+          "type": "CONTRADICTION",
+          "person": "Imran Shaikh",
+          "text": "Claims not spoken to Sameer for weeks. CDR: calls with 9765330812 on 08,14,21,25,27-Sep, 05-Oct 14:52 (Dwarka Circle, after ATM) and 06-Oct 12:40 (Nashik Road, after Rs 9L cash). Also called scam no. 8969204117 at 15:35 03-Oct and 11:15 05-Oct, minutes before victim's RTGS.",
+          "sources": [
+            "DOC-14 ¶5",
+            "CDR 9890447120 2026-10-05 14:52:18",
+            "CDR 9890447120 2026-10-06 12:40:15",
+            "CDR 9890447120 2026-10-03 15:35:10",
+            "CDR 9890447120 2026-10-05 11:15:42"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Scam numbers 7303518246 and 8969204117 both operated from Bhadrakali, Nashik tower (Sameer's residence area); handsets IMEI 861234055591027 and 356938112847152 seized from Sameer's flat with ICCID-matching SIM of 8969204117, fake CBI ID, uniform, Rs 4.8L cash. FSL: ConnectX 'cbi.vikram.rathore' logged in, video calls to 'Prof K Kothrud', OTP SMS from Rohit, chat with 'Imran Mlg' re 2.97 withdrawal.",
+          "sources": [
+            "CDR 7303518246 2026-10-03 10:12:04",
+            "DOC-18 ¶3",
+            "DOC-20 ¶2",
+            "DOC-20 ¶3",
+            "DOC-20 ¶4"
+          ]
+        },
+        {
+          "type": "CLEARED",
+          "person": "Anil Kulkarni",
+          "text": "Phone in Bengaluru throughout 03-06 Oct; office swipes 05/06-Oct at Whitefield; no contact with scam numbers; no link in money trail.",
+          "sources": [
+            "CDR 9845012377 2026-10-03 08:29:21",
+            "DOC-16 ¶3",
+            "DOC-15 ¶4"
+          ]
+        },
+        {
+          "type": "GAP",
+          "text": "ATM CCTV s.63 certificate awaited; FSL final report + s.63 cert pending; Imran seizure only police panch; no on-spot hash at Sameer's seizure; Rohit admission is s.180 only (s.23 BSA) - record s.183; Bapi Mondal/Hemant Saini not examined; ConnectX reply/Konkan branch CCTV/Anil swipe s.63 cert to obtain.",
+          "sources": [
+            "DOC-07 ¶4",
+            "DOC-21 ¶4",
+            "DOC-20 ¶5",
+            "DOC-17 ¶2",
+            "DOC-18 ¶4",
+            "DOC-22 ¶5",
+            "DOC-11 ¶5",
+            "DOC-13 ¶4",
+            "DOC-16 ¶4"
+          ]
+        }
+      ]
+    },
+    "n": 39
+  },
+  {
+    "type": "diary",
+    "entries": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Victim sent 3 RTGS totalling Rs 38,50,000 to Rohit Pawar's KSFB a/c 50210043318876 (9.5L 03-Oct 15:40; 12L 03-Oct 17:05; 17L 05-Oct 11:20).",
+        "sources": [
+          "TXN T00001",
+          "TXN T00003",
+          "TXN T00005",
+          "DOC-03 ¶6"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "Within 6-20 min of each credit, Rohit's a/c was emptied by net-banking IMPS: Rs 21,40,000 to Imran Shaikh/Shaikh Mobile Point a/c 31082290447 (5 txns), Rs 8,60,000 to Bapi Mondal (Bengal Rural Bank 7700118245), Rs 8,40,000 to Hemant Saini (Marudhar Co-op 0451200381).",
+        "sources": [
+          "TXN T00007",
+          "TXN T00010",
+          "TXN T00013",
+          "TXN T00015",
+          "TXN T00017",
+          "TXN T00009",
+          "TXN T00012",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "Imran's a/c paid Rs 15,000 UPI to Rohit on 27-Sep with remark 'acct rent'.",
+        "sources": [
+          "TXN T00021"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Account holder of mule a/c; first statement denies, supplementary admits renting account and forwarding OTPs to 8969204117.",
+        "sources": [
+          "DOC-12 ¶3",
+          "DOC-22 ¶2-4"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Received Rs 21.4L from mule a/c; paid 'acct rent' to Rohit.",
+        "sources": [
+          "TXN T00021",
+          "TXN T00007"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Suspected by victim's wife (stayed Sept, set up banking app, past loan).",
+        "sources": [
+          "DOC-05 ¶3",
+          "DOC-23 ¶1"
+        ],
+        "person": "Anil Kulkarni"
+      },
+      {
+        "n": 7,
+        "type": "FACT",
+        "text": "Rohit's phone 9371662405 sent 8 SMS to 8969204117 from Hadapsar, each 20-40 sec before each IMPS debit from his a/c (OTP forwarding).",
+        "sources": [
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "CDR 9371662405 2026-10-03 17:25:45",
+          "CDR 9371662405 2026-10-05 11:39:20",
+          "TXN T00007",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 8,
+        "type": "CONTRADICTION",
+        "text": "First statement: no OTP received, account hacked, went to bank alone, received no money. Records: 8 SMS to 8969204117 right before debits; Rs 15,000 'acct rent' from Imran; bank manager saw companion.",
+        "sources": [
+          "DOC-12 ¶2-4",
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "TXN T00021",
+          "DOC-13 ¶2"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 9,
+        "type": "FACT",
+        "text": "Scam SIM 8969204117 ('Vikram Rathore') ran in IMEI 356938112847152 from 30-Sep to 06-Oct; same handset carried Sameer Ansari's 9765330812 before (01-29 Sep) and after (07-08 Oct).",
+        "sources": [
+          "IMEI 356938112847152"
+        ],
+        "person": ""
+      },
+      {
+        "n": 10,
+        "type": "SUSPECT",
+        "text": "Handset of his own SIM ran scam number 8969204117 used as 'CBI Vikram Rathore' and OTP recipient.",
+        "sources": [
+          "IMEI 356938112847152",
+          "DOC-03 ¶5",
+          "DOC-22 ¶4"
+        ],
+        "person": "Sameer Ansari"
+      },
+      {
+        "n": 11,
+        "type": "CONTRADICTION",
+        "text": "Claims at Malegaon shop whole day 05-Oct and card never used by others. His phone was at Dwarka Circle, Nashik 14:21-15:08, exactly when 6 ATM withdrawals (Rs 2,97,000) were made at ATM NB-NSK-0417 Dwarka Circle 14:31-14:43.",
+        "sources": [
+          "DOC-14 ¶4",
+          "CDR 9890447120 2026-10-05 14:21:33",
+          "TXN T00022",
+          "TXN T00027"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 12,
+        "type": "FACT",
+        "text": "Onward from Imran a/c: ATM Nashik Rs 2,97,000 (05-Oct), IMPS Rs 9,40,000 to Gulshan Traders a/c 6620045519 (05-Oct 15:20), self-cheque cash Rs 9,00,000 Nashik Road branch (06-Oct).",
+        "sources": [
+          "TXN T00022",
+          "TXN T00023",
+          "TXN T00024",
+          "TXN T00025",
+          "TXN T00026",
+          "TXN T00027",
+          "TXN T00028",
+          "TXN T00029"
+        ],
+        "person": ""
+      },
+      {
+        "n": 13,
+        "type": "CONTRADICTION",
+        "text": "Claims never been to Pune and does not know Rohit. His phone was at Hadapsar, Pune 11:48-15:09 on 25-Sep (branch visit ~12:30) and called Rohit at 11:48; diary seized lists Rohit's a/c as 'Rohit P - 15k'.",
+        "sources": [
+          "DOC-14 ¶3",
+          "CDR 9890447120 2026-09-25 11:48:40",
+          "DOC-13 ¶2",
+          "DOC-17 ¶3"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 14,
+        "type": "CONTRADICTION",
+        "text": "Claims not spoken to Sameer for weeks. CDR: calls with 9765330812 on 08,14,21,25,27-Sep, 05-Oct 14:52 (Dwarka Circle, after ATM) and 06-Oct 12:40 (Nashik Road, after Rs 9L cash). Also called scam no. 8969204117 at 15:35 03-Oct and 11:15 05-Oct, minutes before victim's RTGS.",
+        "sources": [
+          "DOC-14 ¶5",
+          "CDR 9890447120 2026-10-05 14:52:18",
+          "CDR 9890447120 2026-10-06 12:40:15",
+          "CDR 9890447120 2026-10-03 15:35:10",
+          "CDR 9890447120 2026-10-05 11:15:42"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 15,
+        "type": "FACT",
+        "text": "Scam numbers 7303518246 and 8969204117 both operated from Bhadrakali, Nashik tower (Sameer's residence area); handsets IMEI 861234055591027 and 356938112847152 seized from Sameer's flat with ICCID-matching SIM of 8969204117, fake CBI ID, uniform, Rs 4.8L cash. FSL: ConnectX 'cbi.vikram.rathore' logged in, video calls to 'Prof K Kothrud', OTP SMS from Rohit, chat with 'Imran Mlg' re 2.97 withdrawal.",
+        "sources": [
+          "CDR 7303518246 2026-10-03 10:12:04",
+          "DOC-18 ¶3",
+          "DOC-20 ¶2",
+          "DOC-20 ¶3",
+          "DOC-20 ¶4"
+        ],
+        "person": ""
+      },
+      {
+        "n": 16,
+        "type": "CLEARED",
+        "text": "Phone in Bengaluru throughout 03-06 Oct; office swipes 05/06-Oct at Whitefield; no contact with scam numbers; no link in money trail.",
+        "sources": [
+          "CDR 9845012377 2026-10-03 08:29:21",
+          "DOC-16 ¶3",
+          "DOC-15 ¶4"
+        ],
+        "person": "Anil Kulkarni"
+      },
+      {
+        "n": 17,
+        "type": "GAP",
+        "text": "ATM CCTV s.63 certificate awaited; FSL final report + s.63 cert pending; Imran seizure only police panch; no on-spot hash at Sameer's seizure; Rohit admission is s.180 only (s.23 BSA) - record s.183; Bapi Mondal/Hemant Saini not examined; ConnectX reply/Konkan branch CCTV/Anil swipe s.63 cert to obtain.",
+        "sources": [
+          "DOC-07 ¶4",
+          "DOC-21 ¶4",
+          "DOC-20 ¶5",
+          "DOC-17 ¶2",
+          "DOC-18 ¶4",
+          "DOC-22 ¶5",
+          "DOC-11 ¶5",
+          "DOC-13 ¶4",
+          "DOC-16 ¶4"
+        ],
+        "person": ""
+      }
+    ]
+  },
+  {
+    "type": "tool_result",
+    "name": "update_case_diary",
+    "output": {
+      "added": 5,
+      "rejected": [],
+      "diary_size": 17
+    },
+    "n": 39
+  },
+  {
+    "type": "thinking",
+    "text": "I need to flag Rohit as the mule account holder, noting applicable sections, his cooperation that might warrant approver consideration, and the money trail. I should also link this to case CYB-098-2026, where the same IMEI appeared from August 21st tied to Marudhar Co-op Bank, matching Hemant Saini's account.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "submit_report",
+    "input": {
+      "summary": "Between 03-Oct and 05-Oct-2026, Prof. Suresh Kulkarni (67) was kept under a fake \"digital arrest\" by callers posing as a courier company, Mumbai Police and the CBI (\"Vikram Rathore\"). Under this pressure he sent three RTGS transfers totalling Rs 38,50,000 to Konkan SFB account 50210043318876, held by Rohit Pawar. The evidence indicates that both scam numbers (7303518246 and 8969204117) were used from the Bhadrakali, Nashik tower area. They ran in handsets later seized from Sameer Ansari's flat, along with a SIM card matching 8969204117, a fake CBI ID, a uniform and Rs 4.8 lakh in cash. The FSL found the ConnectX account \"cbi.vikram.rathore\" logged in on his phone, with video calls to \"Prof K Kothrud\". Imran Shaikh recruited Rohit's account for Rs 15,000 marked \"acct rent\", went with him to the bank in Pune on 25-Sep, and called the scam number minutes before each RTGS. He received Rs 21.4 lakh and cashed it out in Nashik (ATM Rs 2.97 lakh, then a Rs 9 lakh self-cheque), and his phone and the ATM CCTV place him there. Rohit forwarded 8 bank OTPs to 8969204117, each seconds before each onward IMPS transfer. The nephew Anil Kulkarni, suspected by the victim's wife, was in Bengaluru throughout and has no link to the calls or the money. Rs 10.3 lakh is frozen so far. The case is close to chargesheet stage, but s.63 BSA certificates (ATM CCTV, FSL extraction), the FSL final report, a properly witnessed seizure from Imran, and a s.183 statement from Rohit are still needed.",
+      "accused": [
+        {
+          "name": "Sameer Yusuf Ansari",
+          "role": "Main operator: impersonated 'CBI officer Vikram Rathore' using 8969204117 and ConnectX; ran the courier lure number 7303518246; received the forwarded OTPs and controlled the mule account's net banking",
+          "evidence": [
+            {
+              "point": "Scam SIM 8969204117 ran in handset IMEI 356938112847152, the same phone that carried Sameer's own SIM 9765330812 before (01-29 Sep) and after (07-08 Oct)",
+              "sources": [
+                "IMEI 356938112847152"
+              ]
+            },
+            {
+              "point": "Both scam numbers were used from the Bhadrakali, Nashik tower (his residence area); the courier call to the victim was made at 10:12 on 03-Oct",
+              "sources": [
+                "CDR 7303518246 2026-10-03 10:12:04",
+                "DOC-18 ¶1"
+              ]
+            },
+            {
+              "point": "Seized from his flat with two independent panchas: phones IMEI 356938112847152 and 861234055591027, a SIM matching the ICCID of 8969204117, a fake CBI ID 'Vikram Rathore', a khaki uniform and Rs 4,80,000 in cash",
+              "sources": [
+                "DOC-18 ¶2",
+                "DOC-18 ¶3"
+              ]
+            },
+            {
+              "point": "FSL: ConnectX 'cbi.vikram.rathore' logged in, with video calls to 'Prof K Kothrud' on 03-05 Oct; fake warrant image; OTP SMS from Rohit; chat with 'Imran Mlg' about the 2.97 withdrawal; keypad phone call log shows calls to the victim",
+              "sources": [
+                "DOC-20 ¶2",
+                "DOC-20 ¶3",
+                "DOC-20 ¶4"
+              ]
+            },
+            {
+              "point": "Net-banking logins for the onward transfers came from a mobile data network in the Nashik region",
+              "sources": [
+                "DOC-06 ¶5"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Imran Rafiq Shaikh",
+          "role": "Mule recruiter and cash-out handler: rented Rohit's account, coordinated with the scam number during the transfers, received Rs 21.4 lakh and withdrew/layered it",
+          "evidence": [
+            {
+              "point": "Paid Rs 15,000 to Rohit marked 'acct rent'; seized diary has Rohit's account number noted as 'Rohit P - 15k'",
+              "sources": [
+                "TXN T00020",
+                "TXN T00021",
+                "DOC-17 ¶3"
+              ]
+            },
+            {
+              "point": "Was in Hadapsar, Pune on 25-Sep and called Rohit there; the bank manager saw a bearded man aged 27-30 accompany Rohit to activate net banking",
+              "sources": [
+                "CDR 9890447120 2026-09-25 11:48:40",
+                "DOC-13 ¶2"
+              ]
+            },
+            {
+              "point": "Called scam number 8969204117 minutes before the victim's RTGS on 03-Oct and 05-Oct",
+              "sources": [
+                "CDR 9890447120 2026-10-03 15:35:10",
+                "CDR 9890447120 2026-10-05 11:15:42",
+                "TXN T00001",
+                "TXN T00005"
+              ]
+            },
+            {
+              "point": "Received five IMPS transfers totalling Rs 21,40,000 from the mule account",
+              "sources": [
+                "TXN T00008",
+                "TXN T00011",
+                "TXN T00014",
+                "TXN T00016",
+                "TXN T00018",
+                "DOC-07 ¶2"
+              ]
+            },
+            {
+              "point": "Six ATM withdrawals (Rs 2,97,000) at Dwarka Circle, Nashik at 14:31-14:43 on 05-Oct while his phone was on the Dwarka Circle tower; CCTV face resembles his KYC photo; then called Sameer at 14:52",
+              "sources": [
+                "TXN T00022",
+                "TXN T00027",
+                "CDR 9890447120 2026-10-05 14:21:33",
+                "DOC-21 ¶3",
+                "CDR 9890447120 2026-10-05 14:52:18"
+              ]
+            },
+            {
+              "point": "Rs 9,40,000 sent to Gulshan Traders; Rs 9,00,000 self-cheque cash at Nashik Road on 06-Oct, then called Sameer from Nashik Road",
+              "sources": [
+                "TXN T00028",
+                "TXN T00029",
+                "CDR 9890447120 2026-10-06 12:40:15"
+              ]
+            },
+            {
+              "point": "Four debit cards in other people's names seized from his house",
+              "sources": [
+                "DOC-17 ¶3"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rohit Sunil Pawar",
+          "role": "Money-mule account holder: rented his Konkan SFB account for payment and forwarded bank OTPs to the scam number so the fraud proceeds could be moved out",
+          "evidence": [
+            {
+              "point": "His account received the victim's Rs 38,50,000 and was emptied by IMPS within minutes",
+              "sources": [
+                "TXN T00002",
+                "TXN T00004",
+                "TXN T00006",
+                "TXN T00007",
+                "TXN T00019"
+              ]
+            },
+            {
+              "point": "Sent 8 SMS to 8969204117 from Hadapsar, each seconds before an onward IMPS debit",
+              "sources": [
+                "CDR 9371662405 2026-10-03 15:51:44",
+                "CDR 9371662405 2026-10-03 17:25:45",
+                "CDR 9371662405 2026-10-05 11:39:20"
+              ]
+            },
+            {
+              "point": "Received Rs 15,000 'acct rent'; admits renting the account and forwarding OTPs (s.180 statement only, needs corroboration/s.183)",
+              "sources": [
+                "TXN T00021",
+                "DOC-22 ¶2",
+                "DOC-22 ¶3",
+                "DOC-22 ¶4"
+              ]
+            },
+            {
+              "point": "The registered mobile number was never changed, so the OTPs reached his own phone",
+              "sources": [
+                "DOC-06 ¶2"
+              ]
+            }
+          ]
+        }
+      ],
+      "cleared": [
+        {
+          "name": "Anil Kulkarni",
+          "reason": "Suspected only by the victim's wife (he stayed in September, set up the banking app, and had a past loan). His phone was in Bengaluru (Brookefield/Whitefield) for the whole offence period, 03-06 Oct, and office swipe records show him at Whitefield on 05/06-Oct. He had no contact with 8969204117, and the victim made every transfer himself at the branch, so no password misuse was involved. Nothing links him to the money trail.",
+          "sources": [
+            "CDR 9845012377 2026-10-03 08:29:21",
+            "CDR 9845012377 2026-10-05 09:16:45",
+            "DOC-16 ¶3",
+            "DOC-04 ¶2",
+            "DOC-03 ¶7",
+            "DOC-05 ¶3"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "person": "Rohit Pawar",
+          "claim": "Account was hacked; he got no OTP on 03/05-Oct; went to the bank alone; does not know Imran; received no money (first statement)",
+          "contradicted_by": "8 SMS from his phone to 8969204117 just before each debit; Rs 15,000 'acct rent' from Imran; the bank manager saw a companion; Imran's phone called him from Hadapsar on 25-Sep. He later retracted in his supplementary statement.",
+          "sources": [
+            "DOC-12 ¶2",
+            "DOC-12 ¶3",
+            "DOC-12 ¶4",
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "TXN T00021",
+            "DOC-13 ¶2",
+            "CDR 9890447120 2026-09-25 11:48:40",
+            "DOC-22 ¶2"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Was at his Malegaon shop the whole day on 05-Oct, did not go to Nashik, and nobody else uses his card",
+          "contradicted_by": "His phone was on the Chandwad and Dwarka Circle, Nashik towers 13:22-16:10; six ATM withdrawals with his card at Dwarka Circle 14:31-14:43; CCTV face resembles him",
+          "sources": [
+            "DOC-14 ¶4",
+            "CDR 9890447120 2026-10-05 14:21:33",
+            "TXN T00022",
+            "TXN T00027",
+            "DOC-21 ¶3"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Does not know Rohit Pawar and has never been to Pune; the Rs 15,000 was a staff mistake",
+          "contradicted_by": "His phone was in Hadapsar, Pune on 25-Sep and called Rohit; payment remark 'acct rent'; diary entry 'Rohit P - 15k'",
+          "sources": [
+            "DOC-14 ¶3",
+            "CDR 9890447120 2026-09-25 11:48:40",
+            "TXN T00020",
+            "DOC-17 ¶3"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Knows Sameer only as a customer and has not spoken to him for weeks; the Rs 21.4 lakh was for a bulk phone sale",
+          "contradicted_by": "Repeated calls with Sameer's 9765330812, including 05-Oct and 06-Oct right after the cash withdrawals; FSL chat 'card se 2.97 nikala'; calls to the scam number before each RTGS; no bill for any sale",
+          "sources": [
+            "DOC-14 ¶2",
+            "DOC-14 ¶5",
+            "CDR 9890447120 2026-10-05 14:52:18",
+            "CDR 9890447120 2026-10-06 12:40:15",
+            "DOC-20 ¶3",
+            "CDR 9890447120 2026-10-03 15:35:10"
+          ]
+        }
+      ],
+      "money_trail": [
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 950000,
+          "when": "2026-10-03 15:40",
+          "sources": [
+            "TXN T00001",
+            "DOC-04 ¶2"
+          ]
+        },
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 1200000,
+          "when": "2026-10-03 17:05",
+          "sources": [
+            "TXN T00003"
+          ]
+        },
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 1700000,
+          "when": "2026-10-05 11:20",
+          "sources": [
+            "TXN T00005"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Imran Shaikh / Shaikh Mobile Point, Narmada Bank 31082290447",
+          "amount": 2140000,
+          "when": "2026-10-03 15:52 to 2026-10-05 11:34 (5 IMPS)",
+          "sources": [
+            "TXN T00007",
+            "TXN T00010",
+            "TXN T00013",
+            "TXN T00015",
+            "TXN T00017",
+            "DOC-07 ¶2"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Bapi Mondal, Bengal Rural Bank 7700118245 (Rs 4.2 lakh under lien)",
+          "amount": 860000,
+          "when": "2026-10-03 15:58 and 17:20",
+          "sources": [
+            "TXN T00009",
+            "TXN T00012",
+            "DOC-11 ¶2"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Hemant Saini, Marudhar Co-op Bank 0451200381 (balance nil, moved to wallets)",
+          "amount": 840000,
+          "when": "2026-10-05 11:40",
+          "sources": [
+            "TXN T00019",
+            "DOC-11 ¶3"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Cash via ATM NB-NSK-0417, Dwarka Circle, Nashik (6 withdrawals)",
+          "amount": 297000,
+          "when": "2026-10-05 14:31-14:43",
+          "sources": [
+            "TXN T00022",
+            "TXN T00023",
+            "TXN T00024",
+            "TXN T00025",
+            "TXN T00026",
+            "TXN T00027"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Gulshan Traders, Ulhasnagar 6620045519 (Rs 6.1 lakh under lien)",
+          "amount": 940000,
+          "when": "2026-10-05 15:20",
+          "sources": [
+            "TXN T00028",
+            "DOC-11 ¶4"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Cash by self-cheque 000117, Nashik Road branch",
+          "amount": 900000,
+          "when": "2026-10-06 12:15",
+          "sources": [
+            "TXN T00029"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Rohit Pawar KSFB 50210043318876 ('acct rent')",
+          "amount": 15000,
+          "when": "2026-09-27 18:41",
+          "sources": [
+            "TXN T00020"
+          ]
+        }
+      ],
+      "readiness_gaps": [
+        {
+          "issue": "The s.63 BSA certificate for the ATM NB-NSK-0417 CCTV footage is still awaited from the bank/ATM vendor",
+          "impact": "The CCTV footage used to identify Imran cannot be proved as an electronic record",
+          "fix": "Get the s.63 certificate (with hash of the pen-drive copy) from Narmada Bank/ATM vendor before filing; also get the Konkan SFB branch CCTV of 25-Sep with its certificate and hold a TIP with the branch manager",
+          "sources": [
+            "DOC-07 ¶4",
+            "DOC-21 ¶4",
+            "DOC-23 ¶4",
+            "DOC-13 ¶4"
+          ]
+        },
+        {
+          "issue": "Only the preliminary FSL report exists; the final extraction report and its s.63 certificate are pending",
+          "impact": "The key digital evidence (ConnectX account, OTP SMS, chat with Imran) is not yet in provable form",
+          "fix": "Follow up with RFSL Pune for the final report, hash values and s.63 certificate; send Imran's phone (Article D) for examination too",
+          "sources": [
+            "DOC-20 ¶1",
+            "DOC-20 ¶5"
+          ]
+        },
+        {
+          "issue": "Imran's house seizure (debit cards, diary, phone) was witnessed only by Police Constable Dattatray More; no independent panch",
+          "impact": "The seizure's credibility can be attacked; the diary entry 'Rohit P - 15k' and the debit cards may be weakened",
+          "fix": "Record the reasons local panchas refused, examine the seizing officers, and look for corroboration (videography, handwriting comparison of the diary with Imran's specimen writing); use independent panchas for any further recovery",
+          "sources": [
+            "DOC-17 ¶2",
+            "DOC-17 ¶3"
+          ]
+        },
+        {
+          "issue": "Hash values were not computed on the spot when phones were seized from Sameer",
+          "impact": "Possible chain-of-custody challenge (partly offset because seals were intact and the lab recorded hashes)",
+          "fix": "Document the chain of custody (Faraday bags, seal intact per FSL) and attach the search videography with a s.63 certificate",
+          "sources": [
+            "DOC-18 ¶4",
+            "DOC-20 ¶1",
+            "DOC-18 ¶1"
+          ]
+        },
+        {
+          "issue": "Rohit's admission (renting the account, forwarding OTPs at Imran's instance) is only in a s.180 statement to police",
+          "impact": "Not provable as a confession (s.23 BSA)",
+          "fix": "Record his statement under s.183 BNSS before a Magistrate (he has offered to); it is already corroborated by the CDR SMS, TXN T00020 and the FSL OTP messages",
+          "sources": [
+            "DOC-22 ¶4",
+            "DOC-22 ¶5",
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "DOC-20 ¶3"
+          ]
+        },
+        {
+          "issue": "Layer account holders Bapi Mondal and Hemant Saini have not been examined; Gulshan Traders not examined; Rs 9 lakh cash and wallet trail not traced",
+          "impact": "Rs 28.2 lakh is still unrecovered and the wider network/other accused are unidentified",
+          "fix": "Issue s.94 notices / examine the account holders and Gulshan Traders, trace the wallets, and check whether the Rs 4.8 lakh cash from Sameer links to the Rs 9 lakh self-cheque withdrawal",
+          "sources": [
+            "DOC-11 ¶3",
+            "DOC-11 ¶5",
+            "TXN T00029",
+            "DOC-18 ¶3"
+          ]
+        },
+        {
+          "issue": "Anil's employer swipe records lack a s.63 certificate; the ConnectX platform reply and the POS agents who issued the fake-KYC SIMs are not on file",
+          "impact": "Weakens the documentation clearing Anil and the proof of SIM procurement",
+          "fix": "Get a s.63 certificate from Lumen Arc HR; get the ConnectX account/IP logs with a certificate; examine the Malegaon/Nashik POS agents",
+          "sources": [
+            "DOC-16 ¶4",
+            "DOC-23 ¶1",
+            "DOC-23 ¶3"
+          ]
+        }
+      ],
+      "linked_cases": [
+        "CYB-098-2026 (Leela Joshi, Aundh: same courier number 7303518246 on 21-Aug-2026, whose handset IMEI 861234055591027 was active from 21-Aug and later seized from Sameer; money went to a Marudhar Co-op Bank, Jaipur account, the same bank as layer account Hemant Saini)"
+      ],
+      "suggested_sections": [
+        "BNS 318(4) cheating",
+        "BNS 319(2) cheating by personation",
+        "BNS 204 personating a public servant",
+        "BNS 61(2) criminal conspiracy",
+        "BNS 336/340 forgery of documents (fake CBI ID / warrant) - for IO's consideration",
+        "BNS 317 receiving stolen property (mule/cash-out) - for IO's consideration",
+        "IT Act 66C identity theft",
+        "IT Act 66D cheating by personation using a computer resource"
+      ]
+    },
+    "n": 40
+  },
+  {
+    "type": "tool_result",
+    "name": "submit_report",
+    "output": {
+      "accepted": true
+    },
+    "n": 40
+  },
+  {
+    "type": "report",
+    "report": {
+      "summary": "Between 03-Oct and 05-Oct-2026, Prof. Suresh Kulkarni (67) was kept under a fake \"digital arrest\" by callers posing as a courier company, Mumbai Police and the CBI (\"Vikram Rathore\"). Under this pressure he sent three RTGS transfers totalling Rs 38,50,000 to Konkan SFB account 50210043318876, held by Rohit Pawar. The evidence indicates that both scam numbers (7303518246 and 8969204117) were used from the Bhadrakali, Nashik tower area. They ran in handsets later seized from Sameer Ansari's flat, along with a SIM card matching 8969204117, a fake CBI ID, a uniform and Rs 4.8 lakh in cash. The FSL found the ConnectX account \"cbi.vikram.rathore\" logged in on his phone, with video calls to \"Prof K Kothrud\". Imran Shaikh recruited Rohit's account for Rs 15,000 marked \"acct rent\", went with him to the bank in Pune on 25-Sep, and called the scam number minutes before each RTGS. He received Rs 21.4 lakh and cashed it out in Nashik (ATM Rs 2.97 lakh, then a Rs 9 lakh self-cheque), and his phone and the ATM CCTV place him there. Rohit forwarded 8 bank OTPs to 8969204117, each seconds before each onward IMPS transfer. The nephew Anil Kulkarni, suspected by the victim's wife, was in Bengaluru throughout and has no link to the calls or the money. Rs 10.3 lakh is frozen so far. The case is close to chargesheet stage, but s.63 BSA certificates (ATM CCTV, FSL extraction), the FSL final report, a properly witnessed seizure from Imran, and a s.183 statement from Rohit are still needed.",
+      "accused": [
+        {
+          "name": "Sameer Yusuf Ansari",
+          "role": "Main operator: impersonated 'CBI officer Vikram Rathore' using 8969204117 and ConnectX; ran the courier lure number 7303518246; received the forwarded OTPs and controlled the mule account's net banking",
+          "evidence": [
+            {
+              "point": "Scam SIM 8969204117 ran in handset IMEI 356938112847152, the same phone that carried Sameer's own SIM 9765330812 before (01-29 Sep) and after (07-08 Oct)",
+              "sources": [
+                "IMEI 356938112847152"
+              ]
+            },
+            {
+              "point": "Both scam numbers were used from the Bhadrakali, Nashik tower (his residence area); the courier call to the victim was made at 10:12 on 03-Oct",
+              "sources": [
+                "CDR 7303518246 2026-10-03 10:12:04",
+                "DOC-18 ¶1"
+              ]
+            },
+            {
+              "point": "Seized from his flat with two independent panchas: phones IMEI 356938112847152 and 861234055591027, a SIM matching the ICCID of 8969204117, a fake CBI ID 'Vikram Rathore', a khaki uniform and Rs 4,80,000 in cash",
+              "sources": [
+                "DOC-18 ¶2",
+                "DOC-18 ¶3"
+              ]
+            },
+            {
+              "point": "FSL: ConnectX 'cbi.vikram.rathore' logged in, with video calls to 'Prof K Kothrud' on 03-05 Oct; fake warrant image; OTP SMS from Rohit; chat with 'Imran Mlg' about the 2.97 withdrawal; keypad phone call log shows calls to the victim",
+              "sources": [
+                "DOC-20 ¶2",
+                "DOC-20 ¶3",
+                "DOC-20 ¶4"
+              ]
+            },
+            {
+              "point": "Net-banking logins for the onward transfers came from a mobile data network in the Nashik region",
+              "sources": [
+                "DOC-06 ¶5"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Imran Rafiq Shaikh",
+          "role": "Mule recruiter and cash-out handler: rented Rohit's account, coordinated with the scam number during the transfers, received Rs 21.4 lakh and withdrew/layered it",
+          "evidence": [
+            {
+              "point": "Paid Rs 15,000 to Rohit marked 'acct rent'; seized diary has Rohit's account number noted as 'Rohit P - 15k'",
+              "sources": [
+                "TXN T00020",
+                "TXN T00021",
+                "DOC-17 ¶3"
+              ]
+            },
+            {
+              "point": "Was in Hadapsar, Pune on 25-Sep and called Rohit there; the bank manager saw a bearded man aged 27-30 accompany Rohit to activate net banking",
+              "sources": [
+                "CDR 9890447120 2026-09-25 11:48:40",
+                "DOC-13 ¶2"
+              ]
+            },
+            {
+              "point": "Called scam number 8969204117 minutes before the victim's RTGS on 03-Oct and 05-Oct",
+              "sources": [
+                "CDR 9890447120 2026-10-03 15:35:10",
+                "CDR 9890447120 2026-10-05 11:15:42",
+                "TXN T00001",
+                "TXN T00005"
+              ]
+            },
+            {
+              "point": "Received five IMPS transfers totalling Rs 21,40,000 from the mule account",
+              "sources": [
+                "TXN T00008",
+                "TXN T00011",
+                "TXN T00014",
+                "TXN T00016",
+                "TXN T00018",
+                "DOC-07 ¶2"
+              ]
+            },
+            {
+              "point": "Six ATM withdrawals (Rs 2,97,000) at Dwarka Circle, Nashik at 14:31-14:43 on 05-Oct while his phone was on the Dwarka Circle tower; CCTV face resembles his KYC photo; then called Sameer at 14:52",
+              "sources": [
+                "TXN T00022",
+                "TXN T00027",
+                "CDR 9890447120 2026-10-05 14:21:33",
+                "DOC-21 ¶3",
+                "CDR 9890447120 2026-10-05 14:52:18"
+              ]
+            },
+            {
+              "point": "Rs 9,40,000 sent to Gulshan Traders; Rs 9,00,000 self-cheque cash at Nashik Road on 06-Oct, then called Sameer from Nashik Road",
+              "sources": [
+                "TXN T00028",
+                "TXN T00029",
+                "CDR 9890447120 2026-10-06 12:40:15"
+              ]
+            },
+            {
+              "point": "Four debit cards in other people's names seized from his house",
+              "sources": [
+                "DOC-17 ¶3"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rohit Sunil Pawar",
+          "role": "Money-mule account holder: rented his Konkan SFB account for payment and forwarded bank OTPs to the scam number so the fraud proceeds could be moved out",
+          "evidence": [
+            {
+              "point": "His account received the victim's Rs 38,50,000 and was emptied by IMPS within minutes",
+              "sources": [
+                "TXN T00002",
+                "TXN T00004",
+                "TXN T00006",
+                "TXN T00007",
+                "TXN T00019"
+              ]
+            },
+            {
+              "point": "Sent 8 SMS to 8969204117 from Hadapsar, each seconds before an onward IMPS debit",
+              "sources": [
+                "CDR 9371662405 2026-10-03 15:51:44",
+                "CDR 9371662405 2026-10-03 17:25:45",
+                "CDR 9371662405 2026-10-05 11:39:20"
+              ]
+            },
+            {
+              "point": "Received Rs 15,000 'acct rent'; admits renting the account and forwarding OTPs (s.180 statement only, needs corroboration/s.183)",
+              "sources": [
+                "TXN T00021",
+                "DOC-22 ¶2",
+                "DOC-22 ¶3",
+                "DOC-22 ¶4"
+              ]
+            },
+            {
+              "point": "The registered mobile number was never changed, so the OTPs reached his own phone",
+              "sources": [
+                "DOC-06 ¶2"
+              ]
+            }
+          ]
+        }
+      ],
+      "cleared": [
+        {
+          "name": "Anil Kulkarni",
+          "reason": "Suspected only by the victim's wife (he stayed in September, set up the banking app, and had a past loan). His phone was in Bengaluru (Brookefield/Whitefield) for the whole offence period, 03-06 Oct, and office swipe records show him at Whitefield on 05/06-Oct. He had no contact with 8969204117, and the victim made every transfer himself at the branch, so no password misuse was involved. Nothing links him to the money trail.",
+          "sources": [
+            "CDR 9845012377 2026-10-03 08:29:21",
+            "CDR 9845012377 2026-10-05 09:16:45",
+            "DOC-16 ¶3",
+            "DOC-04 ¶2",
+            "DOC-03 ¶7",
+            "DOC-05 ¶3"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "person": "Rohit Pawar",
+          "claim": "Account was hacked; he got no OTP on 03/05-Oct; went to the bank alone; does not know Imran; received no money (first statement)",
+          "contradicted_by": "8 SMS from his phone to 8969204117 just before each debit; Rs 15,000 'acct rent' from Imran; the bank manager saw a companion; Imran's phone called him from Hadapsar on 25-Sep. He later retracted in his supplementary statement.",
+          "sources": [
+            "DOC-12 ¶2",
+            "DOC-12 ¶3",
+            "DOC-12 ¶4",
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "TXN T00021",
+            "DOC-13 ¶2",
+            "CDR 9890447120 2026-09-25 11:48:40",
+            "DOC-22 ¶2"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Was at his Malegaon shop the whole day on 05-Oct, did not go to Nashik, and nobody else uses his card",
+          "contradicted_by": "His phone was on the Chandwad and Dwarka Circle, Nashik towers 13:22-16:10; six ATM withdrawals with his card at Dwarka Circle 14:31-14:43; CCTV face resembles him",
+          "sources": [
+            "DOC-14 ¶4",
+            "CDR 9890447120 2026-10-05 14:21:33",
+            "TXN T00022",
+            "TXN T00027",
+            "DOC-21 ¶3"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Does not know Rohit Pawar and has never been to Pune; the Rs 15,000 was a staff mistake",
+          "contradicted_by": "His phone was in Hadapsar, Pune on 25-Sep and called Rohit; payment remark 'acct rent'; diary entry 'Rohit P - 15k'",
+          "sources": [
+            "DOC-14 ¶3",
+            "CDR 9890447120 2026-09-25 11:48:40",
+            "TXN T00020",
+            "DOC-17 ¶3"
+          ]
+        },
+        {
+          "person": "Imran Shaikh",
+          "claim": "Knows Sameer only as a customer and has not spoken to him for weeks; the Rs 21.4 lakh was for a bulk phone sale",
+          "contradicted_by": "Repeated calls with Sameer's 9765330812, including 05-Oct and 06-Oct right after the cash withdrawals; FSL chat 'card se 2.97 nikala'; calls to the scam number before each RTGS; no bill for any sale",
+          "sources": [
+            "DOC-14 ¶2",
+            "DOC-14 ¶5",
+            "CDR 9890447120 2026-10-05 14:52:18",
+            "CDR 9890447120 2026-10-06 12:40:15",
+            "DOC-20 ¶3",
+            "CDR 9890447120 2026-10-03 15:35:10"
+          ]
+        }
+      ],
+      "money_trail": [
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 950000,
+          "when": "2026-10-03 15:40",
+          "sources": [
+            "TXN T00001",
+            "DOC-04 ¶2"
+          ]
+        },
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 1200000,
+          "when": "2026-10-03 17:05",
+          "sources": [
+            "TXN T00003"
+          ]
+        },
+        {
+          "from": "Suresh Kulkarni SNB 10020034571",
+          "to": "Rohit Pawar KSFB 50210043318876",
+          "amount": 1700000,
+          "when": "2026-10-05 11:20",
+          "sources": [
+            "TXN T00005"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Imran Shaikh / Shaikh Mobile Point, Narmada Bank 31082290447",
+          "amount": 2140000,
+          "when": "2026-10-03 15:52 to 2026-10-05 11:34 (5 IMPS)",
+          "sources": [
+            "TXN T00007",
+            "TXN T00010",
+            "TXN T00013",
+            "TXN T00015",
+            "TXN T00017",
+            "DOC-07 ¶2"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Bapi Mondal, Bengal Rural Bank 7700118245 (Rs 4.2 lakh under lien)",
+          "amount": 860000,
+          "when": "2026-10-03 15:58 and 17:20",
+          "sources": [
+            "TXN T00009",
+            "TXN T00012",
+            "DOC-11 ¶2"
+          ]
+        },
+        {
+          "from": "Rohit Pawar KSFB 50210043318876",
+          "to": "Hemant Saini, Marudhar Co-op Bank 0451200381 (balance nil, moved to wallets)",
+          "amount": 840000,
+          "when": "2026-10-05 11:40",
+          "sources": [
+            "TXN T00019",
+            "DOC-11 ¶3"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Cash via ATM NB-NSK-0417, Dwarka Circle, Nashik (6 withdrawals)",
+          "amount": 297000,
+          "when": "2026-10-05 14:31-14:43",
+          "sources": [
+            "TXN T00022",
+            "TXN T00023",
+            "TXN T00024",
+            "TXN T00025",
+            "TXN T00026",
+            "TXN T00027"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Gulshan Traders, Ulhasnagar 6620045519 (Rs 6.1 lakh under lien)",
+          "amount": 940000,
+          "when": "2026-10-05 15:20",
+          "sources": [
+            "TXN T00028",
+            "DOC-11 ¶4"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Cash by self-cheque 000117, Nashik Road branch",
+          "amount": 900000,
+          "when": "2026-10-06 12:15",
+          "sources": [
+            "TXN T00029"
+          ]
+        },
+        {
+          "from": "Imran Shaikh Narmada 31082290447",
+          "to": "Rohit Pawar KSFB 50210043318876 ('acct rent')",
+          "amount": 15000,
+          "when": "2026-09-27 18:41",
+          "sources": [
+            "TXN T00020"
+          ]
+        }
+      ],
+      "readiness_gaps": [
+        {
+          "issue": "The s.63 BSA certificate for the ATM NB-NSK-0417 CCTV footage is still awaited from the bank/ATM vendor",
+          "impact": "The CCTV footage used to identify Imran cannot be proved as an electronic record",
+          "fix": "Get the s.63 certificate (with hash of the pen-drive copy) from Narmada Bank/ATM vendor before filing; also get the Konkan SFB branch CCTV of 25-Sep with its certificate and hold a TIP with the branch manager",
+          "sources": [
+            "DOC-07 ¶4",
+            "DOC-21 ¶4",
+            "DOC-23 ¶4",
+            "DOC-13 ¶4"
+          ]
+        },
+        {
+          "issue": "Only the preliminary FSL report exists; the final extraction report and its s.63 certificate are pending",
+          "impact": "The key digital evidence (ConnectX account, OTP SMS, chat with Imran) is not yet in provable form",
+          "fix": "Follow up with RFSL Pune for the final report, hash values and s.63 certificate; send Imran's phone (Article D) for examination too",
+          "sources": [
+            "DOC-20 ¶1",
+            "DOC-20 ¶5"
+          ]
+        },
+        {
+          "issue": "Imran's house seizure (debit cards, diary, phone) was witnessed only by Police Constable Dattatray More; no independent panch",
+          "impact": "The seizure's credibility can be attacked; the diary entry 'Rohit P - 15k' and the debit cards may be weakened",
+          "fix": "Record the reasons local panchas refused, examine the seizing officers, and look for corroboration (videography, handwriting comparison of the diary with Imran's specimen writing); use independent panchas for any further recovery",
+          "sources": [
+            "DOC-17 ¶2",
+            "DOC-17 ¶3"
+          ]
+        },
+        {
+          "issue": "Hash values were not computed on the spot when phones were seized from Sameer",
+          "impact": "Possible chain-of-custody challenge (partly offset because seals were intact and the lab recorded hashes)",
+          "fix": "Document the chain of custody (Faraday bags, seal intact per FSL) and attach the search videography with a s.63 certificate",
+          "sources": [
+            "DOC-18 ¶4",
+            "DOC-20 ¶1",
+            "DOC-18 ¶1"
+          ]
+        },
+        {
+          "issue": "Rohit's admission (renting the account, forwarding OTPs at Imran's instance) is only in a s.180 statement to police",
+          "impact": "Not provable as a confession (s.23 BSA)",
+          "fix": "Record his statement under s.183 BNSS before a Magistrate (he has offered to); it is already corroborated by the CDR SMS, TXN T00020 and the FSL OTP messages",
+          "sources": [
+            "DOC-22 ¶4",
+            "DOC-22 ¶5",
+            "CDR 9371662405 2026-10-03 15:51:44",
+            "DOC-20 ¶3"
+          ]
+        },
+        {
+          "issue": "Layer account holders Bapi Mondal and Hemant Saini have not been examined; Gulshan Traders not examined; Rs 9 lakh cash and wallet trail not traced",
+          "impact": "Rs 28.2 lakh is still unrecovered and the wider network/other accused are unidentified",
+          "fix": "Issue s.94 notices / examine the account holders and Gulshan Traders, trace the wallets, and check whether the Rs 4.8 lakh cash from Sameer links to the Rs 9 lakh self-cheque withdrawal",
+          "sources": [
+            "DOC-11 ¶3",
+            "DOC-11 ¶5",
+            "TXN T00029",
+            "DOC-18 ¶3"
+          ]
+        },
+        {
+          "issue": "Anil's employer swipe records lack a s.63 certificate; the ConnectX platform reply and the POS agents who issued the fake-KYC SIMs are not on file",
+          "impact": "Weakens the documentation clearing Anil and the proof of SIM procurement",
+          "fix": "Get a s.63 certificate from Lumen Arc HR; get the ConnectX account/IP logs with a certificate; examine the Malegaon/Nashik POS agents",
+          "sources": [
+            "DOC-16 ¶4",
+            "DOC-23 ¶1",
+            "DOC-23 ¶3"
+          ]
+        }
+      ],
+      "linked_cases": [
+        "CYB-098-2026 (Leela Joshi, Aundh: same courier number 7303518246 on 21-Aug-2026, whose handset IMEI 861234055591027 was active from 21-Aug and later seized from Sameer; money went to a Marudhar Co-op Bank, Jaipur account, the same bank as layer account Hemant Saini)"
+      ],
+      "suggested_sections": [
+        "BNS 318(4) cheating",
+        "BNS 319(2) cheating by personation",
+        "BNS 204 personating a public servant",
+        "BNS 61(2) criminal conspiracy",
+        "BNS 336/340 forgery of documents (fake CBI ID / warrant) - for IO's consideration",
+        "BNS 317 receiving stolen property (mule/cash-out) - for IO's consideration",
+        "IT Act 66C identity theft",
+        "IT Act 66D cheating by personation using a computer resource"
+      ]
+    },
+    "diary": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Victim sent 3 RTGS totalling Rs 38,50,000 to Rohit Pawar's KSFB a/c 50210043318876 (9.5L 03-Oct 15:40; 12L 03-Oct 17:05; 17L 05-Oct 11:20).",
+        "sources": [
+          "TXN T00001",
+          "TXN T00003",
+          "TXN T00005",
+          "DOC-03 ¶6"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "Within 6-20 min of each credit, Rohit's a/c was emptied by net-banking IMPS: Rs 21,40,000 to Imran Shaikh/Shaikh Mobile Point a/c 31082290447 (5 txns), Rs 8,60,000 to Bapi Mondal (Bengal Rural Bank 7700118245), Rs 8,40,000 to Hemant Saini (Marudhar Co-op 0451200381).",
+        "sources": [
+          "TXN T00007",
+          "TXN T00010",
+          "TXN T00013",
+          "TXN T00015",
+          "TXN T00017",
+          "TXN T00009",
+          "TXN T00012",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "Imran's a/c paid Rs 15,000 UPI to Rohit on 27-Sep with remark 'acct rent'.",
+        "sources": [
+          "TXN T00021"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Account holder of mule a/c; first statement denies, supplementary admits renting account and forwarding OTPs to 8969204117.",
+        "sources": [
+          "DOC-12 ¶3",
+          "DOC-22 ¶2-4"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Received Rs 21.4L from mule a/c; paid 'acct rent' to Rohit.",
+        "sources": [
+          "TXN T00021",
+          "TXN T00007"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Suspected by victim's wife (stayed Sept, set up banking app, past loan).",
+        "sources": [
+          "DOC-05 ¶3",
+          "DOC-23 ¶1"
+        ],
+        "person": "Anil Kulkarni"
+      },
+      {
+        "n": 7,
+        "type": "FACT",
+        "text": "Rohit's phone 9371662405 sent 8 SMS to 8969204117 from Hadapsar, each 20-40 sec before each IMPS debit from his a/c (OTP forwarding).",
+        "sources": [
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "CDR 9371662405 2026-10-03 17:25:45",
+          "CDR 9371662405 2026-10-05 11:39:20",
+          "TXN T00007",
+          "TXN T00019"
+        ],
+        "person": ""
+      },
+      {
+        "n": 8,
+        "type": "CONTRADICTION",
+        "text": "First statement: no OTP received, account hacked, went to bank alone, received no money. Records: 8 SMS to 8969204117 right before debits; Rs 15,000 'acct rent' from Imran; bank manager saw companion.",
+        "sources": [
+          "DOC-12 ¶2-4",
+          "CDR 9371662405 2026-10-03 15:51:44",
+          "TXN T00021",
+          "DOC-13 ¶2"
+        ],
+        "person": "Rohit Pawar"
+      },
+      {
+        "n": 9,
+        "type": "FACT",
+        "text": "Scam SIM 8969204117 ('Vikram Rathore') ran in IMEI 356938112847152 from 30-Sep to 06-Oct; same handset carried Sameer Ansari's 9765330812 before (01-29 Sep) and after (07-08 Oct).",
+        "sources": [
+          "IMEI 356938112847152"
+        ],
+        "person": ""
+      },
+      {
+        "n": 10,
+        "type": "SUSPECT",
+        "text": "Handset of his own SIM ran scam number 8969204117 used as 'CBI Vikram Rathore' and OTP recipient.",
+        "sources": [
+          "IMEI 356938112847152",
+          "DOC-03 ¶5",
+          "DOC-22 ¶4"
+        ],
+        "person": "Sameer Ansari"
+      },
+      {
+        "n": 11,
+        "type": "CONTRADICTION",
+        "text": "Claims at Malegaon shop whole day 05-Oct and card never used by others. His phone was at Dwarka Circle, Nashik 14:21-15:08, exactly when 6 ATM withdrawals (Rs 2,97,000) were made at ATM NB-NSK-0417 Dwarka Circle 14:31-14:43.",
+        "sources": [
+          "DOC-14 ¶4",
+          "CDR 9890447120 2026-10-05 14:21:33",
+          "TXN T00022",
+          "TXN T00027"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 12,
+        "type": "FACT",
+        "text": "Onward from Imran a/c: ATM Nashik Rs 2,97,000 (05-Oct), IMPS Rs 9,40,000 to Gulshan Traders a/c 6620045519 (05-Oct 15:20), self-cheque cash Rs 9,00,000 Nashik Road branch (06-Oct).",
+        "sources": [
+          "TXN T00022",
+          "TXN T00023",
+          "TXN T00024",
+          "TXN T00025",
+          "TXN T00026",
+          "TXN T00027",
+          "TXN T00028",
+          "TXN T00029"
+        ],
+        "person": ""
+      },
+      {
+        "n": 13,
+        "type": "CONTRADICTION",
+        "text": "Claims never been to Pune and does not know Rohit. His phone was at Hadapsar, Pune 11:48-15:09 on 25-Sep (branch visit ~12:30) and called Rohit at 11:48; diary seized lists Rohit's a/c as 'Rohit P - 15k'.",
+        "sources": [
+          "DOC-14 ¶3",
+          "CDR 9890447120 2026-09-25 11:48:40",
+          "DOC-13 ¶2",
+          "DOC-17 ¶3"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 14,
+        "type": "CONTRADICTION",
+        "text": "Claims not spoken to Sameer for weeks. CDR: calls with 9765330812 on 08,14,21,25,27-Sep, 05-Oct 14:52 (Dwarka Circle, after ATM) and 06-Oct 12:40 (Nashik Road, after Rs 9L cash). Also called scam no. 8969204117 at 15:35 03-Oct and 11:15 05-Oct, minutes before victim's RTGS.",
+        "sources": [
+          "DOC-14 ¶5",
+          "CDR 9890447120 2026-10-05 14:52:18",
+          "CDR 9890447120 2026-10-06 12:40:15",
+          "CDR 9890447120 2026-10-03 15:35:10",
+          "CDR 9890447120 2026-10-05 11:15:42"
+        ],
+        "person": "Imran Shaikh"
+      },
+      {
+        "n": 15,
+        "type": "FACT",
+        "text": "Scam numbers 7303518246 and 8969204117 both operated from Bhadrakali, Nashik tower (Sameer's residence area); handsets IMEI 861234055591027 and 356938112847152 seized from Sameer's flat with ICCID-matching SIM of 8969204117, fake CBI ID, uniform, Rs 4.8L cash. FSL: ConnectX 'cbi.vikram.rathore' logged in, video calls to 'Prof K Kothrud', OTP SMS from Rohit, chat with 'Imran Mlg' re 2.97 withdrawal.",
+        "sources": [
+          "CDR 7303518246 2026-10-03 10:12:04",
+          "DOC-18 ¶3",
+          "DOC-20 ¶2",
+          "DOC-20 ¶3",
+          "DOC-20 ¶4"
+        ],
+        "person": ""
+      },
+      {
+        "n": 16,
+        "type": "CLEARED",
+        "text": "Phone in Bengaluru throughout 03-06 Oct; office swipes 05/06-Oct at Whitefield; no contact with scam numbers; no link in money trail.",
+        "sources": [
+          "CDR 9845012377 2026-10-03 08:29:21",
+          "DOC-16 ¶3",
+          "DOC-15 ¶4"
+        ],
+        "person": "Anil Kulkarni"
+      },
+      {
+        "n": 17,
+        "type": "GAP",
+        "text": "ATM CCTV s.63 certificate awaited; FSL final report + s.63 cert pending; Imran seizure only police panch; no on-spot hash at Sameer's seizure; Rohit admission is s.180 only (s.23 BSA) - record s.183; Bapi Mondal/Hemant Saini not examined; ConnectX reply/Konkan branch CCTV/Anil swipe s.63 cert to obtain.",
+        "sources": [
+          "DOC-07 ¶4",
+          "DOC-21 ¶4",
+          "DOC-20 ¶5",
+          "DOC-17 ¶2",
+          "DOC-18 ¶4",
+          "DOC-22 ¶5",
+          "DOC-11 ¶5",
+          "DOC-13 ¶4",
+          "DOC-16 ¶4"
+        ],
+        "person": ""
+      }
+    ],
+    "stats": {
+      "api_calls": 16,
+      "input_tokens": 34,
+      "output_tokens": 14452,
+      "cache_read_tokens": 371734,
+      "cache_write_tokens": 42765,
+      "cost_usd": 0.5773,
+      "tool_calls": 40,
+      "turns": 16,
+      "seconds": 135.2
+    }
+  }
+]

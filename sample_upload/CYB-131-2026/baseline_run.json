@@ -1,0 +1,103 @@
+{
+  "question": "Investigate this case. Who should be charge-sheeted and in what role? Is anyone wrongly suspected? Which statements are contradicted by the records? Trace the money. Is the case ready for chargesheet, and what gaps must the IO fix first?",
+  "retrieved": [
+    {
+      "cite": "DOC-04 ¶3",
+      "case_id": "CYB-131-2026",
+      "title": "Deccan Urban Co-op Bank reply - complainant's account debits",
+      "doc_type": "bank_reply",
+      "date": "2026-10-13",
+      "text": "The account statement for 01-Aug-2026 to 12-Oct-2026 is enclosed as an Excel file with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam signed by the Branch Manager.",
+      "score": 0.0318,
+      "dense_rank": 2,
+      "bm25_rank": 4
+    },
+    {
+      "cite": "DOC-09 ¶3",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Neha Patil under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-16",
+      "text": "I received Rs 10,000 in cash through a friend. I did not know the money would come from a fraud. I have never met Aamir bhai and I do not know anyone named Faisal or Arvind Mehta. I have not withdrawn any money in Bhiwandi.",
+      "score": 0.0305,
+      "dense_rank": 5,
+      "bm25_rank": 6
+    },
+    {
+      "cite": "DOC-07 ¶2",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Vinod Gaikwad under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-15",
+      "text": "I run a small agricultural supplies business. My accountant Ganesh Shinde handles all the banking work of the firm, including net banking. If any wrong money came into my account, he must have misused it without my knowledge.",
+      "score": 0.0302,
+      "dense_rank": 3,
+      "bm25_rank": 10
+    },
+    {
+      "cite": "DOC-08 ¶2",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Ganesh Shinde (accountant) under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-15",
+      "text": "I prepare the GST returns and the cash book of Shree Sai Traders. I do not have the net-banking login of the current account. Vinod sheth keeps the login and the registered phone himself and makes all online payments.",
+      "score": 0.0286,
+      "dense_rank": 8,
+      "bm25_rank": 12
+    },
+    {
+      "cite": "DOC-01 ¶4",
+      "case_id": "CYB-131-2026",
+      "title": "NCRP complaint acknowledgement - Kavita Deshmukh",
+      "doc_type": "complaint",
+      "date": "2026-10-08",
+      "text": "Between 03-Sep and 29-Sep-2026 I transferred Rs 24,50,000 in six transfers to accounts given in the app: Shree Sai Traders (Godavari Bank), Neha Patil (Konkan Small Finance Bank) and Sunrise Agro Exports. The app showed a profit of Rs 61 lakh. When I tried to withdraw, I was asked to pay 15 percent \"tax\" first. I paid Rs 3,50,000 as tax on 29-Sep but was asked for more. Then I understood it was a fraud.",
+      "score": 0.0284,
+      "dense_rank": 4,
+      "bm25_rank": 18
+    },
+    {
+      "cite": "DOC-14 ¶2",
+      "case_id": "CYB-131-2026",
+      "title": "Telecom reply - subscriber of 7387004512 ('Dr. Arvind Mehta')",
+      "doc_type": "telecom_reply",
+      "date": "2026-10-14",
+      "text": "Address verification: no person by this name at the address. The SIM appears to have been issued on forged documents.",
+      "score": 0.028,
+      "dense_rank": 10,
+      "bm25_rank": 13
+    },
+    {
+      "cite": "DOC-05 ¶3",
+      "case_id": "CYB-131-2026",
+      "title": "Godavari Bank reply - account of Shree Sai Traders (Vinod Gaikwad)",
+      "doc_type": "bank_reply",
+      "date": "2026-10-14",
+      "text": "On 23-Sep-2026 at 13:10 hrs a self-cheque cash withdrawal of Rs 3,00,000 was made at the branch counter. The cheque was presented by the proprietor Vinod Gaikwad in person; his signature was verified and his identity was checked by the cashier. Branch CCTV for that date has been preserved.",
+      "score": 0.0277,
+      "dense_rank": 16,
+      "bm25_rank": 9
+    },
+    {
+      "cite": "DOC-02 ¶5",
+      "case_id": "CYB-131-2026",
+      "title": "First Information Report No. 131/2026, Cyber Police Station, Pune City",
+      "doc_type": "fir",
+      "date": "2026-10-12",
+      "text": "Details of known / suspected / unknown accused: unknown person using mobile 7387004512 as \"Dr. Arvind Mehta\"; operators of the app \"GB Pro Trade\" (domain gbprotrade.app); holders of Godavari Bank account 60450012783 (Shree Sai Traders), Konkan SFB account 50210066120044 (Neha Patil) and the account of Sunrise Agro Exports.",
+      "score": 0.0273,
+      "dense_rank": 24,
+      "bm25_rank": 5
+    }
+  ],
+  "answer": "# Case CYB-131-2026: Analysis from the Provided Excerpts\n\n## 1. Who should be charge-sheeted, and in what role\n\nThe excerpts support a **provisional** list of accused, not a final one.\n\n| Person / entity | Suggested role | Basis | Strength of evidence |\n|---|---|---|---|\n| **\"Dr. Arvind Mehta\"** (user of 7387004512) | Principal: the person who induced the complainant | Named as the suspect in the FIR [DOC-02 ¶5]. The SIM was issued on forged documents and no such person lives at the address [DOC-14 ¶2]. | Strong that this is a false identity. The **real person is not identified**, so he cannot yet be charge-sheeted by name. |\n| **Operators of \"GB Pro Trade\"** (gbprotrade.app) | Principal: ran the fake trading platform | FIR [DOC-02 ¶5]. The app showed a fake profit of Rs 61 lakh and then demanded a 15% \"tax\" [DOC-01 ¶4]. | Not identified. No domain, hosting or payment-gateway records are in the excerpts. |\n| **Vinod Gaikwad** (proprietor, Shree Sai Traders) | Probable account holder or money mule, possibly a knowing participant | His firm's account received the complainant's money [DOC-01 ¶4; DOC-02 ¶5]. He personally withdrew Rs 3,00,000 in cash on 23-Sep-2026 [DOC-05 ¶3]. His statement deflects blame [DOC-07 ¶2]. | Moderate. This is the strongest case against any named person in the file, subject to the gaps listed below. |\n| **Neha Patil** (Konkan SFB account holder) | Account holder / possible mule | Her account received the complainant's money [DOC-01 ¶4; DOC-02 ¶5]. She admits receiving Rs 10,000 cash \"through a friend\" [DOC-09 ¶3]. | Weak to moderate. There are no bank records for her account, so knowledge and intent are not established. |\n| **Sunrise Agro Exports** | Account holder (beneficiary) | Named in the complaint and FIR [DOC-01 ¶4; DOC-02 ¶5]. | **No evidence at all.** The bank, account number and proprietors are all unknown. |\n\nPossible offences include cheating, cheating by personation, criminal conspiracy, and identity-theft or personation offences under the IT Act. **The excerpts do not list any sections**, so the IO must frame these.\n\n## 2. Is anyone wrongly suspected?\n\n**Ganesh Shinde (accountant) appears to be wrongly blamed, though he cannot be fully cleared yet.**\n- Vinod says Ganesh \"handles all the banking work… including net banking\" [DOC-07 ¶2].\n- Ganesh says he only does GST returns and the cash book, and that Vinod \"keeps the login and the registered phone himself\" [DOC-08 ¶2].\n- The bank record supports Ganesh's account: Vinod himself operated the account in person on 23-Sep-2026 [DOC-05 ¶3].\n- Ganesh is not named in the FIR [DOC-02 ¶5].\n- To clear him fully, the IO needs the net-banking login, IP and device logs and the registered mobile number for the Shree Sai Traders account. These are not in the excerpts.\n\n**Neha Patil may be an unwitting mule,** but this cannot be decided on the present record (see section 3).\n\n## 3. Statements contradicted, or not supported, by the records\n\n1. **Vinod Gaikwad [DOC-07 ¶2]: contradicted.**\n   - He implies he had no hand in the account's banking and that any wrong money was handled \"without my knowledge.\"\n   - The Godavari Bank reply shows he **presented a self-cheque in person** on 23-Sep-2026 at 13:10 hrs and withdrew Rs 3,00,000. His signature was verified, the cashier checked his identity, and the CCTV has been preserved [DOC-05 ¶3].\n   - This falls inside the fraud window of 03 to 29 Sep [DOC-01 ¶4].\n   - Caveat: the excerpts do not show whether the complainant's money had reached this account **before** 23-Sep. If it had, the contradiction is decisive.\n\n2. **Ganesh Shinde [DOC-08 ¶2]: consistent** with the bank record [DOC-05 ¶3].\n\n3. **Neha Patil [DOC-09 ¶3]: incomplete and suspicious rather than proven false.**\n   - The complainant sent money to **her bank account** [DOC-01 ¶4], yet she speaks only of Rs 10,000 **cash** received through a friend. She does not explain the credits to her account.\n   - She denies withdrawing money \"in Bhiwandi\" and denies knowing \"Aamir bhai\" and \"Faisal.\" None of these appear anywhere else in the excerpts, so she seems to be answering specific questions or leads the file does not show.\n   - Her denials cannot be tested without the Konkan SFB statement, ATM or withdrawal locations, and the identity of the \"friend.\"\n\n## 4. Money trail (as far as the excerpts allow)\n\n| Stage | Amount | Source |\n|---|---|---|\n| Complainant to Shree Sai Traders, Neha Patil and Sunrise Agro Exports, in six transfers, 03 to 29 Sep-2026 | **Rs 24,50,000 total** | [DOC-01 ¶4] |\n| Includes a \"tax\" payment on 29-Sep | Rs 3,50,000 (apparently part of the total; this needs confirming) | [DOC-01 ¶4] |\n| Shree Sai Traders: cash withdrawal at the branch counter by Vinod, 23-Sep, 13:10 | Rs 3,00,000 | [DOC-05 ¶3] |\n| Neha Patil: cash she admits receiving through a friend | Rs 10,000 | [DOC-09 ¶3] (link to the fraud money is unverified) |\n\n**Missing:**\n- The split of the six transfers by beneficiary, date and UTR. The complainant's statement exists as an Excel file with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam [DOC-04 ¶3], but its contents are not in the excerpts.\n- The credit entries in Shree Sai Traders' account.\n- Any record at all for the Neha Patil and Sunrise Agro Exports accounts.\n- Onward transfers to second-layer accounts.\n- Amounts frozen or placed under lien.\n\n## 5. Is the case ready for chargesheet?\n\n**No.** The perpetrators behind the app and the phone number are unidentified, two of the three beneficiary accounts have no bank evidence, and the money trail stops at the first layer.\n\n### Gaps the IO must fix first\n\n**Money trail and bank records**\n1. Extract the complainant's six debits (date, amount, beneficiary, UTR) from the certified statement [DOC-04 ¶3].\n2. Obtain the Godavari Bank statement and KYC for account 60450012783, showing the credits from the complainant and when they arrived relative to 23-Sep. Obtain a Section 63 BSA certificate for it; none is mentioned in [DOC-05 ¶3].\n3. Obtain the net-banking login, IP and device logs and the registered mobile number for Shree Sai Traders, to resolve the Vinod/Ganesh conflict.\n4. Seize the preserved branch CCTV and the self-cheque under a proper certificate [DOC-05 ¶3]. Record the cashier's statement.\n5. Obtain the Konkan SFB statement and KYC for account 50210066120044 [DOC-02 ¶5], plus ATM and withdrawal locations to test the \"Bhiwandi\" denial.\n6. Identify Sunrise Agro Exports' bank, account, KYC and proprietors.\n7. Trace second-layer transfers and freeze or lien the remaining balances.\n\n**Identifying the perpetrators**\n8. Obtain CDR, IPDR and tower locations for 7387004512. Identify who submitted the forged SIM documents and the point-of-sale agent [DOC-14 ¶2].\n9. Obtain domain registrar, hosting and app-store records for gbprotrade.app.\n10. Identify Neha Patil's \"friend,\" \"Aamir bhai,\" \"Faisal,\" and the source of the Bhiwandi lead.\n\n**Complainant's evidence**\n11. Preserve the complainant's chats, app screenshots (the Rs 61 lakh \"profit\" and the tax demand) and the device, with certificates.\n\nUntil items 1 to 7 are done, the role of each account holder (knowing conspirator or unwitting mule) cannot be fixed with confidence, and Ganesh Shinde cannot formally be excluded.",
+  "stats": {
+    "api_calls": 1,
+    "input_tokens": 4,
+    "output_tokens": 4366,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 1305,
+    "cost_usd": 0.0939,
+    "seconds": 43.6
+  }
+}

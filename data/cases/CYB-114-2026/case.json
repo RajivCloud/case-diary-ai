@@ -1,0 +1,97 @@
+{
+  "case_id": "CYB-114-2026",
+  "fir_no": "114/2026",
+  "fir_date": "2026-10-07",
+  "police_station": "Cyber Police Station, Pune City",
+  "district": "Pune City",
+  "fraud_type": "Digital arrest (impersonation of CBI / police)",
+  "sections": [
+    "BNS 318(4)",
+    "BNS 319(2)",
+    "BNS 204",
+    "BNS 61(2)",
+    "IT Act 66C",
+    "IT Act 66D"
+  ],
+  "loss_inr": 3850000,
+  "frozen_inr": 1030000,
+  "io_name": "PI Meera Deshpande",
+  "complainant": "Prof. Suresh Kulkarni",
+  "brief_facts": "A retired professor was kept under a fake 'digital arrest' on video calls by callers posing as a courier company, Mumbai Police and a 'CBI officer Vikram Rathore', and was made to transfer Rs 38.5 lakh in three RTGS transfers for 'RBI verification'.",
+  "parties": [
+    {
+      "name": "Suresh Kulkarni",
+      "role": "Victim / complainant",
+      "phone": "9822041763",
+      "account_no": "10020034571",
+      "bank": "Sahyadri National Bank",
+      "notes": "Kothrud, Pune"
+    },
+    {
+      "name": "Vandana Kulkarni",
+      "role": "Witness",
+      "phone": "",
+      "account_no": "",
+      "bank": "",
+      "notes": "Victim's wife; suspects nephew"
+    },
+    {
+      "name": "Anil Kulkarni",
+      "role": "Person named by family",
+      "phone": "9845012377",
+      "account_no": "",
+      "bank": "",
+      "notes": "Nephew, Bengaluru"
+    },
+    {
+      "name": "Rohit Pawar",
+      "role": "Beneficiary account holder",
+      "phone": "9371662405",
+      "account_no": "50210043318876",
+      "bank": "Konkan Small Finance Bank",
+      "notes": "Student, Hadapsar"
+    },
+    {
+      "name": "Imran Shaikh",
+      "role": "Second-layer account holder",
+      "phone": "9890447120",
+      "account_no": "31082290447",
+      "bank": "Narmada Bank",
+      "notes": "Mobile shop, Malegaon"
+    },
+    {
+      "name": "Sameer Ansari",
+      "role": "Arrested (role to be established)",
+      "phone": "9765330812",
+      "account_no": "",
+      "bank": "",
+      "notes": "Bhadrakali, Nashik"
+    },
+    {
+      "name": "Unknown ('courier')",
+      "role": "Suspect number",
+      "phone": "7303518246",
+      "account_no": "",
+      "bank": "",
+      "notes": "Fake KYC: Pooja Verma"
+    },
+    {
+      "name": "Unknown ('CBI Vikram Rathore')",
+      "role": "Suspect number",
+      "phone": "8969204117",
+      "account_no": "",
+      "bank": "",
+      "notes": "Fake KYC: Ramesh Yadav; ConnectX cbi.vikram.rathore"
+    }
+  ],
+  "status": "Chargesheet under review",
+  "created_at": "2026-10-07 13:20",
+  "updated_at": "2026-10-18 12:40",
+  "suggested_questions": [
+    "Where was Imran Shaikh's phone on the afternoon of 5 October?",
+    "Who is operating the scam number 8969204117, and what links them to it?",
+    "Is the victim's nephew Anil Kulkarni involved?",
+    "Trace the victim's Rs 38.5 lakh account by account.",
+    "What evidence is still missing before we can file the chargesheet?"
+  ]
+}

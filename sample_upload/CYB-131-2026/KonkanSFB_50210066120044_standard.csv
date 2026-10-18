@@ -1,0 +1,14 @@
+txn_id,account_no,account_holder,bank,txn_time,direction,amount,mode,counterparty_account,counterparty_name,utr,remarks,location
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-15 12:41:00,CR,350000,IMPS,20117745902,Kavita Deshmukh,K647473021,IMPS credit,
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-25 16:31:00,CR,500000,RTGS,20117745902,Kavita Deshmukh,K338049559,RTGS credit,
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-16 10:02:00,DR,49000,ATM,,,K453987685,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-16 10:04:30,DR,49000,ATM,,,K100813880,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-16 10:07:10,DR,49000,ATM,,,K278337633,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-16 10:09:40,DR,49000,ATM,,,K331286206,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-26 11:15:00,DR,50000,ATM,,,K899815680,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-26 11:17:20,DR,50000,ATM,,,K973754765,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-26 11:19:45,DR,50000,ATM,,,K519459821,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-26 11:22:05,DR,50000,ATM,,,K493698691,ATM WDL KSFB-BWD-0021,"ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-17 09:30:00,DR,150000,IMPS,,CoinVault Technologies P2P escrow,K627165658,IMPS ref FQ DIGITAL,
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-09-27 09:45:00,DR,250000,IMPS,,CoinVault Technologies P2P escrow,K980576120,IMPS ref FQ DIGITAL,
+,50210066120044,Neha Patil,Konkan Small Finance Bank,2026-08-12 13:00:00,CR,1000,CASH,,,K102171481,Opening deposit,

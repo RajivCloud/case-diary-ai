@@ -1,0 +1,5 @@
+Reply of the Nodal Officer, Airwave Telecom, to notice under Section 94 BNSS. Mobile number 7387004512: subscriber name Arvind Mehta, address given as Satellite, Ahmedabad, Gujarat. Activated on 20-Aug-2026 through point-of-sale agent "Royal Mobile", Kalyan Road, Bhiwandi.
+
+Address verification: no person by this name at the address. The SIM appears to have been issued on forged documents.
+
+Call detail records with IMEI and cell-site locations for 7387004512 for 01-Aug to 12-Oct-2026 are provided in electronic form with a certificate under Section 63 BSA. CDRs of 9850123478, 9820456631 and 9922310045 obtained from their operators are also enclosed, each with a Section 63 certificate.

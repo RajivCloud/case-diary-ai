@@ -1,0 +1,5294 @@
+[
+  {
+    "type": "start",
+    "task": "Investigate this case. Who should be charge-sheeted and in what role? Is anyone wrongly suspected? Which statements are contradicted by the records? Trace the money. Is the case ready for chargesheet, and what gaps must the IO fix first?",
+    "model": "claude-opus-5-5",
+    "effort": "medium",
+    "case_id": "CYB-131-2026"
+  },
+  {
+    "type": "thinking",
+    "text": "I'll start by reading the FIR, complaint statement, and other key documents in parallel to get oriented quickly.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "I'll start with the FIR, the complainant's statement, and the bank replies."
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-02"
+    },
+    "n": 1
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-02",
+      "case_id": "CYB-131-2026",
+      "title": "First Information Report No. 131/2026, Cyber Police Station, Pune City",
+      "doc_type": "fir",
+      "date": "2026-10-12",
+      "paragraphs": [
+        {
+          "cite": "DOC-02 ¶1",
+          "text": "FIRST INFORMATION REPORT (under Section 173 BNSS). District: Pune City. Police Station: Cyber Police Station, Shivajinagar. FIR No. 131/2026. Date and time of FIR: 12-Oct-2026, 11:40 hrs."
+        },
+        {
+          "cite": "DOC-02 ¶2",
+          "text": "Acts and sections: Bharatiya Nyaya Sanhita, 2023 - Sections 318(4), 319(2), 336(3), 61(2); Information Technology Act, 2000 - Section 66D."
+        },
+        {
+          "cite": "DOC-02 ¶3",
+          "text": "Occurrence of offence: 28-Aug-2026 to 29-Sep-2026, through the ChatWave messaging app and the \"GB Pro Trade\" application."
+        },
+        {
+          "cite": "DOC-02 ¶4",
+          "text": "Complainant: Mrs. Kavita Deshmukh, age 52, Baner, Pune. Mobile 9850123478."
+        },
+        {
+          "cite": "DOC-02 ¶5",
+          "text": "Details of known / suspected / unknown accused: unknown person using mobile 7387004512 as \"Dr. Arvind Mehta\"; operators of the app \"GB Pro Trade\" (domain gbprotrade.app); holders of Godavari Bank account 60450012783 (Shree Sai Traders), Konkan SFB account 50210066120044 (Neha Patil) and the account of Sunrise Agro Exports."
+        },
+        {
+          "cite": "DOC-02 ¶6",
+          "text": "Property involved: Rs 24,50,000 transferred from Deccan Urban Co-operative Bank account 20117745902 of the complainant."
+        },
+        {
+          "cite": "DOC-02 ¶7",
+          "text": "Action taken: case registered; investigation entrusted to PSI Rahul Kadam, Cyber Police Station, Pune City."
+        }
+      ]
+    },
+    "n": 1
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-03"
+    },
+    "n": 2
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-03",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Mrs. Kavita Deshmukh under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-12",
+      "paragraphs": [
+        {
+          "cite": "DOC-03 ¶1",
+          "text": "Statement recorded by PSI Rahul Kadam on 12-Oct-2026. I, Kavita Deshmukh, age 52, Principal, residing at Baner, Pune, state as follows."
+        },
+        {
+          "cite": "DOC-03 ¶2",
+          "text": "My colleague Sunil Joshi, a senior teacher in our school, told me in August that he was earning good profits in an IPO group and shared the ChatWave group link. On 28-Aug the admin \"Dr. Arvind Mehta\" added me. Mehta sir also called me on my phone from 7387004512 a few times and spoke in Hindi."
+        },
+        {
+          "cite": "DOC-03 ¶3",
+          "text": "I installed the GB Pro Trade app. It showed my deposits and profits. I made transfers by net banking from my Deccan Urban Bank account: Rs 2,00,000 on 03-Sep, Rs 4,50,000 on 10-Sep and Rs 6,00,000 on 22-Sep to Shree Sai Traders; Rs 3,50,000 on 15-Sep and Rs 5,00,000 on 25-Sep to Neha Patil; and Rs 3,50,000 on 29-Sep to Sunrise Agro Exports as the \"15 percent tax\"."
+        },
+        {
+          "cite": "DOC-03 ¶4",
+          "text": "I suspect Sunil Joshi is part of this gang because he brought me into the group and kept encouraging me to invest more. I have no other suspicion."
+        },
+        {
+          "cite": "DOC-03 ¶5",
+          "text": "I have saved screenshots of the app, the group chat and the payment receipts. I will hand them over on a pen drive."
+        }
+      ]
+    },
+    "n": 2
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-04"
+    },
+    "n": 3
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-04",
+      "case_id": "CYB-131-2026",
+      "title": "Deccan Urban Co-op Bank reply - complainant's account debits",
+      "doc_type": "bank_reply",
+      "date": "2026-10-13",
+      "paragraphs": [
+        {
+          "cite": "DOC-04 ¶1",
+          "text": "Deccan Urban Co-operative Bank, Baner branch, Pune. Reply to notice under Section 94 BNSS dated 12-Oct-2026. Account No. 20117745902, holder Kavita Deshmukh."
+        },
+        {
+          "cite": "DOC-04 ¶2",
+          "text": "Six outward transfers were made by net banking from the customer's registered device between 03-Sep and 29-Sep-2026, totalling Rs 24,50,000, to: Shree Sai Traders, Godavari Bank A/c 60450012783 (three transfers, Rs 12,50,000); Neha Patil, Konkan Small Finance Bank A/c 50210066120044 (two transfers, Rs 8,50,000); Sunrise Agro Exports, Marudhar Co-operative Bank A/c 0451300912 (one transfer, Rs 3,50,000)."
+        },
+        {
+          "cite": "DOC-04 ¶3",
+          "text": "The account statement for 01-Aug-2026 to 12-Oct-2026 is enclosed as an Excel file with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam signed by the Branch Manager."
+        }
+      ]
+    },
+    "n": 3
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-05"
+    },
+    "n": 4
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-05",
+      "case_id": "CYB-131-2026",
+      "title": "Godavari Bank reply - account of Shree Sai Traders (Vinod Gaikwad)",
+      "doc_type": "bank_reply",
+      "date": "2026-10-14",
+      "paragraphs": [
+        {
+          "cite": "DOC-05 ¶1",
+          "text": "Godavari Bank, Osmanpura branch, Chhatrapati Sambhajinagar. Reply to notice under Section 94 BNSS. Current account No. 60450012783 in the name of \"Shree Sai Traders\", sole proprietor Vinod Ramdas Gaikwad, age 41, Osmanpura, Chhatrapati Sambhajinagar. Registered mobile 9922310045. Net banking is registered only to the proprietor; no other authorised signatory or user exists on the account."
+        },
+        {
+          "cite": "DOC-05 ¶2",
+          "text": "Between 03-Sep and 22-Sep-2026 the account received Rs 12,50,000 from Kavita Deshmukh, Rs 4,00,000 from Sunil Joshi (07-Sep and 18-Sep) and other credits. Outward IMPS transfers totalling Rs 14,20,000 were made to \"CoinVault Technologies - P2P escrow\" with the reference \"FQ Digital\". Each outward IMPS was authorised by an OTP sent by SMS (sender GDVBNK) to the registered mobile 9922310045."
+        },
+        {
+          "cite": "DOC-05 ¶3",
+          "text": "On 23-Sep-2026 at 13:10 hrs a self-cheque cash withdrawal of Rs 3,00,000 was made at the branch counter. The cheque was presented by the proprietor Vinod Gaikwad in person; his signature was verified and his identity was checked by the cashier. Branch CCTV for that date has been preserved."
+        },
+        {
+          "cite": "DOC-05 ¶4",
+          "text": "The account statement is enclosed in electronic form with a certificate under Section 63 BSA. Debit freeze applied on 13-Oct-2026; balance at freeze Rs 4,22,400."
+        }
+      ]
+    },
+    "n": 4
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-06"
+    },
+    "n": 5
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-06",
+      "case_id": "CYB-131-2026",
+      "title": "Konkan Small Finance Bank reply - account of Neha Patil",
+      "doc_type": "bank_reply",
+      "date": "2026-10-14",
+      "paragraphs": [
+        {
+          "cite": "DOC-06 ¶1",
+          "text": "Konkan Small Finance Bank, Kothrud branch, Pune. Reply to notice under Section 94 BNSS. Savings account No. 50210066120044, holder Neha Suresh Patil, age 20, student, Karve Nagar, Pune. Registered mobile 9067113452."
+        },
+        {
+          "cite": "DOC-06 ¶2",
+          "text": "The account received Rs 3,50,000 on 15-Sep and Rs 5,00,000 on 25-Sep-2026 from Kavita Deshmukh. The funds were withdrawn through ATM KSFB-BWD-0021, Kalyan Road, Bhiwandi (Rs 1,96,000 on 16-Sep and Rs 2,00,000 on 26-Sep) and Rs 4,00,000 was sent by IMPS to \"CoinVault Technologies - P2P escrow\" with the reference \"FQ Digital\"."
+        },
+        {
+          "cite": "DOC-06 ¶3",
+          "text": "The account holder resides in Pune; all ATM withdrawals took place in Bhiwandi. The statement is enclosed with a certificate under Section 63 BSA. Debit freeze applied on 13-Oct-2026; balance at freeze Rs 55,000."
+        }
+      ]
+    },
+    "n": 5
+  },
+  {
+    "type": "thinking",
+    "text": "Sunil Joshi sending Rs 4,00,000 to Shree Sai Traders stands out — he could be another victim here, so I should check statements DOC-07 through DOC-10 for more context.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Sunil Joshi also paid money into the Shree Sai Traders account, which suggests he may be a victim too. Next I'll read the statements."
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-07"
+    },
+    "n": 6
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-07",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Vinod Gaikwad under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-15",
+      "paragraphs": [
+        {
+          "cite": "DOC-07 ¶1",
+          "text": "Statement recorded at Chhatrapati Sambhajinagar on 15-Oct-2026. I, Vinod Ramdas Gaikwad, age 41, proprietor of Shree Sai Traders, Osmanpura, state as follows."
+        },
+        {
+          "cite": "DOC-07 ¶2",
+          "text": "I run a small agricultural supplies business. My accountant Ganesh Shinde handles all the banking work of the firm, including net banking. If any wrong money came into my account, he must have misused it without my knowledge."
+        },
+        {
+          "cite": "DOC-07 ¶3",
+          "text": "I did not know about these credits from Pune and I never withdrew any large amount in September. I do not know anyone called Dr. Arvind Mehta or Faisal. I do not trade in crypto."
+        },
+        {
+          "cite": "DOC-07 ¶4",
+          "text": "My mobile number is 9922310045. I will cooperate with the investigation."
+        }
+      ]
+    },
+    "n": 6
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-08"
+    },
+    "n": 7
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-08",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Ganesh Shinde (accountant) under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-15",
+      "paragraphs": [
+        {
+          "cite": "DOC-08 ¶1",
+          "text": "Statement recorded on 15-Oct-2026. I, Ganesh Shinde, age 34, part-time accountant for Shree Sai Traders and two other shops, state as follows."
+        },
+        {
+          "cite": "DOC-08 ¶2",
+          "text": "I prepare the GST returns and the cash book of Shree Sai Traders. I do not have the net-banking login of the current account. Vinod sheth keeps the login and the registered phone himself and makes all online payments."
+        },
+        {
+          "cite": "DOC-08 ¶3",
+          "text": "From 20-Sep to 26-Sep-2026 I was admitted at Sahyog Hospital, Chhatrapati Sambhajinagar, for dengue. My discharge summary is attached. I have not seen the bank statement for September."
+        }
+      ]
+    },
+    "n": 7
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-09"
+    },
+    "n": 8
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-09",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Neha Patil under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-16",
+      "paragraphs": [
+        {
+          "cite": "DOC-09 ¶1",
+          "text": "Statement recorded at Cyber Police Station, Pune, on 16-Oct-2026. I, Neha Suresh Patil, age 20, student of B.Sc., Karve Nagar, Pune, state as follows."
+        },
+        {
+          "cite": "DOC-09 ¶2",
+          "text": "In August a person called \"Aamir bhai\" contacted me on Instagram and offered Rs 10,000 for \"renting\" my bank account for a gaming business. I gave him my passbook, debit card, cheque book and the SIM card of my registered mobile 9067113452 through a courier to Bhiwandi."
+        },
+        {
+          "cite": "DOC-09 ¶3",
+          "text": "I received Rs 10,000 in cash through a friend. I did not know the money would come from a fraud. I have never met Aamir bhai and I do not know anyone named Faisal or Arvind Mehta. I have not withdrawn any money in Bhiwandi."
+        }
+      ]
+    },
+    "n": 8
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-10"
+    },
+    "n": 9
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-10",
+      "case_id": "CYB-131-2026",
+      "title": "Statement of Sunil Joshi under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-16",
+      "paragraphs": [
+        {
+          "cite": "DOC-10 ¶1",
+          "text": "Statement recorded on 16-Oct-2026. I, Sunil Joshi, age 55, senior teacher, Vidya Niketan School, Baner, state as follows."
+        },
+        {
+          "cite": "DOC-10 ¶2",
+          "text": "I joined the GoldenBull IPO Club group in July after seeing an advertisement. I believed the profits shown in the app and recommended the group to my colleague Kavita Deshmukh. I am very sorry for this."
+        },
+        {
+          "cite": "DOC-10 ¶3",
+          "text": "I myself transferred Rs 2,50,000 on 07-Sep and Rs 1,50,000 on 18-Sep-2026 to Shree Sai Traders on the instructions of the group, and I have lost Rs 4,00,000. I filed my own complaint on the 1930 helpline, acknowledgement No. 31510260004389 dated 07-Oct-2026."
+        }
+      ]
+    },
+    "n": 9
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-11"
+    },
+    "n": 10
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-11",
+      "case_id": "CYB-131-2026",
+      "title": "Hosting provider reply - admin panel of gbprotrade.app",
+      "doc_type": "platform_reply",
+      "date": "2026-10-17",
+      "paragraphs": [
+        {
+          "cite": "DOC-11 ¶1",
+          "text": "Reply of the hosting provider of the domain gbprotrade.app to a notice under Section 94 BNSS. The domain hosts the \"GB Pro Trade\" web application and its administrator panel."
+        },
+        {
+          "cite": "DOC-11 ¶2",
+          "text": "The administrator account \"gbadmin\" logged in to the panel from IP address 49.36.112.87 on 02-Sep-2026 at 22:10, 09-Sep-2026 at 23:05, 21-Sep-2026 at 21:40 and 28-Sep-2026 at 22:55 hrs IST. The panel was used to edit the \"profit\" figures shown to users, including the account of the user registered with mobile 9850123478."
+        },
+        {
+          "cite": "DOC-11 ¶3",
+          "text": "The logs are provided in electronic form with a certificate under Section 63 BSA."
+        }
+      ]
+    },
+    "n": 10
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-12"
+    },
+    "n": 11
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-12",
+      "case_id": "CYB-131-2026",
+      "title": "ISP reply - subscriber of IP address 49.36.112.87",
+      "doc_type": "platform_reply",
+      "date": "2026-10-17",
+      "paragraphs": [
+        {
+          "cite": "DOC-12 ¶1",
+          "text": "Reply of the Nodal Officer, SkyLink Broadband, to a notice under Section 94 BNSS regarding IP address 49.36.112.87 at the dates and times listed by the hosting provider."
+        },
+        {
+          "cite": "DOC-12 ¶2",
+          "text": "At all four times the IP address was allotted to the fibre broadband connection of subscriber Faisal Ahmed Qureshi, Flat 4, Al-Noor Complex, Nizampura, Bhiwandi, District Thane. Registered contact mobile 9820456631. KYC verified with Aadhaar at installation in March 2025."
+        },
+        {
+          "cite": "DOC-12 ¶3",
+          "text": "The IP allocation logs are provided with a certificate under Section 63 BSA signed by the Nodal Officer."
+        }
+      ]
+    },
+    "n": 11
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-13"
+    },
+    "n": 12
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-13",
+      "case_id": "CYB-131-2026",
+      "title": "CoinVault crypto exchange reply - P2P merchant FQ Digital",
+      "doc_type": "platform_reply",
+      "date": "2026-10-17",
+      "paragraphs": [
+        {
+          "cite": "DOC-13 ¶1",
+          "text": "Email reply received on 17-Oct-2026 from the compliance team of CoinVault Technologies, a crypto exchange, to a notice under Section 94 BNSS."
+        },
+        {
+          "cite": "DOC-13 ¶2",
+          "text": "The P2P merchant account \"FQ Digital\" is registered to Faisal Ahmed Qureshi, Bhiwandi, mobile 9820456631, KYC with PAN and Aadhaar. Between 04-Sep and 30-Sep-2026 the merchant received INR deposits into the P2P escrow from Godavari Bank account 60450012783 (Shree Sai Traders) totalling Rs 14,20,000 and from Konkan SFB account 50210066120044 (Neha Patil) totalling Rs 4,00,000. The INR was converted to USDT and withdrawn to external wallets."
+        },
+        {
+          "cite": "DOC-13 ¶3",
+          "text": "This is an email reply. A signed copy and the certificate under Section 63 BSA will be sent separately."
+        }
+      ]
+    },
+    "n": 12
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-14"
+    },
+    "n": 13
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-14",
+      "case_id": "CYB-131-2026",
+      "title": "Telecom reply - subscriber of 7387004512 ('Dr. Arvind Mehta')",
+      "doc_type": "telecom_reply",
+      "date": "2026-10-14",
+      "paragraphs": [
+        {
+          "cite": "DOC-14 ¶1",
+          "text": "Reply of the Nodal Officer, Airwave Telecom, to notice under Section 94 BNSS. Mobile number 7387004512: subscriber name Arvind Mehta, address given as Satellite, Ahmedabad, Gujarat. Activated on 20-Aug-2026 through point-of-sale agent \"Royal Mobile\", Kalyan Road, Bhiwandi."
+        },
+        {
+          "cite": "DOC-14 ¶2",
+          "text": "Address verification: no person by this name at the address. The SIM appears to have been issued on forged documents."
+        },
+        {
+          "cite": "DOC-14 ¶3",
+          "text": "Call detail records with IMEI and cell-site locations for 7387004512 for 01-Aug to 12-Oct-2026 are provided in electronic form with a certificate under Section 63 BSA. CDRs of 9850123478, 9820456631 and 9922310045 obtained from their operators are also enclosed, each with a Section 63 certificate."
+        }
+      ]
+    },
+    "n": 13
+  },
+  {
+    "type": "tool_call",
+    "name": "read_document",
+    "input": {
+      "doc_id": "DOC-15"
+    },
+    "n": 14
+  },
+  {
+    "type": "tool_result",
+    "name": "read_document",
+    "output": {
+      "doc_id": "DOC-15",
+      "case_id": "CYB-131-2026",
+      "title": "Complainant's letter submitting screenshots on pen drive",
+      "doc_type": "third_party_letter",
+      "date": "2026-10-13",
+      "paragraphs": [
+        {
+          "cite": "DOC-15 ¶1",
+          "text": "Letter dated 13-Oct-2026 from Mrs. Kavita Deshmukh to the Investigating Officer, Cyber Police Station, Pune City."
+        },
+        {
+          "cite": "DOC-15 ¶2",
+          "text": "I am submitting a pen drive containing 46 screenshots: the GoldenBull IPO Club group chat, messages from \"Dr. Arvind Mehta\" (7387004512), the GB Pro Trade app screens showing my \"portfolio\" and \"profit\", and my net-banking receipts."
+        },
+        {
+          "cite": "DOC-15 ¶3",
+          "text": "The screenshots were taken on my mobile phone between 28-Aug and 08-Oct-2026. No certificate has been prepared for them."
+        }
+      ]
+    },
+    "n": 14
+  },
+  {
+    "type": "text",
+    "text": "Writing initial findings to the diary, then checking phones and money."
+  },
+  {
+    "type": "tool_call",
+    "name": "update_case_diary",
+    "input": {
+      "entries": [
+        {
+          "type": "FACT",
+          "text": "Rs 24,50,000 debited in 6 net-banking transfers 03-29 Sep: Rs 12.5L to Shree Sai Traders (Godavari 60450012783), Rs 8.5L to Neha Patil (KSFB 50210066120044), Rs 3.5L to Sunrise Agro Exports (Marudhar Co-op 0451300912).",
+          "sources": [
+            "DOC-04 ¶2",
+            "DOC-03 ¶3"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "GB Pro Trade admin 'gbadmin' logged in from IP 49.36.112.87 on 4 dates and edited the victim's profit figures; ISP shows that IP belonged to Faisal Ahmed Qureshi, Bhiwandi (9820456631) at all four times.",
+          "sources": [
+            "DOC-11 ¶2",
+            "DOC-12 ¶2"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "CoinVault P2P merchant 'FQ Digital' (KYC Faisal Qureshi) received Rs 14,20,000 from Shree Sai Traders a/c and Rs 4,00,000 from Neha Patil a/c, converted to USDT.",
+          "sources": [
+            "DOC-13 ¶2",
+            "DOC-05 ¶2",
+            "DOC-06 ¶2"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Faisal Qureshi",
+          "text": "Indicated as operator of the GB Pro Trade admin panel and recipient of the laundered funds.",
+          "sources": [
+            "DOC-11 ¶2",
+            "DOC-12 ¶2",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Sunil Joshi",
+          "text": "Named by complainant as gang member (DOC-03 ¶4). He himself paid Rs 4L to Shree Sai Traders and filed 1930 complaint; verify.",
+          "sources": [
+            "DOC-03 ¶4",
+            "DOC-05 ¶2",
+            "DOC-10 ¶3"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Vinod Gaikwad",
+          "text": "Proprietor of the beneficiary account; sole net-banking user; self-cheque Rs 3L withdrawn in person on 23-Sep.",
+          "sources": [
+            "DOC-05 ¶1",
+            "DOC-05 ¶3"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Ganesh Shinde",
+          "text": "Blamed by Vinod Gaikwad for misusing net banking.",
+          "sources": [
+            "DOC-07 ¶2"
+          ]
+        },
+        {
+          "type": "SUSPECT",
+          "person": "Neha Patil",
+          "text": "Rented out her account, debit card and SIM for Rs 10,000.",
+          "sources": [
+            "DOC-09 ¶2"
+          ]
+        },
+        {
+          "type": "CONTRADICTION",
+          "person": "Vinod Gaikwad",
+          "text": "Says he never withdrew any large amount in September and the accountant handles net banking. Bank says he is the sole net-banking user and he personally cashed a Rs 3L self-cheque on 23-Sep at 13:10, with his signature and ID verified and CCTV preserved.",
+          "sources": [
+            "DOC-07 ¶2",
+            "DOC-07 ¶3",
+            "DOC-05 ¶1",
+            "DOC-05 ¶3"
+          ]
+        }
+      ]
+    },
+    "n": 15
+  },
+  {
+    "type": "diary",
+    "entries": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Rs 24,50,000 debited in 6 net-banking transfers 03-29 Sep: Rs 12.5L to Shree Sai Traders (Godavari 60450012783), Rs 8.5L to Neha Patil (KSFB 50210066120044), Rs 3.5L to Sunrise Agro Exports (Marudhar Co-op 0451300912).",
+        "sources": [
+          "DOC-04 ¶2",
+          "DOC-03 ¶3"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "GB Pro Trade admin 'gbadmin' logged in from IP 49.36.112.87 on 4 dates and edited the victim's profit figures; ISP shows that IP belonged to Faisal Ahmed Qureshi, Bhiwandi (9820456631) at all four times.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "CoinVault P2P merchant 'FQ Digital' (KYC Faisal Qureshi) received Rs 14,20,000 from Shree Sai Traders a/c and Rs 4,00,000 from Neha Patil a/c, converted to USDT.",
+        "sources": [
+          "DOC-13 ¶2",
+          "DOC-05 ¶2",
+          "DOC-06 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Indicated as operator of the GB Pro Trade admin panel and recipient of the laundered funds.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2",
+          "DOC-13 ¶2"
+        ],
+        "person": "Faisal Qureshi"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Named by complainant as gang member (DOC-03 ¶4). He himself paid Rs 4L to Shree Sai Traders and filed 1930 complaint; verify.",
+        "sources": [
+          "DOC-03 ¶4",
+          "DOC-05 ¶2",
+          "DOC-10 ¶3"
+        ],
+        "person": "Sunil Joshi"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Proprietor of the beneficiary account; sole net-banking user; self-cheque Rs 3L withdrawn in person on 23-Sep.",
+        "sources": [
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 7,
+        "type": "SUSPECT",
+        "text": "Blamed by Vinod Gaikwad for misusing net banking.",
+        "sources": [
+          "DOC-07 ¶2"
+        ],
+        "person": "Ganesh Shinde"
+      },
+      {
+        "n": 8,
+        "type": "SUSPECT",
+        "text": "Rented out her account, debit card and SIM for Rs 10,000.",
+        "sources": [
+          "DOC-09 ¶2"
+        ],
+        "person": "Neha Patil"
+      },
+      {
+        "n": 9,
+        "type": "CONTRADICTION",
+        "text": "Says he never withdrew any large amount in September and the accountant handles net banking. Bank says he is the sole net-banking user and he personally cashed a Rs 3L self-cheque on 23-Sep at 13:10, with his signature and ID verified and CCTV preserved.",
+        "sources": [
+          "DOC-07 ¶2",
+          "DOC-07 ¶3",
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      }
+    ]
+  },
+  {
+    "type": "tool_result",
+    "name": "update_case_diary",
+    "output": {
+      "added": 9,
+      "rejected": [],
+      "diary_size": 9
+    },
+    "n": 15
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "number": "7387004512"
+    },
+    "n": 16
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "number": "7387004512",
+      "handset_sequence": [
+        {
+          "imei": "355412097781230",
+          "from": "2026-08-20 12:34:00",
+          "to": "2026-10-11 21:55:00",
+          "events": 237
+        }
+      ]
+    },
+    "n": 16
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "number": "9820456631"
+    },
+    "n": 17
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "number": "9820456631",
+      "handset_sequence": [
+        {
+          "imei": "359112086654327",
+          "from": "2026-08-20 07:16:58",
+          "to": "2026-10-11 22:03:00",
+          "events": 544
+        }
+      ]
+    },
+    "n": 17
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9922310045",
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "n": 18
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 258,
+      "rows": [
+        {
+          "target_number": "9922310045",
+          "other_number": "9877956860",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-01 07:29:42",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9781715841",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-01 12:01:03",
+          "duration_sec": "229",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9265917399",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-01 14:57:03",
+          "duration_sec": "187",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9781715841",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-01 15:27:15",
+          "duration_sec": "421",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9078554668",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-01 17:21:13",
+          "duration_sec": "274",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9078554668",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-01 19:10:46",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9848853087",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-01 19:14:55",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9944727727",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-01 20:31:28",
+          "duration_sec": "267",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9660231690",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-01 20:37:22",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9256805279",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-01 20:55:47",
+          "duration_sec": "408",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9265917399",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-01 22:49:07",
+          "duration_sec": "357",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9256805279",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-02 07:44:48",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9931634341",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-02 07:57:37",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9781715841",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-02 10:07:29",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9917064591",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-02 19:07:41",
+          "duration_sec": "103",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9931634341",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-02 19:16:39",
+          "duration_sec": "459",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9012342414",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-02 22:15:17",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9944727727",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-03 08:13:24",
+          "duration_sec": "161",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9870207108",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-03 08:47:05",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-03 11:25:00",
+          "duration_sec": "120",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9827092534",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-03 15:12:53",
+          "duration_sec": "111",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9290829758",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-03 15:46:25",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9917064591",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-03 15:48:21",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9660231690",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-03 16:13:27",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9917064591",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-03 16:52:02",
+          "duration_sec": "183",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9290829758",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-03 21:07:07",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9848853087",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-03 21:27:56",
+          "duration_sec": "400",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9931634341",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-04 08:12:11",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9944727727",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 08:56:17",
+          "duration_sec": "450",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-04 11:39:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9078554668",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-04 13:15:36",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9640784603",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 13:28:09",
+          "duration_sec": "548",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9660231690",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 13:57:44",
+          "duration_sec": "75",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9922554701",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 14:03:27",
+          "duration_sec": "109",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9075684215",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 19:45:00",
+          "duration_sec": "179",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9219853239",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-04 19:55:49",
+          "duration_sec": "344",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9265917399",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-04 20:40:49",
+          "duration_sec": "537",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9848853087",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-04 21:07:10",
+          "duration_sec": "331",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9944727727",
+          "call_type": "CALL_IN",
+          "start_time": "2026-09-04 22:10:58",
+          "duration_sec": "260",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "55419009",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-05 09:02:20",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        }
+      ],
+      "truncated": true,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 18
+  },
+  {
+    "type": "thinking",
+    "text": "I'm noting that Vinod called 7387004512 on 03-Sep, so I should narrow in on his contacts with that number and 9820456631, along with the GDVBNK OTPs. I also want to check whether the 7387004512 handset matches Faisal's or has a different IMEI, cross-referencing IMEI 355412097781230 against other SIMs, and compare locations between 7387004512 and Faisal.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Vinod's phone called the 'Mehta' number on 03-Sep. Next I'll check his contacts with the suspect numbers, the bank OTP SMS, and the 'Mehta' handset."
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9922310045",
+      "other_number": "7387004512"
+    },
+    "n": 19
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 6,
+      "rows": [
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-03 11:25:00",
+          "duration_sec": "120",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-07 15:05:00",
+          "duration_sec": "56",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-10 15:50:00",
+          "duration_sec": "189",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-18 12:30:00",
+          "duration_sec": "200",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-22 10:40:00",
+          "duration_sec": "78",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "7387004512",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-23 13:35:00",
+          "duration_sec": "151",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 19
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9922310045",
+      "other_number": "9820456631"
+    },
+    "n": 20
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 3,
+      "rows": [
+        {
+          "target_number": "9922310045",
+          "other_number": "9820456631",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-08-25 18:10:00",
+          "duration_sec": "336",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9820456631",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-05 20:20:00",
+          "duration_sec": "355",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "9820456631",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-24 19:00:00",
+          "duration_sec": "357",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 20
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9922310045",
+      "other_number": "GDVBNK"
+    },
+    "n": 21
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 6,
+      "rows": [
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-04 11:39:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-08 12:14:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-11 10:19:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-19 16:04:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-23 10:44:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        },
+        {
+          "target_number": "9922310045",
+          "other_number": "GDVBNK",
+          "call_type": "SMS_IN",
+          "start_time": "2026-09-23 15:29:00",
+          "duration_sec": "0",
+          "imei": "861555043219087",
+          "cell_id": "CSN-OSM-02",
+          "cell_location": "Osmanpura, Chh. Sambhajinagar"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 21
+  },
+  {
+    "type": "tool_call",
+    "name": "imei_lookup",
+    "input": {
+      "imei": "355412097781230"
+    },
+    "n": 22
+  },
+  {
+    "type": "tool_result",
+    "name": "imei_lookup",
+    "output": {
+      "imei": "355412097781230",
+      "sim_sequence": [
+        {
+          "target_number": "7387004512",
+          "from": "2026-08-20 12:34:00",
+          "to": "2026-10-11 21:55:00",
+          "events": 237
+        }
+      ]
+    },
+    "n": 22
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9922310045",
+      "start": "2026-09-23 10:00",
+      "end": "2026-09-23 16:00"
+    },
+    "n": 23
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9922310045",
+      "window": [
+        "2026-09-23 10:00",
+        "2026-09-23 16:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Osmanpura, Chh. Sambhajinagar",
+          "from": "2026-09-23 10:44:00",
+          "to": "2026-09-23 15:40:04",
+          "events": 7,
+          "cell_id": "CSN-OSM-02"
+        }
+      ]
+    },
+    "n": 23
+  },
+  {
+    "type": "thinking",
+    "text": "Vinod's phone pinged at the Osmanpura branch at 13:10. I should cross-check the Godavari transactions and compare the 'Mehta' number's location against Faisal's, look into any Faisal–Mehta contact and whether Mehta called the victim, and then line up Neha's ATM withdrawals with Faisal's whereabouts.\n\n"
+  },
+  {
+    "type": "thinking",
+    "text": "I found that Vinod's phone received the bank OTPs and stayed in Osmanpura during the withdrawal. Next I'll review the account transactions and locate the 'Mehta' and Faisal phones.\n\n"
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "60450012783"
+    },
+    "n": 24
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 134,
+      "sum_amount": 4477600,
+      "rows": [
+        {
+          "txn_id": "T00045",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-01 14:56:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U833470415",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00046",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-01 19:15:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U799664493",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00047",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-02 19:31:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U374395310",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00048",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-03 10:44:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U503713410",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00049",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-04 11:08:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U797168558",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00050",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-04 14:54:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U934332973",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00051",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-05 10:23:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U447455615",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00052",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-05 11:11:00",
+          "direction": "CR",
+          "amount": "4200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U890216793",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00053",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-05 18:51:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U806289699",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00054",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-06 13:53:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U745642944",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00055",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-06 15:38:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U781864982",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00056",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-06 18:03:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U769226916",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00057",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-07 14:21:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U706078009",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00058",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-08 13:35:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U961272515",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00059",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-08 14:53:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U919133117",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00060",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-08 18:12:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U111337625",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00061",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-09 18:13:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U695116166",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00062",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-10 12:46:00",
+          "direction": "CR",
+          "amount": "9800",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U542822357",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00063",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-10 13:01:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U950524732",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00064",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-10 19:33:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U126469863",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00065",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-11 12:31:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U856070548",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00066",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-12 19:21:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U408786266",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00067",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-13 11:10:00",
+          "direction": "CR",
+          "amount": "4200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U368927048",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00068",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-13 14:22:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U997242992",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00069",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-14 12:50:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U561240891",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00070",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-14 15:22:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U461176551",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00071",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-14 18:43:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U450279817",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00072",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-15 17:48:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U206677676",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00073",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-16 13:37:00",
+          "direction": "DR",
+          "amount": "11000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U830085085",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00074",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-17 16:06:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U837074850",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00075",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-17 16:58:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U991594998",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00076",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-18 10:13:00",
+          "direction": "DR",
+          "amount": "2200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U340716098",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00077",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-18 15:18:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY CASH DEP",
+          "utr": "U504164566",
+          "remarks": "BY CASH DEP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00078",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-18 19:48:00",
+          "direction": "CR",
+          "amount": "4200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U958750954",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00079",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-19 15:31:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI TRANSPORT",
+          "utr": "U134105383",
+          "remarks": "TO UPI TRANSPORT",
+          "location": ""
+        },
+        {
+          "txn_id": "T00080",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-20 16:50:00",
+          "direction": "DR",
+          "amount": "6400",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U367688806",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00081",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-20 18:03:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI SHOP",
+          "utr": "U488574616",
+          "remarks": "BY UPI SHOP",
+          "location": ""
+        },
+        {
+          "txn_id": "T00082",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-21 15:05:00",
+          "direction": "CR",
+          "amount": "15000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U986099082",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00083",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-21 19:08:00",
+          "direction": "CR",
+          "amount": "1500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO UPI SEEDS SUPPLIER",
+          "utr": "U874598879",
+          "remarks": "TO UPI SEEDS SUPPLIER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00084",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-08-22 10:34:00",
+          "direction": "CR",
+          "amount": "4200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY UPI FARMER",
+          "utr": "U235934446",
+          "remarks": "BY UPI FARMER",
+          "location": ""
+        }
+      ],
+      "truncated": true
+    },
+    "n": 24
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "50210066120044"
+    },
+    "n": 25
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 13,
+      "sum_amount": 1647000,
+      "rows": [
+        {
+          "txn_id": "T00179",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-15 12:41:00",
+          "direction": "CR",
+          "amount": "350000",
+          "mode": "IMPS",
+          "counterparty_account": "20117745902",
+          "counterparty_name": "Kavita Deshmukh",
+          "utr": "K647473021",
+          "remarks": "IMPS credit",
+          "location": ""
+        },
+        {
+          "txn_id": "T00181",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-16 10:02:00",
+          "direction": "DR",
+          "amount": "49000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K453987685",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00182",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-16 10:04:30",
+          "direction": "DR",
+          "amount": "49000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K100813880",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00183",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-16 10:07:10",
+          "direction": "DR",
+          "amount": "49000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K278337633",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00184",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-16 10:09:40",
+          "direction": "DR",
+          "amount": "49000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K331286206",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00189",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-17 09:30:00",
+          "direction": "DR",
+          "amount": "150000",
+          "mode": "IMPS",
+          "counterparty_account": "",
+          "counterparty_name": "CoinVault Technologies P2P escrow",
+          "utr": "K627165658",
+          "remarks": "IMPS ref FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00180",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-25 16:31:00",
+          "direction": "CR",
+          "amount": "500000",
+          "mode": "RTGS",
+          "counterparty_account": "20117745902",
+          "counterparty_name": "Kavita Deshmukh",
+          "utr": "K338049559",
+          "remarks": "RTGS credit",
+          "location": ""
+        },
+        {
+          "txn_id": "T00185",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-26 11:15:00",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K899815680",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00186",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-26 11:17:20",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K973754765",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00187",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-26 11:19:45",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K519459821",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00188",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-26 11:22:05",
+          "direction": "DR",
+          "amount": "50000",
+          "mode": "ATM",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K493698691",
+          "remarks": "ATM WDL KSFB-BWD-0021",
+          "location": "ATM KSFB-BWD-0021 Kalyan Road, Bhiwandi"
+        },
+        {
+          "txn_id": "T00190",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-09-27 09:45:00",
+          "direction": "DR",
+          "amount": "250000",
+          "mode": "IMPS",
+          "counterparty_account": "",
+          "counterparty_name": "CoinVault Technologies P2P escrow",
+          "utr": "K980576120",
+          "remarks": "IMPS ref FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00191",
+          "account_no": "50210066120044",
+          "account_holder": "Neha Patil",
+          "bank": "Konkan Small Finance Bank",
+          "txn_time": "2026-12-08 13:00:00",
+          "direction": "CR",
+          "amount": "1000",
+          "mode": "CASH",
+          "counterparty_account": "",
+          "counterparty_name": "",
+          "utr": "K102171481",
+          "remarks": "Opening deposit",
+          "location": ""
+        }
+      ],
+      "truncated": false
+    },
+    "n": 25
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "20117745902",
+      "start": "2026-09-01",
+      "end": "2026-10-12"
+    },
+    "n": 26
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 27,
+      "sum_amount": 2741196,
+      "rows": [
+        {
+          "txn_id": "T00018",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-01 00:00:00",
+          "direction": "CR",
+          "amount": "118500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "NEFT/SALARY/VIDYA NIKETAN TRUST",
+          "utr": "N5854424037",
+          "remarks": "NEFT/SALARY/VIDYA NIKETAN TRUST",
+          "location": ""
+        },
+        {
+          "txn_id": "T00019",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-02 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/MSEDCL",
+          "utr": "UPI5979031286",
+          "remarks": "UPI/MSEDCL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00020",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-03 00:00:00",
+          "direction": "DR",
+          "amount": "200000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "IMPS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "utr": "IMPS624611052231",
+          "remarks": "IMPS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "location": ""
+        },
+        {
+          "txn_id": "T00021",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-03 00:00:00",
+          "direction": "DR",
+          "amount": "2399",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/MSEDCL",
+          "utr": "UPI4062306168",
+          "remarks": "UPI/MSEDCL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00022",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-04 00:00:00",
+          "direction": "DR",
+          "amount": "8800",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "ACH/LIC PREMIUM",
+          "utr": "UPI8839019596",
+          "remarks": "ACH/LIC PREMIUM",
+          "location": ""
+        },
+        {
+          "txn_id": "T00023",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-09 00:00:00",
+          "direction": "DR",
+          "amount": "8800",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/AMAZON PAY",
+          "utr": "UPI1092698048",
+          "remarks": "UPI/AMAZON PAY",
+          "location": ""
+        },
+        {
+          "txn_id": "T00024",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-10 00:00:00",
+          "direction": "DR",
+          "amount": "450000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "RTGS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "utr": "DUCBR525310044518",
+          "remarks": "RTGS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "location": ""
+        },
+        {
+          "txn_id": "T00025",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-11 00:00:00",
+          "direction": "DR",
+          "amount": "450",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "ACH/LIC PREMIUM",
+          "utr": "UPI1887070093",
+          "remarks": "ACH/LIC PREMIUM",
+          "location": ""
+        },
+        {
+          "txn_id": "T00026",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-12 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/BANER MEDICAL",
+          "utr": "UPI4376187137",
+          "remarks": "UPI/BANER MEDICAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00027",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-13 00:00:00",
+          "direction": "DR",
+          "amount": "450",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI3050228888",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00028",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-14 00:00:00",
+          "direction": "DR",
+          "amount": "450",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/BANER MEDICAL",
+          "utr": "UPI1217109659",
+          "remarks": "UPI/BANER MEDICAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00029",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-15 00:00:00",
+          "direction": "DR",
+          "amount": "350000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "IMPS/NEHA PATIL/KONKAN SFB/50210066120044",
+          "utr": "IMPS625812440917",
+          "remarks": "IMPS/NEHA PATIL/KONKAN SFB/50210066120044",
+          "location": ""
+        },
+        {
+          "txn_id": "T00030",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-19 00:00:00",
+          "direction": "DR",
+          "amount": "2399",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI6419268741",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00031",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-22 00:00:00",
+          "direction": "DR",
+          "amount": "600000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "RTGS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "utr": "DUCBR526510009921",
+          "remarks": "RTGS/SHREE SAI TRADERS/GODAVARI BANK/60450012783",
+          "location": ""
+        },
+        {
+          "txn_id": "T00032",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-22 00:00:00",
+          "direction": "DR",
+          "amount": "2399",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/AMAZON PAY",
+          "utr": "UPI8065499161",
+          "remarks": "UPI/AMAZON PAY",
+          "location": ""
+        },
+        {
+          "txn_id": "T00033",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-23 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "ACH/LIC PREMIUM",
+          "utr": "UPI1543799895",
+          "remarks": "ACH/LIC PREMIUM",
+          "location": ""
+        },
+        {
+          "txn_id": "T00034",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-24 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI3114881418",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00035",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-25 00:00:00",
+          "direction": "DR",
+          "amount": "500000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "RTGS/NEHA PATIL/KONKAN SFB/50210066120044",
+          "utr": "DUCBR526810016730",
+          "remarks": "RTGS/NEHA PATIL/KONKAN SFB/50210066120044",
+          "location": ""
+        },
+        {
+          "txn_id": "T00036",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-26 00:00:00",
+          "direction": "DR",
+          "amount": "2399",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI3558525301",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00037",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-09-29 00:00:00",
+          "direction": "DR",
+          "amount": "350000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "RTGS/SUNRISE AGRO EXPORTS/MARUDHAR CO-OP BANK/0451300912",
+          "utr": "DUCBR527210011204",
+          "remarks": "RTGS/SUNRISE AGRO EXPORTS/MARUDHAR CO-OP BANK/0451300912",
+          "location": ""
+        },
+        {
+          "txn_id": "T00038",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-01 00:00:00",
+          "direction": "CR",
+          "amount": "118500",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "NEFT/SALARY/VIDYA NIKETAN TRUST",
+          "utr": "N6174667022",
+          "remarks": "NEFT/SALARY/VIDYA NIKETAN TRUST",
+          "location": ""
+        },
+        {
+          "txn_id": "T00039",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-01 00:00:00",
+          "direction": "DR",
+          "amount": "1200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "ACH/LIC PREMIUM",
+          "utr": "UPI8342760954",
+          "remarks": "ACH/LIC PREMIUM",
+          "location": ""
+        },
+        {
+          "txn_id": "T00040",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-05 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI6889191610",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00041",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-07 00:00:00",
+          "direction": "DR",
+          "amount": "450",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/AMAZON PAY",
+          "utr": "UPI8599424273",
+          "remarks": "UPI/AMAZON PAY",
+          "location": ""
+        },
+        {
+          "txn_id": "T00042",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-08 00:00:00",
+          "direction": "DR",
+          "amount": "3600",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "ACH/LIC PREMIUM",
+          "utr": "UPI5965429403",
+          "remarks": "ACH/LIC PREMIUM",
+          "location": ""
+        },
+        {
+          "txn_id": "T00043",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-10 00:00:00",
+          "direction": "DR",
+          "amount": "1200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI9313927865",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        },
+        {
+          "txn_id": "T00044",
+          "account_no": "20117745902",
+          "account_holder": "Kavita Deshmukh",
+          "bank": "Deccan Urban Co-op Bank",
+          "txn_time": "2026-10-12 00:00:00",
+          "direction": "DR",
+          "amount": "1200",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "UPI/D-MART BANER",
+          "utr": "UPI7547647718",
+          "remarks": "UPI/D-MART BANER",
+          "location": ""
+        }
+      ],
+      "truncated": false
+    },
+    "n": 26
+  },
+  {
+    "type": "thinking",
+    "text": "Neha's ATM total checks out: 4×49000 plus 4×50000 equals 196000+200000, matching. Now I need to pull Godavari's large September transactions.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Now I'll pull the Godavari account's September transactions above Rs 50,000, and check where the Faisal and 'Mehta' phones were when the Bhiwandi ATM withdrawals happened."
+  },
+  {
+    "type": "tool_call",
+    "name": "query_transactions",
+    "input": {
+      "account_no": "60450012783",
+      "start": "2026-09-01",
+      "end": "2026-10-13",
+      "min_amount": 50000
+    },
+    "n": 27
+  },
+  {
+    "type": "tool_result",
+    "name": "query_transactions",
+    "output": {
+      "total_rows": 14,
+      "sum_amount": 3570000,
+      "rows": [
+        {
+          "txn_id": "T00104",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-03 11:06:00",
+          "direction": "CR",
+          "amount": "200000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY IMPS KAVITA DESHMUKH DUCB",
+          "utr": "R899746871",
+          "remarks": "BY IMPS KAVITA DESHMUKH DUCB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00106",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-04 11:40:00",
+          "direction": "DR",
+          "amount": "190000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I283248362",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00109",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-07 14:51:00",
+          "direction": "CR",
+          "amount": "250000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY IMPS SUNIL JOSHI SNB",
+          "utr": "R466264177",
+          "remarks": "BY IMPS SUNIL JOSHI SNB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00112",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-08 12:15:00",
+          "direction": "DR",
+          "amount": "245000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I791926155",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00116",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-10 15:21:00",
+          "direction": "CR",
+          "amount": "450000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY RTGS KAVITA DESHMUKH DUCB",
+          "utr": "R992803507",
+          "remarks": "BY RTGS KAVITA DESHMUKH DUCB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00117",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-11 10:20:00",
+          "direction": "DR",
+          "amount": "205000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I859370196",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00122",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-12 17:40:00",
+          "direction": "CR",
+          "amount": "120000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY IMPS RAMESH NAIK HDB",
+          "utr": "R468554023",
+          "remarks": "BY IMPS RAMESH NAIK HDB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00135",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-18 12:17:00",
+          "direction": "CR",
+          "amount": "150000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY IMPS SUNIL JOSHI SNB",
+          "utr": "R470180292",
+          "remarks": "BY IMPS SUNIL JOSHI SNB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00137",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-19 16:05:00",
+          "direction": "DR",
+          "amount": "280000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I849116893",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00139",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-22 10:16:00",
+          "direction": "CR",
+          "amount": "600000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY RTGS KAVITA DESHMUKH DUCB",
+          "utr": "R413558881",
+          "remarks": "BY RTGS KAVITA DESHMUKH DUCB",
+          "location": ""
+        },
+        {
+          "txn_id": "T00143",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-23 10:45:00",
+          "direction": "DR",
+          "amount": "300000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I373413762",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00144",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-23 13:10:00",
+          "direction": "DR",
+          "amount": "300000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO SELF CHQ 004412 CASH WDL AT BRANCH",
+          "utr": "CHQ004412",
+          "remarks": "TO SELF CHQ 004412 CASH WDL AT BRANCH",
+          "location": ""
+        },
+        {
+          "txn_id": "T00145",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-23 15:30:00",
+          "direction": "DR",
+          "amount": "200000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "utr": "I762413161",
+          "remarks": "TO IMPS COINVAULT TECHNOLOGIES P2P ESCROW REF FQ DIGITAL",
+          "location": ""
+        },
+        {
+          "txn_id": "T00149",
+          "account_no": "60450012783",
+          "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+          "bank": "Godavari Bank",
+          "txn_time": "2026-09-26 11:02:00",
+          "direction": "CR",
+          "amount": "80000",
+          "mode": "",
+          "counterparty_account": "",
+          "counterparty_name": "BY IMPS PRIYA SHAH KTB",
+          "utr": "R468919391",
+          "remarks": "BY IMPS PRIYA SHAH KTB",
+          "location": ""
+        }
+      ],
+      "truncated": false
+    },
+    "n": 27
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9820456631",
+      "start": "2026-09-16 09:00",
+      "end": "2026-09-16 11:00"
+    },
+    "n": 28
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9820456631",
+      "window": [
+        "2026-09-16 09:00",
+        "2026-09-16 11:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-16 10:08:00",
+          "to": "2026-09-16 10:08:00",
+          "events": 1,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-16 10:57:00",
+          "to": "2026-09-16 10:57:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        }
+      ]
+    },
+    "n": 28
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9820456631",
+      "start": "2026-09-26 10:30",
+      "end": "2026-09-26 12:00"
+    },
+    "n": 29
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9820456631",
+      "window": [
+        "2026-09-26 10:30",
+        "2026-09-26 12:00"
+      ],
+      "movements": [
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-26 10:49:59",
+          "to": "2026-09-26 10:49:59",
+          "events": 1,
+          "cell_id": "BWD-NZM-04"
+        }
+      ]
+    },
+    "n": 29
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "7387004512",
+      "other_number": "9820456631"
+    },
+    "n": 30
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 0,
+      "rows": [],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 30
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "7387004512",
+      "other_number": "9850123478"
+    },
+    "n": 31
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 7,
+      "rows": [
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-08-28 19:30:00",
+          "duration_sec": "946",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-02 20:10:00",
+          "duration_sec": "1062",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-09 21:15:00",
+          "duration_sec": "1340",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-21 19:45:00",
+          "duration_sec": "479",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-28 20:30:00",
+          "duration_sec": "1104",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-09-30 11:20:00",
+          "duration_sec": "887",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        },
+        {
+          "target_number": "7387004512",
+          "other_number": "9850123478",
+          "call_type": "CALL_OUT",
+          "start_time": "2026-10-06 18:05:00",
+          "duration_sec": "334",
+          "imei": "355412097781230",
+          "cell_id": "BWD-NZM-04",
+          "cell_location": "Nizampura, Bhiwandi"
+        }
+      ],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 31
+  },
+  {
+    "type": "thinking",
+    "text": "The Godavari CoinVault total checks out at 1.42 million, matching the figures. I'm noting other potential victims like Ramesh Naik and Priya Shah, and I want to check whether Faisal's phone shares the same tower (BWD-NZM-04 in Nizampura) as the Mehta phone during those calls, which would establish co-location.\n\nI need to pull Faisal's location data for 2026-08-28 around 19:30 and for 09-09, verify Sunil Joshi's connection to the suspect numbers since his own number isn't on file, and check if he turns up anywhere in the CDR for the unknown number 7387004512. Time to run those archive searches.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "The money matches the bank replies. I'll now check the archive for linked cases and whether Faisal's phone was co-located with the 'Mehta' phone."
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "7387004512 OR 9820456631 OR FQ Digital OR 60450012783 OR GB Pro Trade",
+      "include_archive": true,
+      "k": 10
+    },
+    "n": 32
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-13 ¶2",
+          "case_id": "CYB-131-2026",
+          "title": "CoinVault crypto exchange reply - P2P merchant FQ Digital",
+          "doc_type": "platform_reply",
+          "date": "2026-10-17",
+          "text": "The P2P merchant account \"FQ Digital\" is registered to Faisal Ahmed Qureshi, Bhiwandi, mobile 9820456631, KYC with PAN and Aadhaar. Between 04-Sep and 30-Sep-2026 the merchant received INR deposits into the P2P escrow from Godavari Bank account 60450012783 (Shree Sai Traders) totalling Rs 14,20,000 and from Konkan SFB account 50210066120044 (Neha Patil) totalling Rs 4,00,000. The INR was converted to USDT and withdrawn to external wallets.",
+          "score": 0.0315,
+          "dense_rank": 1,
+          "bm25_rank": 6
+        },
+        {
+          "cite": "DOC-15 ¶2",
+          "case_id": "CYB-131-2026",
+          "title": "Complainant's letter submitting screenshots on pen drive",
+          "doc_type": "third_party_letter",
+          "date": "2026-10-13",
+          "text": "I am submitting a pen drive containing 46 screenshots: the GoldenBull IPO Club group chat, messages from \"Dr. Arvind Mehta\" (7387004512), the GB Pro Trade app screens showing my \"portfolio\" and \"profit\", and my net-banking receipts.",
+          "score": 0.031,
+          "dense_rank": 4,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "DOC-01 ¶3",
+          "case_id": "CYB-131-2026",
+          "title": "NCRP complaint acknowledgement - Kavita Deshmukh",
+          "doc_type": "complaint",
+          "date": "2026-10-08",
+          "text": "On 28-Aug-2026 I was added to a ChatWave group \"GoldenBull IPO Club\" by the admin \"Dr. Arvind Mehta (SEBI-registered analyst)\", mobile 7387004512. He told members to install the \"GB Pro Trade\" app from a link and to invest through it for IPO allotments.",
+          "score": 0.0306,
+          "dense_rank": 3,
+          "bm25_rank": 8
+        },
+        {
+          "cite": "DOC-13 ¶3",
+          "case_id": "CYB-131-2026",
+          "title": "CoinVault crypto exchange reply - P2P merchant FQ Digital",
+          "doc_type": "platform_reply",
+          "date": "2026-10-17",
+          "text": "This is an email reply. A signed copy and the certificate under Section 63 BSA will be sent separately.",
+          "score": 0.0289,
+          "dense_rank": 2,
+          "bm25_rank": 18
+        },
+        {
+          "cite": "DOC-14 ¶3",
+          "case_id": "CYB-131-2026",
+          "title": "Telecom reply - subscriber of 7387004512 ('Dr. Arvind Mehta')",
+          "doc_type": "telecom_reply",
+          "date": "2026-10-14",
+          "text": "Call detail records with IMEI and cell-site locations for 7387004512 for 01-Aug to 12-Oct-2026 are provided in electronic form with a certificate under Section 63 BSA. CDRs of 9850123478, 9820456631 and 9922310045 obtained from their operators are also enclosed, each with a Section 63 certificate.",
+          "score": 0.0284,
+          "dense_rank": 5,
+          "bm25_rank": 17
+        },
+        {
+          "cite": "DOC-11 ¶1",
+          "case_id": "CYB-131-2026",
+          "title": "Hosting provider reply - admin panel of gbprotrade.app",
+          "doc_type": "platform_reply",
+          "date": "2026-10-17",
+          "text": "Reply of the hosting provider of the domain gbprotrade.app to a notice under Section 94 BNSS. The domain hosts the \"GB Pro Trade\" web application and its administrator panel.",
+          "score": 0.028,
+          "dense_rank": 8,
+          "bm25_rank": 15
+        },
+        {
+          "cite": "DOC-13 ¶1",
+          "case_id": "CYB-131-2026",
+          "title": "CoinVault crypto exchange reply - P2P merchant FQ Digital",
+          "doc_type": "platform_reply",
+          "date": "2026-10-17",
+          "text": "Email reply received on 17-Oct-2026 from the compliance team of CoinVault Technologies, a crypto exchange, to a notice under Section 94 BNSS.",
+          "score": 0.0278,
+          "dense_rank": 6,
+          "bm25_rank": 19
+        },
+        {
+          "cite": "DOC-12 ¶5",
+          "case_id": "CYB-114-2026",
+          "title": "Statement of Rohit Pawar under Section 180 BNSS (first statement)",
+          "doc_type": "statement_180",
+          "date": "2026-10-11",
+          "text": "My mobile number is 9371662405 and it is always with me. I have not lost my phone or SIM.",
+          "score": 0.0273,
+          "dense_rank": 26,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-14 ¶2",
+          "case_id": "CYB-131-2026",
+          "title": "Telecom reply - subscriber of 7387004512 ('Dr. Arvind Mehta')",
+          "doc_type": "telecom_reply",
+          "date": "2026-10-14",
+          "text": "Address verification: no person by this name at the address. The SIM appears to have been issued on forged documents.",
+          "score": 0.0251,
+          "dense_rank": 15,
+          "bm25_rank": 25
+        },
+        {
+          "cite": "DOC-12 ¶2",
+          "case_id": "CYB-131-2026",
+          "title": "ISP reply - subscriber of IP address 49.36.112.87",
+          "doc_type": "platform_reply",
+          "date": "2026-10-17",
+          "text": "At all four times the IP address was allotted to the fibre broadband connection of subscriber Faisal Ahmed Qureshi, Flat 4, Al-Noor Complex, Nizampura, Bhiwandi, District Thane. Registered contact mobile 9820456631. KYC verified with Aadhaar at installation in March 2025.",
+          "score": 0.0246,
+          "dense_rank": 17,
+          "bm25_rank": 26
+        }
+      ]
+    },
+    "n": 32
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9820456631",
+      "start": "2026-09-09 20:00",
+      "end": "2026-09-09 23:59"
+    },
+    "n": 33
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9820456631",
+      "window": [
+        "2026-09-09 20:00",
+        "2026-09-09 23:59"
+      ],
+      "movements": [
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-09 20:28:00",
+          "to": "2026-09-09 22:21:36",
+          "events": 5,
+          "cell_id": "BWD-NZM-04"
+        }
+      ]
+    },
+    "n": 33
+  },
+  {
+    "type": "tool_call",
+    "name": "search_case_files",
+    "input": {
+      "query": "Sunrise Agro Exports Marudhar 0451300912",
+      "include_archive": true
+    },
+    "n": 34
+  },
+  {
+    "type": "tool_result",
+    "name": "search_case_files",
+    "output": {
+      "results": [
+        {
+          "cite": "DOC-04 ¶2",
+          "case_id": "CYB-131-2026",
+          "title": "Deccan Urban Co-op Bank reply - complainant's account debits",
+          "doc_type": "bank_reply",
+          "date": "2026-10-13",
+          "text": "Six outward transfers were made by net banking from the customer's registered device between 03-Sep and 29-Sep-2026, totalling Rs 24,50,000, to: Shree Sai Traders, Godavari Bank A/c 60450012783 (three transfers, Rs 12,50,000); Neha Patil, Konkan Small Finance Bank A/c 50210066120044 (two transfers, Rs 8,50,000); Sunrise Agro Exports, Marudhar Co-operative Bank A/c 0451300912 (one transfer, Rs 3,50,000).",
+          "score": 0.0325,
+          "dense_rank": 2,
+          "bm25_rank": 1
+        },
+        {
+          "cite": "DOC-01 ¶4",
+          "case_id": "CYB-131-2026",
+          "title": "NCRP complaint acknowledgement - Kavita Deshmukh",
+          "doc_type": "complaint",
+          "date": "2026-10-08",
+          "text": "Between 03-Sep and 29-Sep-2026 I transferred Rs 24,50,000 in six transfers to accounts given in the app: Shree Sai Traders (Godavari Bank), Neha Patil (Konkan Small Finance Bank) and Sunrise Agro Exports. The app showed a profit of Rs 61 lakh. When I tried to withdraw, I was asked to pay 15 percent \"tax\" first. I paid Rs 3,50,000 as tax on 29-Sep but was asked for more. Then I understood it was a fraud.",
+          "score": 0.0323,
+          "dense_rank": 1,
+          "bm25_rank": 3
+        },
+        {
+          "cite": "DOC-03 ¶3",
+          "case_id": "CYB-131-2026",
+          "title": "Statement of Mrs. Kavita Deshmukh under Section 180 BNSS",
+          "doc_type": "statement_180",
+          "date": "2026-10-12",
+          "text": "I installed the GB Pro Trade app. It showed my deposits and profits. I made transfers by net banking from my Deccan Urban Bank account: Rs 2,00,000 on 03-Sep, Rs 4,50,000 on 10-Sep and Rs 6,00,000 on 22-Sep to Shree Sai Traders; Rs 3,50,000 on 15-Sep and Rs 5,00,000 on 25-Sep to Neha Patil; and Rs 3,50,000 on 29-Sep to Sunrise Agro Exports as the \"15 percent tax\".",
+          "score": 0.0315,
+          "dense_rank": 3,
+          "bm25_rank": 4
+        },
+        {
+          "cite": "DOC-02 ¶5",
+          "case_id": "CYB-131-2026",
+          "title": "First Information Report No. 131/2026, Cyber Police Station, Pune City",
+          "doc_type": "fir",
+          "date": "2026-10-12",
+          "text": "Details of known / suspected / unknown accused: unknown person using mobile 7387004512 as \"Dr. Arvind Mehta\"; operators of the app \"GB Pro Trade\" (domain gbprotrade.app); holders of Godavari Bank account 60450012783 (Shree Sai Traders), Konkan SFB account 50210066120044 (Neha Patil) and the account of Sunrise Agro Exports.",
+          "score": 0.0302,
+          "dense_rank": 11,
+          "bm25_rank": 2
+        },
+        {
+          "cite": "DOC-11 ¶3",
+          "case_id": "CYB-114-2026",
+          "title": "Layer accounts - trail and freeze status report",
+          "doc_type": "bank_reply",
+          "date": "2026-10-10",
+          "text": "Layer account 2: Hemant Saini, Marudhar Co-operative Bank, Jaipur, A/c 0451200381. Received Rs 8,40,000 on 05-Oct-2026. Balance nil at the time of freeze; funds moved onward to multiple wallets, enquiry pending.",
+          "score": 0.0289,
+          "dense_rank": 14,
+          "bm25_rank": 5
+        },
+        {
+          "cite": "CYB-098-2026-FIR ¶3",
+          "case_id": "CYB-098-2026",
+          "title": "Digital arrest fraud on Mrs. Leela Joshi, Aundh",
+          "doc_type": "fir",
+          "date": "2026-08-24",
+          "text": "She was told to stay on camera and transferred Rs 6,20,000 by IMPS to an account at Marudhar Co-operative Bank, Jaipur. The account holder could not be traced. Investigation pending; the courier number was switched off when checked in August.",
+          "score": 0.0221,
+          "dense_rank": 83,
+          "bm25_rank": 6
+        }
+      ]
+    },
+    "n": 34
+  },
+  {
+    "type": "thinking",
+    "text": "I don't see a direct linked case for these numbers or accounts in the archive — Marudhar Co-op Bank appears in CYB-114 and CYB-098, but that's only a weak MO-based lead, not a confirmed link, and the Sunrise Agro account statement/bank reply is missing entirely, which is a gap. I do note that Faisal's phone shares a tower with the 'Mehta' phone during the 09-Sep call at 21:15, which is consistent with a connection.\n\nThe IMEIs differ though, so I need to check the 08-28 and 09-28 timestamps and whether Faisal's phone was near Kalyan Road during the ATM withdrawal window, but the location data from 16-Sep is inconclusive — Nizampura at 10:08 then Kalyan Road at 10:57, which is where the Royal Mobile POS is located. Neha's claim about her SIM being couriered to Bhiwandi needs checking against 9067113452, though no CDR is on file for it.\n\nOn Ganesh, the OTPs from 23-Sep went to Vinod's phone, and Ganesh's hospital stay from 20-26 Sep is only supported by his own claim and a discharge summary that needs hospital verification — but since net banking is registered solely to the proprietor, I'm inclined to clear him. For Sunil, there's no call evidence linking him to Kavita's phone or the accused number, and his payment records, NCRP complaint, and lack of any tie to the accused numbers, IP, or accounts make for a reasonable (if weak) case to clear him too, pending verification of his 1930 acknowledgment.\n\nFor Neha, she rented out her account and received Rs 10,000, with the withdrawals occurring in Bhiwandi where her SIM was sent — this looks like facilitation even if her knowledge of the fraud is unclear, so I'll name her as an accused in a limited money-mule role and flag the investigating officer to assess her actual knowledge, since every suspect needs to be either accused or cleared. Before finalizing, I want to do one more check on Faisal's location on 08-28 and 09-28, plus any contact between his number and 9067113452.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "Faisal's phone was on the same Nizampura tower during the 09-Sep 'Mehta' call. I'll check two more call times and whether Faisal had any contact with Neha's SIM."
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9820456631",
+      "start": "2026-08-28 19:00",
+      "end": "2026-08-28 20:30"
+    },
+    "n": 35
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9820456631",
+      "window": [
+        "2026-08-28 19:00",
+        "2026-08-28 20:30"
+      ],
+      "movements": [
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-28 19:29:05",
+          "to": "2026-08-28 20:09:00",
+          "events": 2,
+          "cell_id": "BWD-NZM-04"
+        }
+      ]
+    },
+    "n": 35
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "9820456631",
+      "start": "2026-09-28 20:00",
+      "end": "2026-09-28 23:30"
+    },
+    "n": 36
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "9820456631",
+      "window": [
+        "2026-09-28 20:00",
+        "2026-09-28 23:30"
+      ],
+      "movements": [
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-28 22:22:10",
+          "to": "2026-09-28 22:22:10",
+          "events": 1,
+          "cell_id": "BWD-NZM-04"
+        }
+      ]
+    },
+    "n": 36
+  },
+  {
+    "type": "tool_call",
+    "name": "query_cdr",
+    "input": {
+      "number": "9820456631",
+      "other_number": "9067113452"
+    },
+    "n": 37
+  },
+  {
+    "type": "tool_result",
+    "name": "query_cdr",
+    "output": {
+      "total_rows": 0,
+      "rows": [],
+      "truncated": false,
+      "hint": "Narrow with start/end/other_number if truncated."
+    },
+    "n": 37
+  },
+  {
+    "type": "tool_call",
+    "name": "location_timeline",
+    "input": {
+      "number": "7387004512",
+      "start": "2026-08-20",
+      "end": "2026-10-12"
+    },
+    "n": 38
+  },
+  {
+    "type": "tool_result",
+    "name": "location_timeline",
+    "output": {
+      "number": "7387004512",
+      "window": [
+        "2026-08-20",
+        "2026-10-12"
+      ],
+      "movements": [
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-20 12:34:00",
+          "to": "2026-08-20 12:34:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-20 18:06:00",
+          "to": "2026-08-22 21:38:00",
+          "events": 8,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-23 13:00:00",
+          "to": "2026-08-23 13:00:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-23 16:34:00",
+          "to": "2026-08-25 09:33:00",
+          "events": 10,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-25 12:14:00",
+          "to": "2026-08-25 12:14:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-25 17:56:51",
+          "to": "2026-08-27 21:22:57",
+          "events": 13,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-28 10:29:00",
+          "to": "2026-08-28 10:29:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-28 15:51:31",
+          "to": "2026-08-29 09:07:00",
+          "events": 6,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-29 10:07:00",
+          "to": "2026-08-29 10:07:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-29 14:18:00",
+          "to": "2026-08-30 09:35:00",
+          "events": 3,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-08-30 12:53:00",
+          "to": "2026-08-30 12:53:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-08-30 15:55:18",
+          "to": "2026-09-01 12:24:00",
+          "events": 5,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-01 13:55:00",
+          "to": "2026-09-01 13:55:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-01 16:02:23",
+          "to": "2026-09-02 10:44:00",
+          "events": 4,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-02 11:22:00",
+          "to": "2026-09-02 11:22:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-02 16:18:00",
+          "to": "2026-09-04 22:42:00",
+          "events": 12,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-05 13:47:00",
+          "to": "2026-09-05 13:47:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-05 15:02:00",
+          "to": "2026-09-07 11:09:00",
+          "events": 5,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-07 12:39:00",
+          "to": "2026-09-07 12:39:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-07 13:44:00",
+          "to": "2026-09-07 22:46:00",
+          "events": 5,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-08 12:15:00",
+          "to": "2026-09-08 12:15:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-08 12:26:01",
+          "to": "2026-09-09 21:15:00",
+          "events": 9,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-10 10:13:00",
+          "to": "2026-09-10 11:03:00",
+          "events": 2,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-10 12:51:00",
+          "to": "2026-09-10 12:51:00",
+          "events": 1,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-10 13:17:00",
+          "to": "2026-09-10 13:17:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-10 15:23:54",
+          "to": "2026-09-16 09:59:00",
+          "events": 25,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-16 10:48:00",
+          "to": "2026-09-16 11:10:00",
+          "events": 2,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-16 12:34:28",
+          "to": "2026-09-22 21:36:12",
+          "events": 32,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-23 12:53:00",
+          "to": "2026-09-23 12:53:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-23 13:35:00",
+          "to": "2026-09-24 20:43:37",
+          "events": 8,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-25 10:52:00",
+          "to": "2026-09-25 10:52:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-25 11:33:00",
+          "to": "2026-09-28 09:48:00",
+          "events": 14,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-28 12:38:00",
+          "to": "2026-09-28 12:38:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-28 12:46:00",
+          "to": "2026-09-28 12:46:00",
+          "events": 1,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-09-28 13:26:00",
+          "to": "2026-09-28 13:26:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-09-28 18:56:00",
+          "to": "2026-10-02 11:38:00",
+          "events": 15,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-10-02 11:52:00",
+          "to": "2026-10-02 13:59:00",
+          "events": 2,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-10-02 20:03:44",
+          "to": "2026-10-05 10:41:38",
+          "events": 11,
+          "cell_id": "BWD-NZM-04"
+        },
+        {
+          "cell_location": "Kalyan Road, Bhiwandi",
+          "from": "2026-10-05 13:31:00",
+          "to": "2026-10-05 13:31:00",
+          "events": 1,
+          "cell_id": "BWD-KLW-01"
+        },
+        {
+          "cell_location": "Nizampura, Bhiwandi",
+          "from": "2026-10-05 19:10:54",
+          "to": "2026-10-09 10:07:00",
+          "events": 15,
+          "cell_id": "BWD-NZM-04"
+        }
+      ]
+    },
+    "n": 38
+  },
+  {
+    "type": "thinking",
+    "text": "The Mehta phone's movement lines up closely with the withdrawal window — it was in Nizampura until 09:59, then appeared near the Kalyan Road ATM by 10:48, right after the 10:02–10:09 withdrawals, with Faisal's phone also there at 10:57. This co-location pattern is solid enough to note.\n\n"
+  },
+  {
+    "type": "text",
+    "text": "I have enough to write up. Recording the diary entries now."
+  },
+  {
+    "type": "tool_call",
+    "name": "update_case_diary",
+    "input": {
+      "entries": [
+        {
+          "type": "FACT",
+          "text": "The 'Dr. Mehta' SIM 7387004512 is on forged KYC, bought through the Royal Mobile POS on Kalyan Road, Bhiwandi. It ran in a single handset (IMEI 355412097781230) and was based on the Nizampura, Bhiwandi tower (BWD-NZM-04), where Faisal Qureshi's broadband address is. Faisal's 9820456631 was on the same tower during the Mehta calls to the victim on 28-Aug 19:30 and 09-Sep 21:15. Both phones moved to Kalyan Road on 16-Sep at about 10:48-10:57, around the time of the Neha Patil ATM withdrawals.",
+          "sources": [
+            "DOC-14 ¶1",
+            "DOC-14 ¶2",
+            "CDR 7387004512 2026-08-28 19:30",
+            "CDR 7387004512 2026-09-09 21:15",
+            "DOC-12 ¶2"
+          ]
+        },
+        {
+          "type": "FACT",
+          "text": "Vinod's 9922310045 called 7387004512 six times (03-23 Sep) and called Faisal's 9820456631 three times (25-Aug, 05-Sep, 24-Sep). On 23-Sep he called Mehta at 13:35, 25 minutes after the cash withdrawal. GDVBNK OTP SMS arrived on his phone, in his own handset, a minute before each CoinVault IMPS.",
+          "sources": [
+            "CDR 9922310045 2026-09-03 11:25",
+            "CDR 9922310045 2026-09-23 13:35",
+            "CDR 9922310045 2026-08-25 18:10",
+            "CDR 9922310045 2026-09-23 10:44",
+            "TXN T00143"
+          ]
+        },
+        {
+          "type": "CONTRADICTION",
+          "person": "Vinod Gaikwad",
+          "text": "Claims he does not know Dr. Arvind Mehta or Faisal. His CDR shows 6 outgoing calls to 7387004512 and 3 to 9820456631.",
+          "sources": [
+            "DOC-07 ¶3",
+            "CDR 9922310045 2026-09-10 15:50",
+            "CDR 9922310045 2026-09-05 20:20"
+          ]
+        },
+        {
+          "type": "CLEARED",
+          "person": "Ganesh Shinde",
+          "text": "He has no net-banking access (bank: proprietor is the only user). OTPs went to Vinod's phone in Osmanpura, and Vinod cashed the 23-Sep self-cheque in person. Ganesh was hospitalised 20-26 Sep; verify the discharge summary with Sahyog Hospital.",
+          "sources": [
+            "DOC-05 ¶1",
+            "DOC-05 ¶3",
+            "DOC-08 ¶2",
+            "DOC-08 ¶3",
+            "CDR 9922310045 2026-09-23 10:44"
+          ]
+        },
+        {
+          "type": "CLEARED",
+          "person": "Sunil Joshi",
+          "text": "He is a fellow victim. He paid Rs 2.5L (T00109) and Rs 1.5L (T00135) into the mule account and filed his own 1930 complaint. No record links him to 7387004512, 9820456631, the admin IP or the money flows.",
+          "sources": [
+            "TXN T00109",
+            "TXN T00135",
+            "DOC-10 ¶3",
+            "DOC-05 ¶2"
+          ]
+        },
+        {
+          "type": "GAP",
+          "text": "CoinVault reply is an unsigned email with no s.63 BSA certificate. Screenshots pen drive has no s.63 certificate and no hash value. No Marudhar Co-op Bank reply on the Sunrise Agro Exports a/c 0451300912 (Rs 3.5L). No seizure panchnamas and no FSL report. CCTV of 23-Sep at Godavari Bank has not been collected.",
+          "sources": [
+            "DOC-13 ¶3",
+            "DOC-15 ¶3",
+            "DOC-04 ¶2",
+            "DOC-05 ¶3"
+          ]
+        }
+      ]
+    },
+    "n": 39
+  },
+  {
+    "type": "diary",
+    "entries": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Rs 24,50,000 debited in 6 net-banking transfers 03-29 Sep: Rs 12.5L to Shree Sai Traders (Godavari 60450012783), Rs 8.5L to Neha Patil (KSFB 50210066120044), Rs 3.5L to Sunrise Agro Exports (Marudhar Co-op 0451300912).",
+        "sources": [
+          "DOC-04 ¶2",
+          "DOC-03 ¶3"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "GB Pro Trade admin 'gbadmin' logged in from IP 49.36.112.87 on 4 dates and edited the victim's profit figures; ISP shows that IP belonged to Faisal Ahmed Qureshi, Bhiwandi (9820456631) at all four times.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "CoinVault P2P merchant 'FQ Digital' (KYC Faisal Qureshi) received Rs 14,20,000 from Shree Sai Traders a/c and Rs 4,00,000 from Neha Patil a/c, converted to USDT.",
+        "sources": [
+          "DOC-13 ¶2",
+          "DOC-05 ¶2",
+          "DOC-06 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Indicated as operator of the GB Pro Trade admin panel and recipient of the laundered funds.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2",
+          "DOC-13 ¶2"
+        ],
+        "person": "Faisal Qureshi"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Named by complainant as gang member (DOC-03 ¶4). He himself paid Rs 4L to Shree Sai Traders and filed 1930 complaint; verify.",
+        "sources": [
+          "DOC-03 ¶4",
+          "DOC-05 ¶2",
+          "DOC-10 ¶3"
+        ],
+        "person": "Sunil Joshi"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Proprietor of the beneficiary account; sole net-banking user; self-cheque Rs 3L withdrawn in person on 23-Sep.",
+        "sources": [
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 7,
+        "type": "SUSPECT",
+        "text": "Blamed by Vinod Gaikwad for misusing net banking.",
+        "sources": [
+          "DOC-07 ¶2"
+        ],
+        "person": "Ganesh Shinde"
+      },
+      {
+        "n": 8,
+        "type": "SUSPECT",
+        "text": "Rented out her account, debit card and SIM for Rs 10,000.",
+        "sources": [
+          "DOC-09 ¶2"
+        ],
+        "person": "Neha Patil"
+      },
+      {
+        "n": 9,
+        "type": "CONTRADICTION",
+        "text": "Says he never withdrew any large amount in September and the accountant handles net banking. Bank says he is the sole net-banking user and he personally cashed a Rs 3L self-cheque on 23-Sep at 13:10, with his signature and ID verified and CCTV preserved.",
+        "sources": [
+          "DOC-07 ¶2",
+          "DOC-07 ¶3",
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 10,
+        "type": "FACT",
+        "text": "The 'Dr. Mehta' SIM 7387004512 is on forged KYC, bought through the Royal Mobile POS on Kalyan Road, Bhiwandi. It ran in a single handset (IMEI 355412097781230) and was based on the Nizampura, Bhiwandi tower (BWD-NZM-04), where Faisal Qureshi's broadband address is. Faisal's 9820456631 was on the same tower during the Mehta calls to the victim on 28-Aug 19:30 and 09-Sep 21:15. Both phones moved to Kalyan Road on 16-Sep at about 10:48-10:57, around the time of the Neha Patil ATM withdrawals.",
+        "sources": [
+          "DOC-14 ¶1",
+          "DOC-14 ¶2",
+          "CDR 7387004512 2026-08-28 19:30",
+          "CDR 7387004512 2026-09-09 21:15",
+          "DOC-12 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 11,
+        "type": "FACT",
+        "text": "Vinod's 9922310045 called 7387004512 six times (03-23 Sep) and called Faisal's 9820456631 three times (25-Aug, 05-Sep, 24-Sep). On 23-Sep he called Mehta at 13:35, 25 minutes after the cash withdrawal. GDVBNK OTP SMS arrived on his phone, in his own handset, a minute before each CoinVault IMPS.",
+        "sources": [
+          "CDR 9922310045 2026-09-03 11:25",
+          "CDR 9922310045 2026-09-23 13:35",
+          "CDR 9922310045 2026-08-25 18:10",
+          "CDR 9922310045 2026-09-23 10:44",
+          "TXN T00143"
+        ],
+        "person": ""
+      },
+      {
+        "n": 12,
+        "type": "CONTRADICTION",
+        "text": "Claims he does not know Dr. Arvind Mehta or Faisal. His CDR shows 6 outgoing calls to 7387004512 and 3 to 9820456631.",
+        "sources": [
+          "DOC-07 ¶3",
+          "CDR 9922310045 2026-09-10 15:50",
+          "CDR 9922310045 2026-09-05 20:20"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 13,
+        "type": "CLEARED",
+        "text": "He has no net-banking access (bank: proprietor is the only user). OTPs went to Vinod's phone in Osmanpura, and Vinod cashed the 23-Sep self-cheque in person. Ganesh was hospitalised 20-26 Sep; verify the discharge summary with Sahyog Hospital.",
+        "sources": [
+          "DOC-05 ¶1",
+          "DOC-05 ¶3",
+          "DOC-08 ¶2",
+          "DOC-08 ¶3",
+          "CDR 9922310045 2026-09-23 10:44"
+        ],
+        "person": "Ganesh Shinde"
+      },
+      {
+        "n": 14,
+        "type": "CLEARED",
+        "text": "He is a fellow victim. He paid Rs 2.5L (T00109) and Rs 1.5L (T00135) into the mule account and filed his own 1930 complaint. No record links him to 7387004512, 9820456631, the admin IP or the money flows.",
+        "sources": [
+          "TXN T00109",
+          "TXN T00135",
+          "DOC-10 ¶3",
+          "DOC-05 ¶2"
+        ],
+        "person": "Sunil Joshi"
+      },
+      {
+        "n": 15,
+        "type": "GAP",
+        "text": "CoinVault reply is an unsigned email with no s.63 BSA certificate. Screenshots pen drive has no s.63 certificate and no hash value. No Marudhar Co-op Bank reply on the Sunrise Agro Exports a/c 0451300912 (Rs 3.5L). No seizure panchnamas and no FSL report. CCTV of 23-Sep at Godavari Bank has not been collected.",
+        "sources": [
+          "DOC-13 ¶3",
+          "DOC-15 ¶3",
+          "DOC-04 ¶2",
+          "DOC-05 ¶3"
+        ],
+        "person": ""
+      }
+    ]
+  },
+  {
+    "type": "tool_result",
+    "name": "update_case_diary",
+    "output": {
+      "added": 6,
+      "rejected": [],
+      "diary_size": 15
+    },
+    "n": 39
+  },
+  {
+    "type": "tool_call",
+    "name": "submit_report",
+    "input": {
+      "summary": "The evidence indicates that the victim, Kavita Deshmukh, was defrauded of Rs 24,50,000 through the fake 'GB Pro Trade' app and the 'Dr. Arvind Mehta' persona (SIM 7387004512, issued on forged KYC in Bhiwandi). The GB Pro Trade admin panel used to edit the victim's fake profits was accessed four times from IP 49.36.112.87, which was allotted to the home broadband of Faisal Ahmed Qureshi, Nizampura, Bhiwandi (DOC-11, DOC-12). The 'Mehta' handset worked from the same Nizampura tower and was co-located with Faisal's phone during calls to the victim. Faisal's CoinVault P2P merchant account 'FQ Digital' received Rs 18,20,000 of the money from the mule accounts and converted it to USDT (DOC-13). Vinod Gaikwad's current account (Shree Sai Traders) received Rs 12.5L from the victim plus money from other victims. He was the sole net-banking user, and OTPs reached his own phone before each CoinVault IMPS. He personally cashed a Rs 3L self-cheque. He was in regular phone contact with both 'Mehta' and Faisal, which contradicts his statement. Neha Patil rented out her account, debit card and SIM for Rs 10,000; the money in it was withdrawn at Bhiwandi ATMs or sent to FQ Digital. The suspicion against colleague Sunil Joshi (himself a victim who lost Rs 4L) and against accountant Ganesh Shinde is not supported by the records. The case is not yet ready for chargesheet: the CoinVault s.63 certificate, the Marudhar Bank trail, seizures and the FSL report are outstanding.",
+      "accused": [
+        {
+          "name": "Faisal Ahmed Qureshi",
+          "role": "Main operator: ran the GB Pro Trade admin panel, most likely operated the 'Dr. Arvind Mehta' SIM, and received and laundered the money through the crypto P2P merchant 'FQ Digital'",
+          "evidence": [
+            {
+              "point": "The admin account 'gbadmin' edited the victim's profit figures from IP 49.36.112.87, which was allotted to Faisal's broadband at all four login times",
+              "sources": [
+                "DOC-11 ¶2",
+                "DOC-12 ¶2"
+              ]
+            },
+            {
+              "point": "CoinVault merchant FQ Digital (KYC Faisal Qureshi) received Rs 14,20,000 from the Shree Sai Traders account and Rs 4,00,000 from the Neha Patil account, converted it to USDT and withdrew it to external wallets",
+              "sources": [
+                "DOC-13 ¶2",
+                "TXN T00106",
+                "TXN T00145",
+                "TXN T00189",
+                "TXN T00190"
+              ]
+            },
+            {
+              "point": "The 'Mehta' SIM was bought on forged KYC at Kalyan Road, Bhiwandi, and used only from Nizampura and Kalyan Road. Faisal's phone was on the same Nizampura tower during the Mehta calls to the victim",
+              "sources": [
+                "DOC-14 ¶1",
+                "DOC-14 ¶2",
+                "CDR 7387004512 2026-08-28 19:30",
+                "CDR 7387004512 2026-09-09 21:15"
+              ]
+            },
+            {
+              "point": "Faisal's phone and the Mehta phone were both at Kalyan Road, Bhiwandi, around the time of the 16-Sep ATM withdrawals from Neha's account at the Kalyan Road ATM",
+              "sources": [
+                "TXN T00181",
+                "TXN T00184"
+              ]
+            },
+            {
+              "point": "In regular phone contact with mule-account holder Vinod Gaikwad",
+              "sources": [
+                "CDR 9922310045 2026-08-25 18:10",
+                "CDR 9922310045 2026-09-24 19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vinod Ramdas Gaikwad",
+          "role": "Knowing mule-account holder: received the money in the Shree Sai Traders account, moved it to FQ Digital, and withdrew cash",
+          "evidence": [
+            {
+              "point": "His account received Rs 12,50,000 from the victim, plus Rs 4L from Sunil Joshi and money from other people (Ramesh Naik, Priya Shah)",
+              "sources": [
+                "TXN T00104",
+                "TXN T00116",
+                "TXN T00139",
+                "TXN T00109",
+                "TXN T00122",
+                "TXN T00149"
+              ]
+            },
+            {
+              "point": "Six IMPS transfers totalling Rs 14,20,000 went to CoinVault 'FQ Digital'. Each was authorised by an OTP delivered to his own phone in Osmanpura",
+              "sources": [
+                "DOC-05 ¶2",
+                "CDR 9922310045 2026-09-04 11:39",
+                "TXN T00106",
+                "CDR 9922310045 2026-09-23 15:29",
+                "TXN T00145"
+              ]
+            },
+            {
+              "point": "He is the sole net-banking user. He cashed the Rs 3L self-cheque in person on 23-Sep (signature and ID verified, CCTV preserved) and called the Mehta number 25 minutes later",
+              "sources": [
+                "DOC-05 ¶1",
+                "DOC-05 ¶3",
+                "TXN T00144",
+                "CDR 9922310045 2026-09-23 13:35"
+              ]
+            },
+            {
+              "point": "Made 6 calls to 7387004512, timed around the incoming credits (03, 07, 10, 18, 22 Sep)",
+              "sources": [
+                "CDR 9922310045 2026-09-03 11:25",
+                "CDR 9922310045 2026-09-10 15:50",
+                "CDR 9922310045 2026-09-22 10:40"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Neha Suresh Patil",
+          "role": "Account renter / money mule (limited role): handed her bank kit and SIM to the gang for payment",
+          "evidence": [
+            {
+              "point": "She admits renting her account and handing over her passbook, debit card, cheque book and SIM to 'Aamir bhai' in Bhiwandi for Rs 10,000 (her own statement; this must be corroborated)",
+              "sources": [
+                "DOC-09 ¶2",
+                "DOC-09 ¶3"
+              ]
+            },
+            {
+              "point": "Her account received Rs 8.5L from the victim. Rs 3,96,000 was withdrawn at a Bhiwandi ATM and Rs 4L was sent to FQ Digital",
+              "sources": [
+                "TXN T00179",
+                "TXN T00180",
+                "TXN T00181",
+                "TXN T00185",
+                "TXN T00189",
+                "TXN T00190",
+                "DOC-06 ¶2"
+              ]
+            }
+          ]
+        }
+      ],
+      "cleared": [
+        {
+          "name": "Sunil Joshi",
+          "reason": "He is a fellow victim, not a gang member. He paid Rs 4L into the same mule account and filed his own 1930 complaint. No CDR, IP or money link connects him to the accused.",
+          "sources": [
+            "TXN T00109",
+            "TXN T00135",
+            "DOC-10 ¶2",
+            "DOC-10 ¶3",
+            "DOC-05 ¶2"
+          ]
+        },
+        {
+          "name": "Ganesh Shinde",
+          "reason": "He had no net-banking access; the proprietor is the only user. OTPs reached Vinod's phone, and Vinod withdrew the cash in person. Ganesh was hospitalised 20-26 Sep (discharge summary to be verified).",
+          "sources": [
+            "DOC-05 ¶1",
+            "DOC-05 ¶3",
+            "DOC-08 ¶2",
+            "DOC-08 ¶3",
+            "CDR 9922310045 2026-09-23 10:44"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "His accountant Ganesh handles net banking and may have misused it",
+          "contradicted_by": "The bank says the proprietor is the only net-banking user. OTPs were delivered to Vinod's own phone and handset. The accountant says Vinod keeps the login.",
+          "sources": [
+            "DOC-07 ¶2",
+            "DOC-05 ¶1",
+            "DOC-08 ¶2",
+            "CDR 9922310045 2026-09-19 16:04"
+          ]
+        },
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "He never withdrew any large amount in September",
+          "contradicted_by": "He cashed a Rs 3L self-cheque in person at the counter on 23-Sep at 13:10 (signature and ID verified, CCTV preserved). His phone was in Osmanpura at that time.",
+          "sources": [
+            "DOC-07 ¶3",
+            "DOC-05 ¶3",
+            "TXN T00144"
+          ]
+        },
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "He does not know Dr. Arvind Mehta or Faisal",
+          "contradicted_by": "His CDR shows 6 outgoing calls to 7387004512 and 3 outgoing calls to Faisal's 9820456631",
+          "sources": [
+            "DOC-07 ¶3",
+            "CDR 9922310045 2026-09-03 11:25",
+            "CDR 9922310045 2026-09-23 13:35",
+            "CDR 9922310045 2026-09-05 20:20"
+          ]
+        },
+        {
+          "person": "Kavita Deshmukh",
+          "claim": "Sunil Joshi is part of the gang",
+          "contradicted_by": "Sunil himself paid Rs 4L into the mule account, and no record links him to the accused",
+          "sources": [
+            "DOC-03 ¶4",
+            "TXN T00109",
+            "TXN T00135"
+          ]
+        }
+      ],
+      "money_trail": [
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Shree Sai Traders a/c 60450012783",
+          "amount": 1250000,
+          "when": "03, 10, 22 Sep 2026",
+          "sources": [
+            "TXN T00020",
+            "TXN T00024",
+            "TXN T00031",
+            "TXN T00104",
+            "TXN T00116",
+            "TXN T00139"
+          ]
+        },
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Neha Patil a/c 50210066120044",
+          "amount": 850000,
+          "when": "15 and 25 Sep 2026",
+          "sources": [
+            "TXN T00029",
+            "TXN T00035",
+            "TXN T00179",
+            "TXN T00180"
+          ]
+        },
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Sunrise Agro Exports, Marudhar Co-op Bank a/c 0451300912",
+          "amount": 350000,
+          "when": "29 Sep 2026 ('tax')",
+          "sources": [
+            "TXN T00037",
+            "DOC-04 ¶2"
+          ]
+        },
+        {
+          "from": "Shree Sai Traders a/c 60450012783",
+          "to": "CoinVault P2P escrow 'FQ Digital' (Faisal Qureshi)",
+          "amount": 1420000,
+          "when": "04-23 Sep 2026, 6 IMPS",
+          "sources": [
+            "TXN T00106",
+            "TXN T00112",
+            "TXN T00117",
+            "TXN T00137",
+            "TXN T00143",
+            "TXN T00145",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "from": "Shree Sai Traders a/c 60450012783",
+          "to": "Cash, self-cheque withdrawn by Vinod Gaikwad",
+          "amount": 300000,
+          "when": "23 Sep 2026 13:10",
+          "sources": [
+            "TXN T00144",
+            "DOC-05 ¶3"
+          ]
+        },
+        {
+          "from": "Neha Patil a/c 50210066120044",
+          "to": "Cash, ATM KSFB-BWD-0021 Bhiwandi",
+          "amount": 396000,
+          "when": "16 and 26 Sep 2026",
+          "sources": [
+            "TXN T00181",
+            "TXN T00182",
+            "TXN T00183",
+            "TXN T00184",
+            "TXN T00185",
+            "TXN T00186",
+            "TXN T00187",
+            "TXN T00188"
+          ]
+        },
+        {
+          "from": "Neha Patil a/c 50210066120044",
+          "to": "CoinVault P2P escrow 'FQ Digital' (Faisal Qureshi)",
+          "amount": 400000,
+          "when": "17 and 27 Sep 2026",
+          "sources": [
+            "TXN T00189",
+            "TXN T00190",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "from": "CoinVault 'FQ Digital'",
+          "to": "External USDT wallets (not yet identified)",
+          "amount": 1820000,
+          "when": "Sep 2026",
+          "sources": [
+            "DOC-13 ¶2"
+          ]
+        }
+      ],
+      "readiness_gaps": [
+        {
+          "issue": "The CoinVault reply is an unsigned email; the signed copy and s.63 BSA certificate are 'to be sent separately'",
+          "impact": "The key link of the money to Faisal (FQ Digital) cannot be proved as an electronic record",
+          "fix": "Obtain the signed reply, KYC documents, wallet withdrawal logs and the s.63 certificate",
+          "sources": [
+            "DOC-13 ¶3"
+          ]
+        },
+        {
+          "issue": "The screenshots pen drive (46 images) has no s.63 certificate and no hash value",
+          "impact": "The chat and app evidence of the inducement may be inadmissible",
+          "fix": "Seize the victim's phone and the pen drive under panchnama with hash values, send them to FSL, and get a s.63 certificate from the complainant",
+          "sources": [
+            "DOC-15 ¶3"
+          ]
+        },
+        {
+          "issue": "There is no Marudhar Co-op Bank reply on the Sunrise Agro Exports account 0451300912 (Rs 3.5L 'tax')",
+          "impact": "Rs 3.5L is untraced and the account holder is unidentified",
+          "fix": "Send a s.94 BNSS notice for KYC, statement, freeze and a s.63 certificate",
+          "sources": [
+            "DOC-04 ¶2",
+            "TXN T00037"
+          ]
+        },
+        {
+          "issue": "No search or seizure panchnamas are on file, and no handsets have been seized",
+          "impact": "The IMEI 355412097781230 handset, Faisal's phone and router, Vinod's phone and Neha's bank kit and SIM are not yet in evidence",
+          "fix": "Search Faisal's Nizampura flat and seize the devices with two independent panchas. Seize Vinod's handset (IMEI 861555043219087).",
+          "sources": [
+            "DOC-12 ¶2",
+            "DOC-14 ¶1"
+          ]
+        },
+        {
+          "issue": "There is no FSL report",
+          "impact": "Device contents (app admin, ChatWave, wallets) are not proved",
+          "fix": "Send the seized devices to FSL with hash values and obtain the final report"
+        },
+        {
+          "issue": "The Godavari Bank CCTV of 23-Sep and the Bhiwandi ATM CCTV (16 and 26 Sep) are not collected",
+          "impact": "Cannot visually prove who withdrew the cash",
+          "fix": "Collect the footage with s.63 certificates",
+          "sources": [
+            "DOC-05 ¶3",
+            "DOC-06 ¶3"
+          ]
+        },
+        {
+          "issue": "Neha's role rests mainly on her own s.180 statement",
+          "impact": "An admission to police is not provable against her (s.23 BSA)",
+          "fix": "Corroborate with the courier record, the Instagram 'Aamir bhai' chats and the Rs 10,000 cash trail, or record a s.183 BNSS statement before a Magistrate",
+          "sources": [
+            "DOC-09 ¶2"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "when": "2026-08-20 12:34",
+          "event": "Forged-KYC SIM 7387004512 activated at Royal Mobile, Kalyan Road, Bhiwandi",
+          "sources": [
+            "DOC-14 ¶1"
+          ]
+        },
+        {
+          "when": "2026-08-25 18:10",
+          "event": "Vinod calls Faisal's 9820456631",
+          "sources": [
+            "CDR 9922310045 2026-08-25 18:10"
+          ]
+        },
+        {
+          "when": "2026-08-28 19:30",
+          "event": "Victim added to the group; 'Mehta' calls her from Nizampura, Bhiwandi, with Faisal's phone on the same tower",
+          "sources": [
+            "CDR 7387004512 2026-08-28 19:30",
+            "DOC-01 ¶3"
+          ]
+        },
+        {
+          "when": "2026-09-02 22:10",
+          "event": "First gbadmin login from Faisal's IP",
+          "sources": [
+            "DOC-11 ¶2"
+          ]
+        },
+        {
+          "when": "2026-09-03 11:06",
+          "event": "Rs 2L credited to Shree Sai Traders; Vinod calls Mehta at 11:25",
+          "sources": [
+            "TXN T00104",
+            "CDR 9922310045 2026-09-03 11:25"
+          ]
+        },
+        {
+          "when": "2026-09-04 11:40",
+          "event": "Rs 1.9L moved to FQ Digital after an OTP on Vinod's phone",
+          "sources": [
+            "TXN T00106",
+            "CDR 9922310045 2026-09-04 11:39"
+          ]
+        },
+        {
+          "when": "2026-09-15 to 2026-09-17",
+          "event": "Rs 3.5L into Neha's account; Rs 1.96L withdrawn at a Bhiwandi ATM; Rs 1.5L sent to FQ Digital",
+          "sources": [
+            "TXN T00179",
+            "TXN T00181",
+            "TXN T00189"
+          ]
+        },
+        {
+          "when": "2026-09-22 10:16",
+          "event": "Rs 6L RTGS credited to Shree Sai Traders",
+          "sources": [
+            "TXN T00139"
+          ]
+        },
+        {
+          "when": "2026-09-23",
+          "event": "Rs 3L to FQ Digital (10:45); Rs 3L self-cheque cashed by Vinod (13:10); Vinod calls Mehta (13:35); Rs 2L to FQ Digital (15:30)",
+          "sources": [
+            "TXN T00143",
+            "TXN T00144",
+            "CDR 9922310045 2026-09-23 13:35",
+            "TXN T00145"
+          ]
+        },
+        {
+          "when": "2026-09-25 to 2026-09-27",
+          "event": "Rs 5L into Neha's account; Rs 2L withdrawn at a Bhiwandi ATM; Rs 2.5L sent to FQ Digital",
+          "sources": [
+            "TXN T00180",
+            "TXN T00185",
+            "TXN T00190"
+          ]
+        },
+        {
+          "when": "2026-09-29",
+          "event": "Rs 3.5L 'tax' paid to Sunrise Agro Exports, Marudhar Co-op Bank",
+          "sources": [
+            "TXN T00037"
+          ]
+        },
+        {
+          "when": "2026-10-08 / 2026-10-12",
+          "event": "NCRP complaint filed and FIR 131/2026 registered",
+          "sources": [
+            "DOC-01 ¶3",
+            "DOC-02 ¶1"
+          ]
+        },
+        {
+          "when": "2026-10-13",
+          "event": "Debit freezes: Rs 4,22,400 (Godavari) and Rs 55,000 (KSFB)",
+          "sources": [
+            "DOC-05 ¶4",
+            "DOC-06 ¶3"
+          ]
+        }
+      ],
+      "suggested_sections": [
+        "BNS 318(4) - cheating",
+        "BNS 319(2) - cheating by personation",
+        "BNS 336(3) - forgery (fake SEBI identity / forged SIM KYC)",
+        "BNS 340(2) - using forged documents",
+        "BNS 61(2) - criminal conspiracy",
+        "BNS 317 - dishonestly receiving stolen property (mule account holders)",
+        "IT Act 66C - identity theft",
+        "IT Act 66D - cheating by personation using a computer resource",
+        "Consider BNS 111 (organised crime) if the linked victims (Sunil Joshi, Ramesh Naik, Priya Shah) are confirmed"
+      ],
+      "linked_cases": [
+        "Sunil Joshi 1930 complaint No. 31510260004389 (07-Oct-2026), same mule account",
+        "Possible other victims crediting Shree Sai Traders: Ramesh Naik (TXN T00122), Priya Shah (TXN T00149), to be checked on NCRP",
+        "Weak lead only: CYB-114-2026 and CYB-098-2026 also involve Marudhar Co-op Bank accounts; no direct number or account match found"
+      ],
+      "next_actions": [
+        {
+          "action": "Search Faisal Qureshi's flat at Al-Noor Complex, Nizampura, with independent panchas. Seize phones (look for IMEI 355412097781230), the router, laptops and crypto wallets, then arrest.",
+          "why": "Ties him to the admin panel, the Mehta handset and the USDT wallets"
+        },
+        {
+          "action": "Obtain the signed CoinVault reply with s.63 certificate, wallet addresses and withdrawal logs; request a freeze of the remaining USDT",
+          "why": "Rs 18.2L was laundered through FQ Digital"
+        },
+        {
+          "action": "Send a s.94 notice to Marudhar Co-op Bank for a/c 0451300912 (Sunrise Agro Exports): KYC, statement, freeze",
+          "why": "Rs 3.5L is untraced"
+        },
+        {
+          "action": "Collect the Godavari Bank 23-Sep CCTV and the Bhiwandi ATM KSFB-BWD-0021 CCTV for 16 and 26 Sep",
+          "why": "Identify who withdrew the cash"
+        },
+        {
+          "action": "Seize Vinod Gaikwad's handset and question him about his calls with Faisal and 'Mehta'",
+          "why": "Contradictions in his statement"
+        },
+        {
+          "action": "Get the Royal Mobile POS agent's records and statement for the forged-KYC SIM",
+          "why": "Identify who bought SIM 7387004512"
+        },
+        {
+          "action": "Seize the victim's phone and pen drive with hash values, send to FSL, and obtain a s.63 certificate",
+          "why": "The screenshots are currently uncertified"
+        },
+        {
+          "action": "Verify Ganesh Shinde's admission at Sahyog Hospital and Sunil Joshi's 1930 acknowledgement; record statements of Ramesh Naik and Priya Shah",
+          "why": "Confirms the clearances and the linked victims"
+        },
+        {
+          "action": "Get the CDR for Neha's SIM 9067113452 and the courier records to Bhiwandi",
+          "why": "Corroborates her account and identifies 'Aamir bhai'"
+        },
+        {
+          "action": "Move for release of the frozen Rs 4,77,400 to the victims",
+          "why": "Victim restitution"
+        }
+      ]
+    },
+    "n": 40
+  },
+  {
+    "type": "tool_result",
+    "name": "submit_report",
+    "output": {
+      "accepted": true
+    },
+    "n": 40
+  },
+  {
+    "type": "report",
+    "report": {
+      "summary": "The evidence indicates that the victim, Kavita Deshmukh, was defrauded of Rs 24,50,000 through the fake 'GB Pro Trade' app and the 'Dr. Arvind Mehta' persona (SIM 7387004512, issued on forged KYC in Bhiwandi). The GB Pro Trade admin panel used to edit the victim's fake profits was accessed four times from IP 49.36.112.87, which was allotted to the home broadband of Faisal Ahmed Qureshi, Nizampura, Bhiwandi (DOC-11, DOC-12). The 'Mehta' handset worked from the same Nizampura tower and was co-located with Faisal's phone during calls to the victim. Faisal's CoinVault P2P merchant account 'FQ Digital' received Rs 18,20,000 of the money from the mule accounts and converted it to USDT (DOC-13). Vinod Gaikwad's current account (Shree Sai Traders) received Rs 12.5L from the victim plus money from other victims. He was the sole net-banking user, and OTPs reached his own phone before each CoinVault IMPS. He personally cashed a Rs 3L self-cheque. He was in regular phone contact with both 'Mehta' and Faisal, which contradicts his statement. Neha Patil rented out her account, debit card and SIM for Rs 10,000; the money in it was withdrawn at Bhiwandi ATMs or sent to FQ Digital. The suspicion against colleague Sunil Joshi (himself a victim who lost Rs 4L) and against accountant Ganesh Shinde is not supported by the records. The case is not yet ready for chargesheet: the CoinVault s.63 certificate, the Marudhar Bank trail, seizures and the FSL report are outstanding.",
+      "accused": [
+        {
+          "name": "Faisal Ahmed Qureshi",
+          "role": "Main operator: ran the GB Pro Trade admin panel, most likely operated the 'Dr. Arvind Mehta' SIM, and received and laundered the money through the crypto P2P merchant 'FQ Digital'",
+          "evidence": [
+            {
+              "point": "The admin account 'gbadmin' edited the victim's profit figures from IP 49.36.112.87, which was allotted to Faisal's broadband at all four login times",
+              "sources": [
+                "DOC-11 ¶2",
+                "DOC-12 ¶2"
+              ]
+            },
+            {
+              "point": "CoinVault merchant FQ Digital (KYC Faisal Qureshi) received Rs 14,20,000 from the Shree Sai Traders account and Rs 4,00,000 from the Neha Patil account, converted it to USDT and withdrew it to external wallets",
+              "sources": [
+                "DOC-13 ¶2",
+                "TXN T00106",
+                "TXN T00145",
+                "TXN T00189",
+                "TXN T00190"
+              ]
+            },
+            {
+              "point": "The 'Mehta' SIM was bought on forged KYC at Kalyan Road, Bhiwandi, and used only from Nizampura and Kalyan Road. Faisal's phone was on the same Nizampura tower during the Mehta calls to the victim",
+              "sources": [
+                "DOC-14 ¶1",
+                "DOC-14 ¶2",
+                "CDR 7387004512 2026-08-28 19:30",
+                "CDR 7387004512 2026-09-09 21:15"
+              ]
+            },
+            {
+              "point": "Faisal's phone and the Mehta phone were both at Kalyan Road, Bhiwandi, around the time of the 16-Sep ATM withdrawals from Neha's account at the Kalyan Road ATM",
+              "sources": [
+                "TXN T00181",
+                "TXN T00184"
+              ]
+            },
+            {
+              "point": "In regular phone contact with mule-account holder Vinod Gaikwad",
+              "sources": [
+                "CDR 9922310045 2026-08-25 18:10",
+                "CDR 9922310045 2026-09-24 19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vinod Ramdas Gaikwad",
+          "role": "Knowing mule-account holder: received the money in the Shree Sai Traders account, moved it to FQ Digital, and withdrew cash",
+          "evidence": [
+            {
+              "point": "His account received Rs 12,50,000 from the victim, plus Rs 4L from Sunil Joshi and money from other people (Ramesh Naik, Priya Shah)",
+              "sources": [
+                "TXN T00104",
+                "TXN T00116",
+                "TXN T00139",
+                "TXN T00109",
+                "TXN T00122",
+                "TXN T00149"
+              ]
+            },
+            {
+              "point": "Six IMPS transfers totalling Rs 14,20,000 went to CoinVault 'FQ Digital'. Each was authorised by an OTP delivered to his own phone in Osmanpura",
+              "sources": [
+                "DOC-05 ¶2",
+                "CDR 9922310045 2026-09-04 11:39",
+                "TXN T00106",
+                "CDR 9922310045 2026-09-23 15:29",
+                "TXN T00145"
+              ]
+            },
+            {
+              "point": "He is the sole net-banking user. He cashed the Rs 3L self-cheque in person on 23-Sep (signature and ID verified, CCTV preserved) and called the Mehta number 25 minutes later",
+              "sources": [
+                "DOC-05 ¶1",
+                "DOC-05 ¶3",
+                "TXN T00144",
+                "CDR 9922310045 2026-09-23 13:35"
+              ]
+            },
+            {
+              "point": "Made 6 calls to 7387004512, timed around the incoming credits (03, 07, 10, 18, 22 Sep)",
+              "sources": [
+                "CDR 9922310045 2026-09-03 11:25",
+                "CDR 9922310045 2026-09-10 15:50",
+                "CDR 9922310045 2026-09-22 10:40"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Neha Suresh Patil",
+          "role": "Account renter / money mule (limited role): handed her bank kit and SIM to the gang for payment",
+          "evidence": [
+            {
+              "point": "She admits renting her account and handing over her passbook, debit card, cheque book and SIM to 'Aamir bhai' in Bhiwandi for Rs 10,000 (her own statement; this must be corroborated)",
+              "sources": [
+                "DOC-09 ¶2",
+                "DOC-09 ¶3"
+              ]
+            },
+            {
+              "point": "Her account received Rs 8.5L from the victim. Rs 3,96,000 was withdrawn at a Bhiwandi ATM and Rs 4L was sent to FQ Digital",
+              "sources": [
+                "TXN T00179",
+                "TXN T00180",
+                "TXN T00181",
+                "TXN T00185",
+                "TXN T00189",
+                "TXN T00190",
+                "DOC-06 ¶2"
+              ]
+            }
+          ]
+        }
+      ],
+      "cleared": [
+        {
+          "name": "Sunil Joshi",
+          "reason": "He is a fellow victim, not a gang member. He paid Rs 4L into the same mule account and filed his own 1930 complaint. No CDR, IP or money link connects him to the accused.",
+          "sources": [
+            "TXN T00109",
+            "TXN T00135",
+            "DOC-10 ¶2",
+            "DOC-10 ¶3",
+            "DOC-05 ¶2"
+          ]
+        },
+        {
+          "name": "Ganesh Shinde",
+          "reason": "He had no net-banking access; the proprietor is the only user. OTPs reached Vinod's phone, and Vinod withdrew the cash in person. Ganesh was hospitalised 20-26 Sep (discharge summary to be verified).",
+          "sources": [
+            "DOC-05 ¶1",
+            "DOC-05 ¶3",
+            "DOC-08 ¶2",
+            "DOC-08 ¶3",
+            "CDR 9922310045 2026-09-23 10:44"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "His accountant Ganesh handles net banking and may have misused it",
+          "contradicted_by": "The bank says the proprietor is the only net-banking user. OTPs were delivered to Vinod's own phone and handset. The accountant says Vinod keeps the login.",
+          "sources": [
+            "DOC-07 ¶2",
+            "DOC-05 ¶1",
+            "DOC-08 ¶2",
+            "CDR 9922310045 2026-09-19 16:04"
+          ]
+        },
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "He never withdrew any large amount in September",
+          "contradicted_by": "He cashed a Rs 3L self-cheque in person at the counter on 23-Sep at 13:10 (signature and ID verified, CCTV preserved). His phone was in Osmanpura at that time.",
+          "sources": [
+            "DOC-07 ¶3",
+            "DOC-05 ¶3",
+            "TXN T00144"
+          ]
+        },
+        {
+          "person": "Vinod Gaikwad",
+          "claim": "He does not know Dr. Arvind Mehta or Faisal",
+          "contradicted_by": "His CDR shows 6 outgoing calls to 7387004512 and 3 outgoing calls to Faisal's 9820456631",
+          "sources": [
+            "DOC-07 ¶3",
+            "CDR 9922310045 2026-09-03 11:25",
+            "CDR 9922310045 2026-09-23 13:35",
+            "CDR 9922310045 2026-09-05 20:20"
+          ]
+        },
+        {
+          "person": "Kavita Deshmukh",
+          "claim": "Sunil Joshi is part of the gang",
+          "contradicted_by": "Sunil himself paid Rs 4L into the mule account, and no record links him to the accused",
+          "sources": [
+            "DOC-03 ¶4",
+            "TXN T00109",
+            "TXN T00135"
+          ]
+        }
+      ],
+      "money_trail": [
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Shree Sai Traders a/c 60450012783",
+          "amount": 1250000,
+          "when": "03, 10, 22 Sep 2026",
+          "sources": [
+            "TXN T00020",
+            "TXN T00024",
+            "TXN T00031",
+            "TXN T00104",
+            "TXN T00116",
+            "TXN T00139"
+          ]
+        },
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Neha Patil a/c 50210066120044",
+          "amount": 850000,
+          "when": "15 and 25 Sep 2026",
+          "sources": [
+            "TXN T00029",
+            "TXN T00035",
+            "TXN T00179",
+            "TXN T00180"
+          ]
+        },
+        {
+          "from": "Kavita Deshmukh a/c 20117745902",
+          "to": "Sunrise Agro Exports, Marudhar Co-op Bank a/c 0451300912",
+          "amount": 350000,
+          "when": "29 Sep 2026 ('tax')",
+          "sources": [
+            "TXN T00037",
+            "DOC-04 ¶2"
+          ]
+        },
+        {
+          "from": "Shree Sai Traders a/c 60450012783",
+          "to": "CoinVault P2P escrow 'FQ Digital' (Faisal Qureshi)",
+          "amount": 1420000,
+          "when": "04-23 Sep 2026, 6 IMPS",
+          "sources": [
+            "TXN T00106",
+            "TXN T00112",
+            "TXN T00117",
+            "TXN T00137",
+            "TXN T00143",
+            "TXN T00145",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "from": "Shree Sai Traders a/c 60450012783",
+          "to": "Cash, self-cheque withdrawn by Vinod Gaikwad",
+          "amount": 300000,
+          "when": "23 Sep 2026 13:10",
+          "sources": [
+            "TXN T00144",
+            "DOC-05 ¶3"
+          ]
+        },
+        {
+          "from": "Neha Patil a/c 50210066120044",
+          "to": "Cash, ATM KSFB-BWD-0021 Bhiwandi",
+          "amount": 396000,
+          "when": "16 and 26 Sep 2026",
+          "sources": [
+            "TXN T00181",
+            "TXN T00182",
+            "TXN T00183",
+            "TXN T00184",
+            "TXN T00185",
+            "TXN T00186",
+            "TXN T00187",
+            "TXN T00188"
+          ]
+        },
+        {
+          "from": "Neha Patil a/c 50210066120044",
+          "to": "CoinVault P2P escrow 'FQ Digital' (Faisal Qureshi)",
+          "amount": 400000,
+          "when": "17 and 27 Sep 2026",
+          "sources": [
+            "TXN T00189",
+            "TXN T00190",
+            "DOC-13 ¶2"
+          ]
+        },
+        {
+          "from": "CoinVault 'FQ Digital'",
+          "to": "External USDT wallets (not yet identified)",
+          "amount": 1820000,
+          "when": "Sep 2026",
+          "sources": [
+            "DOC-13 ¶2"
+          ]
+        }
+      ],
+      "readiness_gaps": [
+        {
+          "issue": "The CoinVault reply is an unsigned email; the signed copy and s.63 BSA certificate are 'to be sent separately'",
+          "impact": "The key link of the money to Faisal (FQ Digital) cannot be proved as an electronic record",
+          "fix": "Obtain the signed reply, KYC documents, wallet withdrawal logs and the s.63 certificate",
+          "sources": [
+            "DOC-13 ¶3"
+          ]
+        },
+        {
+          "issue": "The screenshots pen drive (46 images) has no s.63 certificate and no hash value",
+          "impact": "The chat and app evidence of the inducement may be inadmissible",
+          "fix": "Seize the victim's phone and the pen drive under panchnama with hash values, send them to FSL, and get a s.63 certificate from the complainant",
+          "sources": [
+            "DOC-15 ¶3"
+          ]
+        },
+        {
+          "issue": "There is no Marudhar Co-op Bank reply on the Sunrise Agro Exports account 0451300912 (Rs 3.5L 'tax')",
+          "impact": "Rs 3.5L is untraced and the account holder is unidentified",
+          "fix": "Send a s.94 BNSS notice for KYC, statement, freeze and a s.63 certificate",
+          "sources": [
+            "DOC-04 ¶2",
+            "TXN T00037"
+          ]
+        },
+        {
+          "issue": "No search or seizure panchnamas are on file, and no handsets have been seized",
+          "impact": "The IMEI 355412097781230 handset, Faisal's phone and router, Vinod's phone and Neha's bank kit and SIM are not yet in evidence",
+          "fix": "Search Faisal's Nizampura flat and seize the devices with two independent panchas. Seize Vinod's handset (IMEI 861555043219087).",
+          "sources": [
+            "DOC-12 ¶2",
+            "DOC-14 ¶1"
+          ]
+        },
+        {
+          "issue": "There is no FSL report",
+          "impact": "Device contents (app admin, ChatWave, wallets) are not proved",
+          "fix": "Send the seized devices to FSL with hash values and obtain the final report"
+        },
+        {
+          "issue": "The Godavari Bank CCTV of 23-Sep and the Bhiwandi ATM CCTV (16 and 26 Sep) are not collected",
+          "impact": "Cannot visually prove who withdrew the cash",
+          "fix": "Collect the footage with s.63 certificates",
+          "sources": [
+            "DOC-05 ¶3",
+            "DOC-06 ¶3"
+          ]
+        },
+        {
+          "issue": "Neha's role rests mainly on her own s.180 statement",
+          "impact": "An admission to police is not provable against her (s.23 BSA)",
+          "fix": "Corroborate with the courier record, the Instagram 'Aamir bhai' chats and the Rs 10,000 cash trail, or record a s.183 BNSS statement before a Magistrate",
+          "sources": [
+            "DOC-09 ¶2"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "when": "2026-08-20 12:34",
+          "event": "Forged-KYC SIM 7387004512 activated at Royal Mobile, Kalyan Road, Bhiwandi",
+          "sources": [
+            "DOC-14 ¶1"
+          ]
+        },
+        {
+          "when": "2026-08-25 18:10",
+          "event": "Vinod calls Faisal's 9820456631",
+          "sources": [
+            "CDR 9922310045 2026-08-25 18:10"
+          ]
+        },
+        {
+          "when": "2026-08-28 19:30",
+          "event": "Victim added to the group; 'Mehta' calls her from Nizampura, Bhiwandi, with Faisal's phone on the same tower",
+          "sources": [
+            "CDR 7387004512 2026-08-28 19:30",
+            "DOC-01 ¶3"
+          ]
+        },
+        {
+          "when": "2026-09-02 22:10",
+          "event": "First gbadmin login from Faisal's IP",
+          "sources": [
+            "DOC-11 ¶2"
+          ]
+        },
+        {
+          "when": "2026-09-03 11:06",
+          "event": "Rs 2L credited to Shree Sai Traders; Vinod calls Mehta at 11:25",
+          "sources": [
+            "TXN T00104",
+            "CDR 9922310045 2026-09-03 11:25"
+          ]
+        },
+        {
+          "when": "2026-09-04 11:40",
+          "event": "Rs 1.9L moved to FQ Digital after an OTP on Vinod's phone",
+          "sources": [
+            "TXN T00106",
+            "CDR 9922310045 2026-09-04 11:39"
+          ]
+        },
+        {
+          "when": "2026-09-15 to 2026-09-17",
+          "event": "Rs 3.5L into Neha's account; Rs 1.96L withdrawn at a Bhiwandi ATM; Rs 1.5L sent to FQ Digital",
+          "sources": [
+            "TXN T00179",
+            "TXN T00181",
+            "TXN T00189"
+          ]
+        },
+        {
+          "when": "2026-09-22 10:16",
+          "event": "Rs 6L RTGS credited to Shree Sai Traders",
+          "sources": [
+            "TXN T00139"
+          ]
+        },
+        {
+          "when": "2026-09-23",
+          "event": "Rs 3L to FQ Digital (10:45); Rs 3L self-cheque cashed by Vinod (13:10); Vinod calls Mehta (13:35); Rs 2L to FQ Digital (15:30)",
+          "sources": [
+            "TXN T00143",
+            "TXN T00144",
+            "CDR 9922310045 2026-09-23 13:35",
+            "TXN T00145"
+          ]
+        },
+        {
+          "when": "2026-09-25 to 2026-09-27",
+          "event": "Rs 5L into Neha's account; Rs 2L withdrawn at a Bhiwandi ATM; Rs 2.5L sent to FQ Digital",
+          "sources": [
+            "TXN T00180",
+            "TXN T00185",
+            "TXN T00190"
+          ]
+        },
+        {
+          "when": "2026-09-29",
+          "event": "Rs 3.5L 'tax' paid to Sunrise Agro Exports, Marudhar Co-op Bank",
+          "sources": [
+            "TXN T00037"
+          ]
+        },
+        {
+          "when": "2026-10-08 / 2026-10-12",
+          "event": "NCRP complaint filed and FIR 131/2026 registered",
+          "sources": [
+            "DOC-01 ¶3",
+            "DOC-02 ¶1"
+          ]
+        },
+        {
+          "when": "2026-10-13",
+          "event": "Debit freezes: Rs 4,22,400 (Godavari) and Rs 55,000 (KSFB)",
+          "sources": [
+            "DOC-05 ¶4",
+            "DOC-06 ¶3"
+          ]
+        }
+      ],
+      "suggested_sections": [
+        "BNS 318(4) - cheating",
+        "BNS 319(2) - cheating by personation",
+        "BNS 336(3) - forgery (fake SEBI identity / forged SIM KYC)",
+        "BNS 340(2) - using forged documents",
+        "BNS 61(2) - criminal conspiracy",
+        "BNS 317 - dishonestly receiving stolen property (mule account holders)",
+        "IT Act 66C - identity theft",
+        "IT Act 66D - cheating by personation using a computer resource",
+        "Consider BNS 111 (organised crime) if the linked victims (Sunil Joshi, Ramesh Naik, Priya Shah) are confirmed"
+      ],
+      "linked_cases": [
+        "Sunil Joshi 1930 complaint No. 31510260004389 (07-Oct-2026), same mule account",
+        "Possible other victims crediting Shree Sai Traders: Ramesh Naik (TXN T00122), Priya Shah (TXN T00149), to be checked on NCRP",
+        "Weak lead only: CYB-114-2026 and CYB-098-2026 also involve Marudhar Co-op Bank accounts; no direct number or account match found"
+      ],
+      "next_actions": [
+        {
+          "action": "Search Faisal Qureshi's flat at Al-Noor Complex, Nizampura, with independent panchas. Seize phones (look for IMEI 355412097781230), the router, laptops and crypto wallets, then arrest.",
+          "why": "Ties him to the admin panel, the Mehta handset and the USDT wallets"
+        },
+        {
+          "action": "Obtain the signed CoinVault reply with s.63 certificate, wallet addresses and withdrawal logs; request a freeze of the remaining USDT",
+          "why": "Rs 18.2L was laundered through FQ Digital"
+        },
+        {
+          "action": "Send a s.94 notice to Marudhar Co-op Bank for a/c 0451300912 (Sunrise Agro Exports): KYC, statement, freeze",
+          "why": "Rs 3.5L is untraced"
+        },
+        {
+          "action": "Collect the Godavari Bank 23-Sep CCTV and the Bhiwandi ATM KSFB-BWD-0021 CCTV for 16 and 26 Sep",
+          "why": "Identify who withdrew the cash"
+        },
+        {
+          "action": "Seize Vinod Gaikwad's handset and question him about his calls with Faisal and 'Mehta'",
+          "why": "Contradictions in his statement"
+        },
+        {
+          "action": "Get the Royal Mobile POS agent's records and statement for the forged-KYC SIM",
+          "why": "Identify who bought SIM 7387004512"
+        },
+        {
+          "action": "Seize the victim's phone and pen drive with hash values, send to FSL, and obtain a s.63 certificate",
+          "why": "The screenshots are currently uncertified"
+        },
+        {
+          "action": "Verify Ganesh Shinde's admission at Sahyog Hospital and Sunil Joshi's 1930 acknowledgement; record statements of Ramesh Naik and Priya Shah",
+          "why": "Confirms the clearances and the linked victims"
+        },
+        {
+          "action": "Get the CDR for Neha's SIM 9067113452 and the courier records to Bhiwandi",
+          "why": "Corroborates her account and identifies 'Aamir bhai'"
+        },
+        {
+          "action": "Move for release of the frozen Rs 4,77,400 to the victims",
+          "why": "Victim restitution"
+        }
+      ]
+    },
+    "diary": [
+      {
+        "n": 1,
+        "type": "FACT",
+        "text": "Rs 24,50,000 debited in 6 net-banking transfers 03-29 Sep: Rs 12.5L to Shree Sai Traders (Godavari 60450012783), Rs 8.5L to Neha Patil (KSFB 50210066120044), Rs 3.5L to Sunrise Agro Exports (Marudhar Co-op 0451300912).",
+        "sources": [
+          "DOC-04 ¶2",
+          "DOC-03 ¶3"
+        ],
+        "person": ""
+      },
+      {
+        "n": 2,
+        "type": "FACT",
+        "text": "GB Pro Trade admin 'gbadmin' logged in from IP 49.36.112.87 on 4 dates and edited the victim's profit figures; ISP shows that IP belonged to Faisal Ahmed Qureshi, Bhiwandi (9820456631) at all four times.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 3,
+        "type": "FACT",
+        "text": "CoinVault P2P merchant 'FQ Digital' (KYC Faisal Qureshi) received Rs 14,20,000 from Shree Sai Traders a/c and Rs 4,00,000 from Neha Patil a/c, converted to USDT.",
+        "sources": [
+          "DOC-13 ¶2",
+          "DOC-05 ¶2",
+          "DOC-06 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 4,
+        "type": "SUSPECT",
+        "text": "Indicated as operator of the GB Pro Trade admin panel and recipient of the laundered funds.",
+        "sources": [
+          "DOC-11 ¶2",
+          "DOC-12 ¶2",
+          "DOC-13 ¶2"
+        ],
+        "person": "Faisal Qureshi"
+      },
+      {
+        "n": 5,
+        "type": "SUSPECT",
+        "text": "Named by complainant as gang member (DOC-03 ¶4). He himself paid Rs 4L to Shree Sai Traders and filed 1930 complaint; verify.",
+        "sources": [
+          "DOC-03 ¶4",
+          "DOC-05 ¶2",
+          "DOC-10 ¶3"
+        ],
+        "person": "Sunil Joshi"
+      },
+      {
+        "n": 6,
+        "type": "SUSPECT",
+        "text": "Proprietor of the beneficiary account; sole net-banking user; self-cheque Rs 3L withdrawn in person on 23-Sep.",
+        "sources": [
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 7,
+        "type": "SUSPECT",
+        "text": "Blamed by Vinod Gaikwad for misusing net banking.",
+        "sources": [
+          "DOC-07 ¶2"
+        ],
+        "person": "Ganesh Shinde"
+      },
+      {
+        "n": 8,
+        "type": "SUSPECT",
+        "text": "Rented out her account, debit card and SIM for Rs 10,000.",
+        "sources": [
+          "DOC-09 ¶2"
+        ],
+        "person": "Neha Patil"
+      },
+      {
+        "n": 9,
+        "type": "CONTRADICTION",
+        "text": "Says he never withdrew any large amount in September and the accountant handles net banking. Bank says he is the sole net-banking user and he personally cashed a Rs 3L self-cheque on 23-Sep at 13:10, with his signature and ID verified and CCTV preserved.",
+        "sources": [
+          "DOC-07 ¶2",
+          "DOC-07 ¶3",
+          "DOC-05 ¶1",
+          "DOC-05 ¶3"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 10,
+        "type": "FACT",
+        "text": "The 'Dr. Mehta' SIM 7387004512 is on forged KYC, bought through the Royal Mobile POS on Kalyan Road, Bhiwandi. It ran in a single handset (IMEI 355412097781230) and was based on the Nizampura, Bhiwandi tower (BWD-NZM-04), where Faisal Qureshi's broadband address is. Faisal's 9820456631 was on the same tower during the Mehta calls to the victim on 28-Aug 19:30 and 09-Sep 21:15. Both phones moved to Kalyan Road on 16-Sep at about 10:48-10:57, around the time of the Neha Patil ATM withdrawals.",
+        "sources": [
+          "DOC-14 ¶1",
+          "DOC-14 ¶2",
+          "CDR 7387004512 2026-08-28 19:30",
+          "CDR 7387004512 2026-09-09 21:15",
+          "DOC-12 ¶2"
+        ],
+        "person": ""
+      },
+      {
+        "n": 11,
+        "type": "FACT",
+        "text": "Vinod's 9922310045 called 7387004512 six times (03-23 Sep) and called Faisal's 9820456631 three times (25-Aug, 05-Sep, 24-Sep). On 23-Sep he called Mehta at 13:35, 25 minutes after the cash withdrawal. GDVBNK OTP SMS arrived on his phone, in his own handset, a minute before each CoinVault IMPS.",
+        "sources": [
+          "CDR 9922310045 2026-09-03 11:25",
+          "CDR 9922310045 2026-09-23 13:35",
+          "CDR 9922310045 2026-08-25 18:10",
+          "CDR 9922310045 2026-09-23 10:44",
+          "TXN T00143"
+        ],
+        "person": ""
+      },
+      {
+        "n": 12,
+        "type": "CONTRADICTION",
+        "text": "Claims he does not know Dr. Arvind Mehta or Faisal. His CDR shows 6 outgoing calls to 7387004512 and 3 to 9820456631.",
+        "sources": [
+          "DOC-07 ¶3",
+          "CDR 9922310045 2026-09-10 15:50",
+          "CDR 9922310045 2026-09-05 20:20"
+        ],
+        "person": "Vinod Gaikwad"
+      },
+      {
+        "n": 13,
+        "type": "CLEARED",
+        "text": "He has no net-banking access (bank: proprietor is the only user). OTPs went to Vinod's phone in Osmanpura, and Vinod cashed the 23-Sep self-cheque in person. Ganesh was hospitalised 20-26 Sep; verify the discharge summary with Sahyog Hospital.",
+        "sources": [
+          "DOC-05 ¶1",
+          "DOC-05 ¶3",
+          "DOC-08 ¶2",
+          "DOC-08 ¶3",
+          "CDR 9922310045 2026-09-23 10:44"
+        ],
+        "person": "Ganesh Shinde"
+      },
+      {
+        "n": 14,
+        "type": "CLEARED",
+        "text": "He is a fellow victim. He paid Rs 2.5L (T00109) and Rs 1.5L (T00135) into the mule account and filed his own 1930 complaint. No record links him to 7387004512, 9820456631, the admin IP or the money flows.",
+        "sources": [
+          "TXN T00109",
+          "TXN T00135",
+          "DOC-10 ¶3",
+          "DOC-05 ¶2"
+        ],
+        "person": "Sunil Joshi"
+      },
+      {
+        "n": 15,
+        "type": "GAP",
+        "text": "CoinVault reply is an unsigned email with no s.63 BSA certificate. Screenshots pen drive has no s.63 certificate and no hash value. No Marudhar Co-op Bank reply on the Sunrise Agro Exports a/c 0451300912 (Rs 3.5L). No seizure panchnamas and no FSL report. CCTV of 23-Sep at Godavari Bank has not been collected.",
+        "sources": [
+          "DOC-13 ¶3",
+          "DOC-15 ¶3",
+          "DOC-04 ¶2",
+          "DOC-05 ¶3"
+        ],
+        "person": ""
+      }
+    ],
+    "stats": {
+      "api_calls": 11,
+      "input_tokens": 24,
+      "output_tokens": 15010,
+      "cache_read_tokens": 271742,
+      "cache_write_tokens": 55043,
+      "cost_usd": 0.6299,
+      "tool_calls": 40,
+      "turns": 11,
+      "seconds": 133.7
+    }
+  }
+]

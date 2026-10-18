@@ -1,0 +1,89 @@
+{
+  "_note": "ANSWER KEY for the sample kit. The agent never reads it; only eval/run_eval.py does.",
+  "case_id": "CYB-131-2026",
+  "story": "Faisal Qureshi (Bhiwandi) ran the fake GB Pro Trade app and the 'Dr. Arvind Mehta' number 7387004512 (fake KYC). Vinod Gaikwad knowingly ran Shree Sai Traders as a mule and passed money to Faisal's CoinVault P2P merchant 'FQ Digital'. Neha Patil rented her account kit; it was operated from Bhiwandi. Sunil Joshi is a co-victim and Ganesh Shinde had no access - both red herrings.",
+  "checks": [
+    {
+      "name": "Operator identified (Faisal Qureshi)",
+      "kind": "accused",
+      "person": "Faisal Qureshi"
+    },
+    {
+      "name": "Mule account holder identified (Vinod Gaikwad)",
+      "kind": "accused",
+      "person": "Vinod Gaikwad"
+    },
+    {
+      "name": "Rented account identified (Neha Patil)",
+      "kind": "accused",
+      "person": "Neha Patil"
+    },
+    {
+      "name": "Red herring cleared (Sunil Joshi, co-victim)",
+      "kind": "cleared",
+      "person": "Sunil Joshi"
+    },
+    {
+      "name": "Red herring cleared (Ganesh Shinde, accountant)",
+      "kind": "cleared",
+      "person": "Ganesh Shinde"
+    },
+    {
+      "name": "Lie caught: Vinod blames accountant vs OTPs / self-cheque",
+      "kind": "text",
+      "all": [
+        "(Vinod|Gaikwad)[^\\n]{0,400}(accountant|Ganesh)",
+        "(Vinod|Gaikwad)[^\\n]{0,400}(self-?cheque|OTP|GDVBNK|in person)|(self-?cheque|OTP|GDVBNK|in person)[^\\n]{0,400}(Vinod|Gaikwad)"
+      ]
+    },
+    {
+      "name": "Key link: admin-panel IP 49.36.112.87 -> ISP subscriber Faisal",
+      "kind": "text",
+      "all": [
+        "49\\.36\\.112\\.87[^\\n]{0,300}Faisal|Faisal[^\\n]{0,300}49\\.36\\.112\\.87"
+      ]
+    },
+    {
+      "name": "Key link: CoinVault P2P 'FQ Digital' KYC -> Faisal",
+      "kind": "text",
+      "all": [
+        "(CoinVault|FQ Digital)[^\\n]{0,300}Faisal|Faisal[^\\n]{0,300}(CoinVault|FQ Digital)"
+      ]
+    },
+    {
+      "name": "Key link: scam SIM co-located with Faisal's own SIM",
+      "kind": "text",
+      "all": [
+        "7387004512[^\\n]{0,400}9820456631|9820456631[^\\n]{0,400}7387004512"
+      ]
+    },
+    {
+      "name": "Gap: screenshots lack BSA s.63 certificate",
+      "kind": "text",
+      "all": [
+        "screenshot[^\\n]{0,300}63|63[^\\n]{0,300}screenshot"
+      ]
+    },
+    {
+      "name": "Gap: CoinVault reply is an email without certificate",
+      "kind": "text",
+      "all": [
+        "CoinVault[^\\n]{0,300}(63|certificate|email|signed)"
+      ]
+    },
+    {
+      "name": "Money: Rs 12.5 lakh to Shree Sai Traders traced",
+      "kind": "text",
+      "all": [
+        "12,50,000|12\\.5 ?(L|lakh)|1250000"
+      ]
+    },
+    {
+      "name": "Bonus: linked archive case CYB-090-2026 found",
+      "kind": "text",
+      "all": [
+        "CYB-090"
+      ]
+    }
+  ]
+}

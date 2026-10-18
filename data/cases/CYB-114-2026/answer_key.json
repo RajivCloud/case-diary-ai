@@ -1,0 +1,209 @@
+{
+  "_note": "ANSWER KEY. Fictional demo case. The agent and the retriever never load this file; only eval/run_eval.py does. 'checks' are the grading rules, matched within one line/record.",
+  "case_id": "CYB-114-2026",
+  "title": "Digital-arrest fraud on Prof. Suresh Kulkarni (Rs 38.5 lakh)",
+  "story": "Between 03 and 05 Oct 2026 a caller posing as a courier company and then a 'CBI officer Vikram Rathore' kept the victim on a video call ('digital arrest') and made him transfer Rs 38.5 lakh in three RTGS transfers to Rohit Pawar's Konkan SFB account. Rohit had rented his account to Imran Shaikh for Rs 15,000 and forwarded each OTP to the scam number 8969204117. Money was layered to Imran (Rs 21.4 L) and two other accounts. Imran withdrew cash at the Dwarka Circle ATM in Nashik. The scam numbers were operated by Sameer Ansari from Nashik: the handset IMEI 356938112847152 carried his personal SIM 9765330812 before and after the scam window and the scam SIM 8969204117 during it.",
+  "roles": {
+    "Sameer Ansari": "operator / mastermind (accused)",
+    "Imran Shaikh": "mule #2 / cash-out handler (accused)",
+    "Rohit Pawar": "mule #1 / account renter (accused, lesser role)",
+    "Anil Kulkarni": "innocent - red herring (victim's nephew)",
+    "Vikram Rathore": "fake identity used by Sameer Ansari",
+    "Ramesh Yadav": "fake KYC name on scam SIM 8969204117",
+    "Pooja Verma": "fake KYC name on scam SIM 7303518246"
+  },
+  "expected_primary_accused": "Sameer Ansari",
+  "expected_mules": [
+    "Rohit Pawar",
+    "Imran Shaikh"
+  ],
+  "expected_cleared": [
+    "Anil Kulkarni"
+  ],
+  "key_links": [
+    {
+      "id": "L1",
+      "desc": "IMEI 356938112847152 carried Sameer's SIM 9765330812 and scam SIM 8969204117",
+      "sources": [
+        "DOC-09",
+        "table:cdr"
+      ]
+    },
+    {
+      "id": "L2",
+      "desc": "Rohit's number forwarded each bank OTP to 8969204117 within minutes",
+      "sources": [
+        "table:cdr"
+      ]
+    },
+    {
+      "id": "L3",
+      "desc": "Rs 15,000 'account rent' from Imran's account to Rohit on 27-Sep",
+      "sources": [
+        "table:transactions",
+        "DOC-13"
+      ]
+    },
+    {
+      "id": "L4",
+      "desc": "Imran called Sameer's personal number 9765330812 right after the ATM withdrawals on 05-Oct",
+      "sources": [
+        "table:cdr"
+      ]
+    },
+    {
+      "id": "L5",
+      "desc": "Seized phone from Sameer's house has IMEI 356938112847152 and the fake CBI ConnectX account",
+      "sources": [
+        "DOC-18",
+        "DOC-20"
+      ]
+    }
+  ],
+  "planted_lies": [
+    {
+      "id": "LIE1",
+      "who": "Rohit Pawar",
+      "claim": "account was hacked, does not know Imran",
+      "disproved_by": [
+        "table:cdr OTP forwarding",
+        "table:transactions Rs 15,000 rent",
+        "DOC-13 bank manager saw him with a man",
+        "DOC-22 his own supplementary statement"
+      ]
+    },
+    {
+      "id": "LIE2",
+      "who": "Imran Shaikh",
+      "claim": "was at his shop in Malegaon on 05-Oct afternoon; has not spoken to Sameer for weeks",
+      "disproved_by": [
+        "table:cdr tower Nashik Dwarka 05-Oct 14:20-15:10",
+        "DOC-21 ATM CCTV note",
+        "table:transactions ATM Dwarka Circle",
+        "table:cdr call to 9765330812 at 14:52 on 05-Oct",
+        "DOC-20 chat with Imran Mlg"
+      ]
+    }
+  ],
+  "red_herrings": [
+    {
+      "id": "RH1",
+      "who": "Anil Kulkarni",
+      "why_suspected": "had access to victim's phone and knew banking habits (DOC-05)",
+      "cleared_by": [
+        "table:cdr Bengaluru towers 03-05 Oct",
+        "DOC-16 employer swipe logs"
+      ]
+    }
+  ],
+  "readiness_gaps": [
+    {
+      "id": "GAP1",
+      "desc": "ATM CCTV footage relied on but no BSA s.63 certificate received from Narmada Bank",
+      "source": "DOC-07"
+    },
+    {
+      "id": "GAP2",
+      "desc": "Seizure at Imran's house has only one panch witness, who is not independent",
+      "source": "DOC-17"
+    },
+    {
+      "id": "GAP3",
+      "desc": "Rohit's admission is in a police statement (BNSS s.180); a confession to police is not provable (BSA s.23). Needs independent corroboration or a s.183 statement before a Magistrate",
+      "source": "DOC-22"
+    }
+  ],
+  "bonus": [
+    {
+      "id": "B1",
+      "desc": "Scam number 7303518246 also appears in an earlier unrelated archive case (CYB-098-2026)",
+      "source": "archive"
+    }
+  ],
+  "money_trail": {
+    "victim_to_rohit": 3850000,
+    "rohit_to_imran": 2140000,
+    "rohit_to_layer_accounts": 1700000,
+    "frozen": 1030000
+  },
+  "checks": [
+    {
+      "name": "Main operator identified (Sameer Ansari)",
+      "kind": "accused",
+      "person": "Sameer Ansari"
+    },
+    {
+      "name": "Mule #2 identified (Imran Shaikh)",
+      "kind": "accused",
+      "person": "Imran"
+    },
+    {
+      "name": "Mule #1 identified (Rohit Pawar)",
+      "kind": "accused",
+      "person": "Rohit"
+    },
+    {
+      "name": "Red herring cleared (Anil Kulkarni)",
+      "kind": "cleared",
+      "person": "Anil"
+    },
+    {
+      "name": "Lie 1 caught: Rohit's 'hacked' claim vs OTP forwarding",
+      "kind": "text",
+      "all": [
+        "Rohit[^\\n]{0,400}(hack|first statement|false|not (fully )?true|contradict)",
+        "(9371662405|Rohit)[^\\n]{0,300}(SMS|forward)[^\\n]{0,200}8969204117|8969204117[^\\n]{0,200}(SMS|forward)[^\\n]{0,300}(9371662405|Rohit)"
+      ]
+    },
+    {
+      "name": "Lie 2 caught: Imran's Malegaon alibi vs Nashik towers/ATM",
+      "kind": "text",
+      "all": [
+        "Malegaon[^\\n]{0,300}Dwarka|Dwarka[^\\n]{0,300}Malegaon"
+      ]
+    },
+    {
+      "name": "Key link: IMEI 356938112847152 shared by scam & personal SIM",
+      "kind": "text",
+      "all": [
+        "356938112847152",
+        "9765330812"
+      ]
+    },
+    {
+      "name": "Gap 1: CCTV lacks BSA s.63 certificate",
+      "kind": "text",
+      "all": [
+        "CCTV[^\\n]{0,300}63|63[^\\n]{0,300}CCTV"
+      ]
+    },
+    {
+      "name": "Gap 2: seizure with single / non-independent panch",
+      "kind": "text",
+      "all": [
+        "panch[^\\n]{0,200}(single|one|only|independent|police)|(single|one|only|independent)[^\\n]{0,200}panch"
+      ]
+    },
+    {
+      "name": "Gap 3: police-statement admission not a confession (s.23 / s.183)",
+      "kind": "text",
+      "all": [
+        "(s\\.?\\s*23|section 23|confession)[^\\n]{0,300}183|183[^\\n]{0,300}(s\\.?\\s*23|section 23|confession)"
+      ]
+    },
+    {
+      "name": "Money: Rs 21.4 lakh to Imran traced",
+      "kind": "text",
+      "all": [
+        "21,40,000|21\\.4|2140000"
+      ]
+    },
+    {
+      "name": "Bonus: linked archive case CYB-098-2026 found",
+      "kind": "text",
+      "all": [
+        "CYB-098"
+      ]
+    }
+  ]
+}

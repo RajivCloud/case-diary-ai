@@ -1,0 +1,12 @@
+# Exact versions this project was built and tested with (Python 3.13).
+anthropic==1.15.0      # Claude API client (tool use, caching, refusal fallback)
+streamlit==1.66.0      # UI (multipage navigation)
+fastembed==0.9.0       # local ONNX embeddings (bge-small), no PyTorch needed
+rank-bm25==0.2.2       # keyword search
+numpy==2.5.4
+pandas==3.0.6
+openpyxl==3.1.5        # Excel bank / CDR exports
+pypdf==6.21.1          # text from PDF documents
+python-docx==1.2.0     # Word documents in, Word chargesheet draft out
+python-dotenv==1.2.4   # loads ANTHROPIC_API_KEY from .env locally
+pytest==9.1.1

@@ -1,0 +1,103 @@
+{
+  "question": "Investigate this case. Who should be charge-sheeted and in what role? Is anyone wrongly suspected? Which statements are contradicted by the records? Trace the money. Is the case ready for chargesheet, and what gaps must the IO fix first?",
+  "retrieved": [
+    {
+      "cite": "DOC-01 ¶4",
+      "case_id": "CYB-114-2026",
+      "title": "NCRP complaint acknowledgement (1930 helpline)",
+      "doc_type": "complaint",
+      "date": "2026-10-06",
+      "text": "The person in police uniform on the video call, using number 8969204117, said I was under \"digital arrest\" and must not tell anyone, including my family. The 'digital arrest' continued through Sunday 04-Oct. He said my bank funds must be verified by the RBI and would be returned within 48 hours after verification.",
+      "score": 0.0308,
+      "dense_rank": 6,
+      "bm25_rank": 4
+    },
+    {
+      "cite": "DOC-23 ¶3",
+      "case_id": "CYB-114-2026",
+      "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+      "doc_type": "case_diary",
+      "date": "2026-10-10",
+      "text": "09-Oct-2026: Telecom replies received for 8969204117 and 7303518246. Both SIMs issued on false identities through point-of-sale agents in Malegaon and Nashik. CDRs with IMEI received with Section 63 certificates. CDR analysis of the scam numbers, the account holder's number and the nephew's number is pending.",
+      "score": 0.0308,
+      "dense_rank": 5,
+      "bm25_rank": 5
+    },
+    {
+      "cite": "DOC-23 ¶5",
+      "case_id": "CYB-114-2026",
+      "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+      "doc_type": "case_diary",
+      "date": "2026-10-10",
+      "text": "Pending tasks: (1) analyse CDRs for location and contact links; (2) obtain IMEI linkage for the handsets used with the scam numbers; (3) examine Rohit Pawar, Imran Shaikh and Anil Kulkarni; (4) identify the person operating 8969204117.",
+      "score": 0.0306,
+      "dense_rank": 3,
+      "bm25_rank": 8
+    },
+    {
+      "cite": "DOC-23 ¶2",
+      "case_id": "CYB-114-2026",
+      "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+      "doc_type": "case_diary",
+      "date": "2026-10-10",
+      "text": "08-Oct-2026: Konkan SFB reply received. Beneficiary is Rohit Pawar, student, Hadapsar. Funds left the account within minutes of each credit by OTP-authorised IMPS. Net-banking IPs are from the Nashik region although the account holder lives in Pune. ConnectX account suspended.",
+      "score": 0.03,
+      "dense_rank": 12,
+      "bm25_rank": 2
+    },
+    {
+      "cite": "DOC-23 ¶1",
+      "case_id": "CYB-114-2026",
+      "title": "Case Diary Part 1 (07-Oct to 10-Oct-2026) under Section 192 BNSS",
+      "doc_type": "case_diary",
+      "date": "2026-10-10",
+      "text": "07-Oct-2026: FIR 114/2026 registered. Statements of the complainant and his wife recorded. The wife suspects the nephew Anil Kulkarni, who stayed with them in September. Notices under Section 94 BNSS issued to Sahyadri National Bank, Konkan SFB, Trinet Mobile, Airwave Telecom and the ConnectX platform.",
+      "score": 0.0296,
+      "dense_rank": 16,
+      "bm25_rank": 1
+    },
+    {
+      "cite": "DOC-08 ¶4",
+      "case_id": "CYB-114-2026",
+      "title": "Telecom nodal officer replies - subscriber details of scam numbers",
+      "doc_type": "telecom_reply",
+      "date": "2026-10-09",
+      "text": "Call detail records with cell-site (tower) locations and handset IMEI for both numbers, for 01-Sep-2026 to 08-Oct-2026, are provided in electronic form. A certificate under Section 63 BSA signed by each nodal officer is enclosed for the CDRs.",
+      "score": 0.028,
+      "dense_rank": 14,
+      "bm25_rank": 9
+    },
+    {
+      "cite": "DOC-15 ¶4",
+      "case_id": "CYB-114-2026",
+      "title": "Statement of Anil Kulkarni (victim's nephew) under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-13",
+      "text": "It is true I borrowed Rs 2 lakh from my uncle in 2025 for a medical emergency of my mother; I have repaid Rs 1.2 lakh. I have nothing to do with this fraud. My mobile number is 9845012377 and police may check my call records.",
+      "score": 0.0279,
+      "dense_rank": 2,
+      "bm25_rank": 25
+    },
+    {
+      "cite": "DOC-22 ¶4",
+      "case_id": "CYB-114-2026",
+      "title": "Supplementary statement of Rohit Pawar under Section 180 BNSS",
+      "doc_type": "statement_180",
+      "date": "2026-10-14",
+      "text": "On 03-Oct and 05-Oct I got OTP messages from my bank. Imran bhai had told me to forward every OTP immediately to a number he gave me, which was 8969204117. I forwarded the OTPs as SMS. I did not know the money was from a fraud on an old man. I never met or spoke to anyone named Sameer.",
+      "score": 0.0276,
+      "dense_rank": 7,
+      "bm25_rank": 19
+    }
+  ],
+  "answer": "# Case CYB-114-2026 (FIR 114/2026): Analysis from the Available Excerpts\n\n**Bottom line:** The case is **not ready for chargesheet**. The excerpts show one strong evidentiary link: the mule account holder sent his OTPs to the same number used by the fake officer. But the main operator is unidentified, a key suspect has not been examined, and there are no amounts or onward money trail.\n\n## 1. The key link in the evidence\n\n- The complainant says the \"police officer\" on the video call used **8969204117** and kept him under \"digital arrest\" through Sunday 04-Oct [DOC-01 ¶4].\n- Rohit Pawar, the beneficiary account holder [DOC-23 ¶2], admits he forwarded his bank OTPs on 03-Oct and 05-Oct to **8969204117**, the number \"Imran bhai\" gave him [DOC-22 ¶4].\n- The bank reports that funds left Rohit's account within minutes of each credit, by **OTP-authorised IMPS** [DOC-23 ¶2].\n\nSo the person impersonating police and the person draining the mule account used the same number. This ties the scam call, the mule account and the cash-out into one chain.\n\n## 2. Who should be charge-sheeted, and in what role (provisional)\n\n| Person | Role suggested by the excerpts | Basis |\n|---|---|---|\n| **Unknown operator of 8969204117** | Principal offender: impersonated police, ran the \"digital arrest\", received the OTPs and controlled the onward transfers | [DOC-01 ¶4], [DOC-22 ¶4], [DOC-23 ¶2]. Still unidentified; this is pending task (4) [DOC-23 ¶5]. |\n| **Imran Shaikh** | Recruiter/handler of the mule; gave Rohit the number and the instruction to forward every OTP | [DOC-22 ¶4]. Not yet examined [DOC-23 ¶5]. |\n| **Rohit Pawar** | Mule account holder who enabled withdrawals by passing on OTPs | [DOC-23 ¶2], [DOC-22 ¶4] |\n| **Point-of-sale agents, Malegaon and Nashik** | Possibly issued the scam SIMs on false identities. Whether they were complicit or negligent must be established before charging. | [DOC-23 ¶3] |\n\nThe excerpts do not provide enough to frame specific offence sections or to name the operator. No one other than Rohit can be charged on admissions or documents alone yet.\n\n## 3. Is anyone wrongly suspected?\n\n**Anil Kulkarni (the nephew)** appears to be suspected on weak grounds.\n- The wife's suspicion rests only on his stay with them in September [DOC-23 ¶1].\n- He admits a Rs 2 lakh loan in 2025, of which he says Rs 1.2 lakh is repaid. He denies involvement and volunteers his number, 9845012377, for checking [DOC-15 ¶4].\n- No excerpt links him to 8969204117, 7303518246, Rohit, Imran, or the Nashik IPs.\n\nHe should not be charge-sheeted on this record. However, he cannot be formally cleared until his CDR is analysed against the scam numbers, which is still pending [DOC-23 ¶3, ¶5].\n\n## 4. Statements contradicted or undermined by the records\n\n- **Rohit's claim that he \"did not know\" about the fraud** [DOC-22 ¶4] is weakened by the records:\n  - He forwarded every OTP on instruction to the very number used to impersonate police.\n  - Debits followed each credit within minutes, all OTP-authorised [DOC-23 ¶2].\n  - Net-banking was accessed from **Nashik-region IPs**, although he lives in Pune [DOC-23 ¶2]. This suggests someone else operated his account remotely.\n  \n  This is not a direct contradiction of his knowledge, but it makes his claim of innocent ignorance doubtful. It needs testing, for example by examining what he was paid and his chats with Imran.\n- **Rohit's statement that he \"never met or spoke to anyone named Sameer\"** [DOC-22 ¶4] cannot be assessed. No excerpt says who \"Sameer\" is or why the question was put to him.\n- **The wife's suspicion of the nephew** [DOC-23 ¶1] is not supported by any record in the excerpts (see section 3).\n- **One timing point to verify:** the complainant says the digital arrest ran through 04-Oct [DOC-01 ¶4], and 04-Oct-2026 is indeed a Sunday. But Rohit received an OTP on **05-Oct** [DOC-22 ¶4]. The IO should check whether a credit from the victim arrived on 05-Oct, after the date the victim gives for the end of the \"arrest\", or whether that OTP relates to other funds.\n\n## 5. Money trail (as far as the excerpts go)\n\n1. The victim was told his funds needed \"RBI verification\" and would be returned in 48 hours [DOC-01 ¶4]. His bank is presumably Sahyadri National Bank, since a notice was issued to it [DOC-23 ¶1], but its reply is not in the excerpts.\n2. The funds were credited to **Rohit Pawar's Konkan SFB account** [DOC-23 ¶2].\n3. They were moved out **within minutes** by OTP-authorised IMPS, with OTPs routed to 8969204117 and logins from Nashik-region IPs [DOC-23 ¶2], [DOC-22 ¶4].\n4. **The trail stops here.** The excerpts give no amounts, no transaction IDs, and no destination accounts for the IMPS transfers. The role of the suspended ConnectX account [DOC-23 ¶2] is also not explained.\n\n## 6. Gaps the IO must fix before chargesheet\n\n1. **Identify the operator of 8969204117.** Use the CDR tower locations and IMEI data for 01-Sep to 08-Oct [DOC-08 ¶4], and cross-match with the Nashik IPs.\n2. **Complete the CDR and IMEI analysis** for both scam numbers, Rohit's number and Anil's number [DOC-23 ¶3, ¶5]. The data has been received; the linkage analysis is pending.\n3. **Establish the role of 7303518246**, which none of the excerpts explain.\n4. **Examine Imran Shaikh** and establish his link to 8969204117 [DOC-23 ¶5].\n5. **Obtain the victim bank's reply** and build a complete money-trail chart: amounts, dates, UTRs, and onward beneficiary accounts beyond Konkan SFB. Then issue freeze or notice requests to those banks.\n6. **Get IP subscriber details** for the Nashik-region net-banking logins.\n7. **Establish the ConnectX account's role.** Was it the video-call platform, and is it linked to the operator?\n8. **Seize and examine Rohit's phone** to corroborate the OTP forwarding and any payments he received or chats he had with Imran. Ensure Section 63 BSA certificates cover this evidence, as was done for the CDRs [DOC-08 ¶4].\n9. **Investigate the POS agents** who issued the SIMs on false identities [DOC-23 ¶3].\n10. **Clarify who \"Sameer\" is.**\n11. **Formally eliminate or implicate Anil Kulkarni** on the basis of his CDR.\n\nUntil at least items 1, 4 and 5 are resolved, a chargesheet would cover only the mule (Rohit) and would miss the principal offender and the money trail.",
+  "stats": {
+    "api_calls": 1,
+    "input_tokens": 4,
+    "output_tokens": 3657,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 1415,
+    "cost_usd": 0.0802,
+    "seconds": 36.3
+  }
+}

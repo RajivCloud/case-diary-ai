@@ -1,0 +1,85 @@
+{
+  "case_id": "CYB-114-2026",
+  "baseline": {
+    "checks": {
+      "Main operator identified (Sameer Ansari)": false,
+      "Mule #2 identified (Imran Shaikh)": true,
+      "Mule #1 identified (Rohit Pawar)": true,
+      "Red herring cleared (Anil Kulkarni)": false,
+      "Lie 1 caught: Rohit's 'hacked' claim vs OTP forwarding": false,
+      "Lie 2 caught: Imran's Malegaon alibi vs Nashik towers/ATM": false,
+      "Key link: IMEI 356938112847152 shared by scam & personal SIM": false,
+      "Gap 1: CCTV lacks BSA s.63 certificate": false,
+      "Gap 2: seizure with single / non-independent panch": false,
+      "Gap 3: police-statement admission not a confession (s.23 / s.183)": false,
+      "Money: Rs 21.4 lakh to Imran traced": false,
+      "Bonus: linked archive case CYB-098-2026 found": false
+    },
+    "stats": {
+      "api_calls": 1,
+      "input_tokens": 4,
+      "output_tokens": 3657,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 1415,
+      "cost_usd": 0.0802,
+      "seconds": 36.3
+    },
+    "citations": 34
+  },
+  "agent": {
+    "checks": {
+      "Main operator identified (Sameer Ansari)": true,
+      "Mule #2 identified (Imran Shaikh)": true,
+      "Mule #1 identified (Rohit Pawar)": true,
+      "Red herring cleared (Anil Kulkarni)": true,
+      "Lie 1 caught: Rohit's 'hacked' claim vs OTP forwarding": true,
+      "Lie 2 caught: Imran's Malegaon alibi vs Nashik towers/ATM": true,
+      "Key link: IMEI 356938112847152 shared by scam & personal SIM": true,
+      "Gap 1: CCTV lacks BSA s.63 certificate": true,
+      "Gap 2: seizure with single / non-independent panch": true,
+      "Gap 3: police-statement admission not a confession (s.23 / s.183)": true,
+      "Money: Rs 21.4 lakh to Imran traced": true,
+      "Bonus: linked archive case CYB-098-2026 found": true
+    },
+    "stats": {
+      "api_calls": 16,
+      "input_tokens": 34,
+      "output_tokens": 14452,
+      "cache_read_tokens": 371734,
+      "cache_write_tokens": 42765,
+      "cost_usd": 0.5773,
+      "tool_calls": 40,
+      "turns": 16,
+      "seconds": 135.2
+    },
+    "citations": 191
+  },
+  "agent_runs": {
+    "agent_run": {
+      "score": 12,
+      "of": 12,
+      "api_calls": 16,
+      "input_tokens": 34,
+      "output_tokens": 14452,
+      "cache_read_tokens": 371734,
+      "cache_write_tokens": 42765,
+      "cost_usd": 0.5773,
+      "tool_calls": 40,
+      "turns": 16,
+      "seconds": 135.2
+    },
+    "agent_run_v1": {
+      "score": 12,
+      "of": 12,
+      "api_calls": 15,
+      "input_tokens": 32,
+      "output_tokens": 21652,
+      "cache_read_tokens": 370807,
+      "cache_write_tokens": 55735,
+      "cost_usd": 0.786,
+      "tool_calls": 39,
+      "turns": 15,
+      "seconds": 174.3
+    }
+  }
+}

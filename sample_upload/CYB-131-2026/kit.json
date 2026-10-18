@@ -1,0 +1,265 @@
+{
+  "case": {
+    "case_id": "CYB-131-2026",
+    "fir_no": "131/2026",
+    "fir_date": "2026-10-12",
+    "police_station": "Cyber Police Station, Pune City",
+    "district": "Pune City",
+    "fraud_type": "Fake stock-trading / investment app",
+    "sections": [
+      "BNS 318(4)",
+      "BNS 319(2)",
+      "BNS 336",
+      "BNS 61(2)",
+      "IT Act 66D"
+    ],
+    "loss_inr": 2450000,
+    "frozen_inr": 477400,
+    "io_name": "PSI Rahul Kadam",
+    "complainant": "Mrs. Kavita Deshmukh",
+    "brief_facts": "A school principal was added to a 'GoldenBull IPO Club' chat group by a fake SEBI analyst 'Dr. Arvind Mehta', installed a fake trading app 'GB Pro Trade' showing false profits, and transferred Rs 24.5 lakh in six transfers to three accounts, the last as a fake 'tax'.",
+    "parties": [
+      {
+        "name": "Kavita Deshmukh",
+        "role": "Victim / complainant",
+        "phone": "9850123478",
+        "account_no": "20117745902",
+        "bank": "Deccan Urban Co-op Bank",
+        "notes": "Baner, Pune"
+      },
+      {
+        "name": "Sunil Joshi",
+        "role": "Person named by complainant",
+        "phone": "",
+        "account_no": "",
+        "bank": "",
+        "notes": "Colleague who recommended the group"
+      },
+      {
+        "name": "Unknown ('Dr. Arvind Mehta')",
+        "role": "Suspect number",
+        "phone": "7387004512",
+        "account_no": "",
+        "bank": "",
+        "notes": "ChatWave group admin"
+      },
+      {
+        "name": "Vinod Gaikwad",
+        "role": "Beneficiary account holder",
+        "phone": "9922310045",
+        "account_no": "60450012783",
+        "bank": "Godavari Bank",
+        "notes": "Shree Sai Traders, Chh. Sambhajinagar"
+      },
+      {
+        "name": "Neha Patil",
+        "role": "Beneficiary account holder",
+        "phone": "9067113452",
+        "account_no": "50210066120044",
+        "bank": "Konkan Small Finance Bank",
+        "notes": "Student, Pune"
+      },
+      {
+        "name": "Faisal Qureshi",
+        "role": "Other",
+        "phone": "9820456631",
+        "account_no": "",
+        "bank": "",
+        "notes": "Bhiwandi; CDR obtained"
+      }
+    ],
+    "suggested_questions": [
+      "Who operated the 'Dr. Arvind Mehta' number and the GB Pro Trade app? What links them?",
+      "Is Sunil Joshi, who recommended the group, involved?",
+      "Vinod Gaikwad blames his accountant. Do the records support that?",
+      "Trace the Rs 24.5 lakh account by account.",
+      "What evidence is still missing before chargesheet?"
+    ]
+  },
+  "documents": [
+    {
+      "file": "01_NCRP_complaint.txt",
+      "doc_type": "complaint",
+      "title": "NCRP complaint acknowledgement - Kavita Deshmukh",
+      "date": "2026-10-08",
+      "persons": "Kavita Deshmukh"
+    },
+    {
+      "file": "02_FIR_131_2026.docx",
+      "doc_type": "fir",
+      "title": "First Information Report No. 131/2026, Cyber Police Station, Pune City",
+      "date": "2026-10-12",
+      "persons": "Kavita Deshmukh; Rahul Kadam"
+    },
+    {
+      "file": "03_statement_Kavita_Deshmukh.docx",
+      "doc_type": "statement_180",
+      "title": "Statement of Mrs. Kavita Deshmukh under Section 180 BNSS",
+      "date": "2026-10-12",
+      "persons": "Kavita Deshmukh; Sunil Joshi"
+    },
+    {
+      "file": "04_Deccan_Urban_Bank_reply.txt",
+      "doc_type": "bank_reply",
+      "title": "Deccan Urban Co-op Bank reply - complainant's account debits",
+      "date": "2026-10-13",
+      "persons": "Kavita Deshmukh"
+    },
+    {
+      "file": "05_Godavari_Bank_reply_Shree_Sai_Traders.txt",
+      "doc_type": "bank_reply",
+      "title": "Godavari Bank reply - account of Shree Sai Traders (Vinod Gaikwad)",
+      "date": "2026-10-14",
+      "persons": "Vinod Gaikwad"
+    },
+    {
+      "file": "06_Konkan_SFB_reply_Neha_Patil.txt",
+      "doc_type": "bank_reply",
+      "title": "Konkan Small Finance Bank reply - account of Neha Patil",
+      "date": "2026-10-14",
+      "persons": "Neha Patil"
+    },
+    {
+      "file": "07_statement_Vinod_Gaikwad.docx",
+      "doc_type": "statement_180",
+      "title": "Statement of Vinod Gaikwad under Section 180 BNSS",
+      "date": "2026-10-15",
+      "persons": "Vinod Gaikwad; Ganesh Shinde"
+    },
+    {
+      "file": "08_statement_Ganesh_Shinde.txt",
+      "doc_type": "statement_180",
+      "title": "Statement of Ganesh Shinde (accountant) under Section 180 BNSS",
+      "date": "2026-10-15",
+      "persons": "Ganesh Shinde; Vinod Gaikwad"
+    },
+    {
+      "file": "09_statement_Neha_Patil.txt",
+      "doc_type": "statement_180",
+      "title": "Statement of Neha Patil under Section 180 BNSS",
+      "date": "2026-10-16",
+      "persons": "Neha Patil"
+    },
+    {
+      "file": "10_statement_Sunil_Joshi.txt",
+      "doc_type": "statement_180",
+      "title": "Statement of Sunil Joshi under Section 180 BNSS",
+      "date": "2026-10-16",
+      "persons": "Sunil Joshi"
+    },
+    {
+      "file": "11_hosting_provider_reply_gbprotrade.txt",
+      "doc_type": "platform_reply",
+      "title": "Hosting provider reply - admin panel of gbprotrade.app",
+      "date": "2026-10-17",
+      "persons": ""
+    },
+    {
+      "file": "12_ISP_reply_SkyLink.txt",
+      "doc_type": "platform_reply",
+      "title": "ISP reply - subscriber of IP address 49.36.112.87",
+      "date": "2026-10-17",
+      "persons": "Faisal Qureshi"
+    },
+    {
+      "file": "13_CoinVault_exchange_reply.txt",
+      "doc_type": "platform_reply",
+      "title": "CoinVault crypto exchange reply - P2P merchant FQ Digital",
+      "date": "2026-10-17",
+      "persons": "Faisal Qureshi"
+    },
+    {
+      "file": "14_telecom_reply_7387004512.txt",
+      "doc_type": "telecom_reply",
+      "title": "Telecom reply - subscriber of 7387004512 ('Dr. Arvind Mehta')",
+      "date": "2026-10-14",
+      "persons": "Arvind Mehta"
+    },
+    {
+      "file": "15_complainant_letter_screenshots.txt",
+      "doc_type": "third_party_letter",
+      "title": "Complainant's letter submitting screenshots on pen drive",
+      "date": "2026-10-13",
+      "persons": "Kavita Deshmukh"
+    }
+  ],
+  "records": [
+    {
+      "file": "victim_statement_DeccanUrban.xlsx",
+      "kind": "transactions",
+      "mapping": {
+        "date": "Txn Date",
+        "remarks": "Narration",
+        "counterparty_name": "Narration",
+        "utr": "Chq/Ref No",
+        "debit": "Withdrawal Amt",
+        "credit": "Deposit Amt"
+      },
+      "constants": {
+        "account_no": "20117745902",
+        "account_holder": "Kavita Deshmukh",
+        "bank": "Deccan Urban Co-op Bank",
+        "mode": ""
+      }
+    },
+    {
+      "file": "GodavariBank_60450012783.csv",
+      "kind": "transactions",
+      "mapping": {
+        "date": "Tran Date",
+        "time": "Tran Time",
+        "remarks": "Particulars",
+        "counterparty_name": "Particulars",
+        "utr": "Ref No",
+        "debit": "Debit",
+        "credit": "Credit"
+      },
+      "constants": {
+        "account_no": "60450012783",
+        "account_holder": "Shree Sai Traders (Vinod Gaikwad)",
+        "bank": "Godavari Bank"
+      }
+    },
+    {
+      "file": "KonkanSFB_50210066120044_standard.csv",
+      "kind": "transactions",
+      "mapping": {
+        "txn_id": "txn_id",
+        "account_no": "account_no",
+        "account_holder": "account_holder",
+        "bank": "bank",
+        "txn_time": "txn_time",
+        "direction": "direction",
+        "amount": "amount",
+        "mode": "mode",
+        "counterparty_account": "counterparty_account",
+        "counterparty_name": "counterparty_name",
+        "utr": "utr",
+        "remarks": "remarks",
+        "location": "location"
+      }
+    },
+    {
+      "file": "CDR_export_4_numbers.csv",
+      "kind": "cdr",
+      "mapping": {
+        "target_number": "A Party",
+        "other_number": "B Party",
+        "date": "Call Date",
+        "time": "Call Time",
+        "duration_sec": "Duration (sec)",
+        "call_type": "Call Type",
+        "imei": "IMEI",
+        "cell_id": "First Cell ID",
+        "cell_location": "First Cell Address"
+      }
+    }
+  ],
+  "answer_key": "answer_key.json",
+  "recorded": [
+    "agent_run.json",
+    "baseline_run.json",
+    "qa_suggested.json",
+    "eval.json"
+  ]
+}

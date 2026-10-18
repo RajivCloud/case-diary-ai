@@ -1,0 +1,74 @@
+{
+  "case_id": "CYB-131-2026",
+  "baseline": {
+    "checks": {
+      "Operator identified (Faisal Qureshi)": false,
+      "Mule account holder identified (Vinod Gaikwad)": true,
+      "Rented account identified (Neha Patil)": true,
+      "Red herring cleared (Sunil Joshi, co-victim)": false,
+      "Red herring cleared (Ganesh Shinde, accountant)": true,
+      "Lie caught: Vinod blames accountant vs OTPs / self-cheque": true,
+      "Key link: admin-panel IP 49.36.112.87 -> ISP subscriber Faisal": false,
+      "Key link: CoinVault P2P 'FQ Digital' KYC -> Faisal": false,
+      "Key link: scam SIM co-located with Faisal's own SIM": false,
+      "Gap: screenshots lack BSA s.63 certificate": false,
+      "Gap: CoinVault reply is an email without certificate": false,
+      "Money: Rs 12.5 lakh to Shree Sai Traders traced": false,
+      "Bonus: linked archive case CYB-090-2026 found": false
+    },
+    "stats": {
+      "api_calls": 1,
+      "input_tokens": 4,
+      "output_tokens": 4366,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 1305,
+      "cost_usd": 0.0939,
+      "seconds": 43.6
+    },
+    "citations": 34
+  },
+  "agent": {
+    "checks": {
+      "Operator identified (Faisal Qureshi)": true,
+      "Mule account holder identified (Vinod Gaikwad)": true,
+      "Rented account identified (Neha Patil)": true,
+      "Red herring cleared (Sunil Joshi, co-victim)": true,
+      "Red herring cleared (Ganesh Shinde, accountant)": true,
+      "Lie caught: Vinod blames accountant vs OTPs / self-cheque": true,
+      "Key link: admin-panel IP 49.36.112.87 -> ISP subscriber Faisal": true,
+      "Key link: CoinVault P2P 'FQ Digital' KYC -> Faisal": true,
+      "Key link: scam SIM co-located with Faisal's own SIM": true,
+      "Gap: screenshots lack BSA s.63 certificate": true,
+      "Gap: CoinVault reply is an email without certificate": true,
+      "Money: Rs 12.5 lakh to Shree Sai Traders traced": true,
+      "Bonus: linked archive case CYB-090-2026 found": false
+    },
+    "stats": {
+      "api_calls": 11,
+      "input_tokens": 24,
+      "output_tokens": 15010,
+      "cache_read_tokens": 271742,
+      "cache_write_tokens": 55043,
+      "cost_usd": 0.6299,
+      "tool_calls": 40,
+      "turns": 11,
+      "seconds": 133.7
+    },
+    "citations": 186
+  },
+  "agent_runs": {
+    "agent_run": {
+      "score": 12,
+      "of": 13,
+      "api_calls": 11,
+      "input_tokens": 24,
+      "output_tokens": 15010,
+      "cache_read_tokens": 271742,
+      "cache_write_tokens": 55043,
+      "cost_usd": 0.6299,
+      "tool_calls": 40,
+      "turns": 11,
+      "seconds": 133.7
+    }
+  }
+}
