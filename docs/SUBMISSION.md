@@ -1,6 +1,6 @@
 # CaseDiary.AI: an Agentic RAG Assistant for Cyber Police Investigating Officers
 
-**Builder:** Rajiv · **Week:** RAG Agentic Demo · 🌐 **Live app:** `<deployed URL>` · 💻 **GitHub:** `<repo URL>` · 🎬 **Video:** `<video URL>`
+**Builder:** Rajiv · **Week:** RAG Agentic Demo · 🌐 **Live app:** https://casediary.streamlit.app · 💻 **GitHub:** https://github.com/RajivCloud/case-diary-ai · 🎬 **Video:** `<video URL>`
 
 > **In one line:** A police station registers a cyber-fraud case and uploads its evidence. An AI agent then follows the money and the phones across documents and 2,000+ records, catches the lies, clears the innocent, drafts a cited chargesheet with a court-readiness check, and answers the officer's questions. The officer reviews and signs off on every finding.
 

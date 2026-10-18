@@ -2,6 +2,8 @@
 
 **An agentic RAG investigation assistant for Cyber Police Investigating Officers (IOs).**
 
+🌐 **Live demo:** https://casediary.streamlit.app · 📄 [Submission write-up](docs/SUBMISSION.md) · 🎓 [Learning guide](docs/LEARNING.md)
+
 A station registers a cyber-fraud case and uploads its evidence: FIR, statements, bank and telecom replies, call detail records and bank statements, in whatever format they arrive. The AI agent then:
 - **follows the money and follows the phones** across documents and records;
 - **catches statements that the records contradict**, and **clears the wrongly suspected**;
